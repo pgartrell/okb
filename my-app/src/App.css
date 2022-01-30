@@ -38,6 +38,10 @@
 }
 
 /* Navbar CSS */
+.custom-navbar {
+  margin-bottom: 2em;
+}
+
 .items-navigation {
   text-decoration: none;
   padding: 2em;

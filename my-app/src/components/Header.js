@@ -10,7 +10,7 @@ import LogoImage from '../images/okb-logo.png';
 
 const Header = () => {
   return (
-    <Navbar bg="light" variant="light" sticky="top" expand="lg">
+    <Navbar className="custom-navbar" bg="light" variant="light" sticky="top" expand="lg">
       <Container fluid>  
         <NavbarBrand href="#">
             <img
