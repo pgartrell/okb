@@ -20,7 +20,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="navBarLinks">
-            <NavLink className="items-navigation" to="/landingPage">Landing</NavLink>
+            <NavLink className="items-navigation" to="/landingPage">Home</NavLink>
             <NavLink className="items-navigation" to="/mobileClinicPage">Mobile Clinic</NavLink>
             <NavLink className="items-navigation" to="/onlineTherapyPage">Online Therapy</NavLink>
             <NavLink className="items-navigation" to="/resourcesPage">Resources</NavLink>
