@@ -15,6 +15,7 @@ import Header from "./components/Header";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeAccordion from './components/HomeAccordion';
+import HomeJoinLink from './components/HomeJoinLink';
 
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
       </Router>
 
       <HomeAccordion />
+
+      <HomeJoinLink />
+
 
     </div>
   );
