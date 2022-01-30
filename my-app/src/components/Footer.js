@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 export default function Footer() {
@@ -13,6 +15,9 @@ export default function Footer() {
                     <li>Work With Us</li>
                     <li>Donate</li>
                 </ul>
+            </div>
+            <div>
+                <FontAwesomeIcon icon={['fal', 'coffee']} />
             </div>
         </footer>
     );
