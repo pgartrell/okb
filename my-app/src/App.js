@@ -1,3 +1,4 @@
+
 import React, { Fragment } from "react";
 import {
   BrowserRouter as Router,
@@ -11,9 +12,15 @@ import OnlineTherapyPage from "./pages/OnlineTherapyPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import Header from "./components/Header";
 
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeAccordion from './components/HomeAccordion';
+
+
 function App() {
   return (
     <div className="App">
+
       <Router>
         <Header />
         <Routes>
@@ -27,6 +34,9 @@ function App() {
           </Route>
         </Routes>
       </Router>
+
+      <HomeAccordion />
+
     </div>
   );
 }
