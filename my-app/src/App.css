@@ -37,6 +37,13 @@
   }
 }
 
+/* Navbar CSS */
+.items-navigation {
+  text-decoration: none;
+  padding: 2em;
+  color: #282c34;
+}
+
 /* Footer CSS */
 .site-footer {
   padding: 2em;
