@@ -1,8 +1,13 @@
 import React from 'react';
-import { Container, Row, Col, FormGroup, Form, FormControl, Button } from "react-bootstrap";
-
-
-
+import { 
+    Container, 
+    Row, 
+    Col, 
+    FormGroup, 
+    Form, 
+    FormControl, 
+    Button
+} from "react-bootstrap";
 
 export default function Footer() {
     const [formData, setFormData] = React.useState({
@@ -30,41 +35,35 @@ export default function Footer() {
     return (
         <footer className="site-footer">
             <Container>
-                <Row>             
-                    <Col>
-                        <h5>Menu</h5>
-                        <ul className="list-unstyled">
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">What We Do</a></li>
-                            <li><a href="#">Our Impact</a></li>
-                            <li><a href="#">Work With Us</a></li>
-                            <li><a href="#">Donate</a></li>
-                        </ul>
-                    </Col>
-                </Row>
                 <Row>
                     <Col>
-                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/" target="_blank"><i className="social-btn fa fa-facebook" /></a>{' '}
-                        <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/" target="_blank"><i className="social-btn fa fa-twitter" /></a>{' '}
-                        <a className="btn btn-social-icon btn-instagram" href="http://instagram.com/" target="_blank"><i className="social-btn fa fa-instagram" /></a>{' '}
-                        <a className="btn btn-social-icon btn-linkedin" href="http://linkedin.com/" target="_blank"><i className="social-btn fa fa-linkedin" /></a> 
-                        <a className="btn btn-social-icon btn-envelope" href="#" target="_blank"><i className="social-btn fa fa-envelope" /></a>
+                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/" target="_blank"><i className="social-btn fa fa-facebook fa-2x" /></a>{' '}
+                        <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/" target="_blank"><i className="social-btn fa fa-twitter fa-2x" /></a>{' '}
+                        <a className="btn btn-social-icon btn-instagram" href="http://instagram.com/" target="_blank"><i className="social-btn fa fa-instagram fa-2x" /></a>{' '}
+                        <a className="btn btn-social-icon btn-linkedin" href="http://linkedin.com/" target="_blank"><i className="social-btn fa fa-linkedin fa-2x" /></a> 
+                        <a className="btn btn-social-icon btn-envelope" href="#" target="_blank"><i className="social-btn fa fa-envelope fa-2x" /></a>
                         <p>Join Us in our effort to increase access to healthcare across Ghana</p>
                         <p className="text-muted">OKB is a 501c(3) Tax-Exempt Nonprofit</p>
                         <p className="text-muted">EIN: 85-2646352</p>
+                        <hr/>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone" /> 1-206-555-1234</a><br />
-                        <a role="button" className="btn btn-link" href="mailto:notreal@notreal.co"><i className="fa fa-envelope-o" /> campsites@nucamp.co</a>
+                <Row>             
+                    <Col md={6} className="menu-footer">
+                        <h3>Menu</h3>
+                        <ul className="list-unstyled">
+                            <li><a className="menu-item-footer" href="#">Who We Are</a></li>
+                            <li><a className="menu-item-footer" href="#">What We Do</a></li>
+                            <li><a className="menu-item-footer" href="#">Our Impact</a></li>
+                            <li><a className="menu-item-footer" href="#">Work With Us</a></li>
+                            <li><a className="menu-item-footer" href="#">Donate</a></li>
+                        </ul>
                     </Col>
-                </Row>
-                <Row>
-                    <Col>
+                        <hr className="d-md-none"></hr>
+                    <Col md={6}>
                         <Form onSubmit={handleSubmit}>
                             <h3>Follow Our Progress</h3>
-                            <FormGroup controlId="email">
+                            <FormGroup controlId="email" className="form-footer">
                                 <FormControl
                                     model='.email'
                                     id='email'
@@ -75,7 +74,7 @@ export default function Footer() {
                                     value={formData.email}
                                 />
                             </FormGroup>
-                            <FormGroup constrolId="firstName">
+                            <FormGroup constrolId="firstName" className="form-footer">
                                 <FormControl
                                      model='.firstName'
                                      id='firstName'
@@ -86,7 +85,7 @@ export default function Footer() {
                                      value={formData.firstName}
                                 />
                             </FormGroup>
-                            <FormGroup constrolId="lastName">
+                            <FormGroup constrolId="lastName" className="form-footer">
                                 <FormControl
                                      model='.lastName'
                                      id='lastName'
@@ -97,10 +96,11 @@ export default function Footer() {
                                      value={formData.lastName}
                                 />
                             </FormGroup>
-                            <Button variant="primary" type='submit'>Sign-up</Button>
+                            <Button className="btn-signup" variant="primary" type='submit'>Sign-up</Button>
                         </Form>
                         <p>Sign-up for our newsletter to learn more about our upcoming projects and how you can get involved!</p>
                     </Col>
+                        <hr/>
                 </Row>
                 <Row>
                     <Col>

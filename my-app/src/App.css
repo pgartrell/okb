@@ -48,3 +48,24 @@
   color: white;
 }
 
+.social-btn:hover {
+  opacity: .5;
+}
+
+.form-footer {
+  margin-top: 1em;
+}
+
+.btn-signup {
+  margin: 1em;
+}
+
+.menu-item-footer {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.menu-footer {
+  padding: 2em;
+}
+
