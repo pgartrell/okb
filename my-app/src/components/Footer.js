@@ -35,8 +35,9 @@ export default function Footer() {
     return (
         <footer className="site-footer">
             <Container>
-                <Row>
-                    <Col>
+                <Row> 
+                    <Col xs={12} lg={6}>
+                    <h3>Follow Us</h3>
                         <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/" target="_blank"><i className="social-btn fa fa-facebook fa-2x" /></a>{' '}
                         <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/" target="_blank"><i className="social-btn fa fa-twitter fa-2x" /></a>{' '}
                         <a className="btn btn-social-icon btn-instagram" href="http://instagram.com/" target="_blank"><i className="social-btn fa fa-instagram fa-2x" /></a>{' '}
@@ -45,22 +46,9 @@ export default function Footer() {
                         <p>Join Us in our effort to increase access to healthcare across Ghana</p>
                         <p className="text-muted">OKB is a 501c(3) Tax-Exempt Nonprofit</p>
                         <p className="text-muted">EIN: 85-2646352</p>
-                        <hr/>
-                    </Col>
-                </Row>
-                <Row>             
-                    <Col md={6} className="menu-footer">
-                        <h3>Menu</h3>
-                        <ul className="list-unstyled">
-                            <li><a className="menu-item-footer" href="#">Who We Are</a></li>
-                            <li><a className="menu-item-footer" href="#">What We Do</a></li>
-                            <li><a className="menu-item-footer" href="#">Our Impact</a></li>
-                            <li><a className="menu-item-footer" href="#">Work With Us</a></li>
-                            <li><a className="menu-item-footer" href="#">Donate</a></li>
-                        </ul>
-                    </Col>
-                        <hr className="d-md-none"></hr>
-                    <Col md={6}>
+                        <hr className="d-lg-none"/>
+                    </Col>            
+                    <Col xs={12} lg={6}>
                         <Form onSubmit={handleSubmit}>
                             <h3>Follow Our Progress</h3>
                             <FormGroup controlId="email" className="form-footer">
@@ -96,7 +84,7 @@ export default function Footer() {
                                      value={formData.lastName}
                                 />
                             </FormGroup>
-                            <Button className="btn-signup" variant="primary" type='submit'>Sign-up</Button>
+                            <Button className="btn-signup" variant="danger" type='submit'>Sign-up</Button>
                         </Form>
                         <p>Sign-up for our newsletter to learn more about our upcoming projects and how you can get involved!</p>
                     </Col>
@@ -116,7 +104,7 @@ export default function Footer() {
                 </Row>
                 <Row>
                     <Col>
-                        <p>&copy; OKB Hope Foundation. All rights reserved.</p>
+                        <p className="copy-footer">&copy; OKB Hope Foundation. All rights reserved.</p>
                     </Col>
                 </Row>
             </Container>
