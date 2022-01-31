@@ -44,14 +44,14 @@
 
 .items-navigation {
   text-decoration: none;
-  padding: 2em;
+  padding: 1rem 3rem;
   color: #282c34;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
 .items-navigation:hover {
-  color: red;
+  color: #ff4444;
 }
 
 /* Footer CSS */
