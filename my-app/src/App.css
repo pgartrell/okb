@@ -37,6 +37,23 @@
   }
 }
 
+/* Navbar CSS */
+.custom-navbar {
+  margin-bottom: 2em;
+}
+
+.items-navigation {
+  text-decoration: none;
+  padding: 1rem 3rem;
+  color: #282c34;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.items-navigation:hover {
+  color: #ff4444;
+}
+
 /* Footer CSS */
 .site-footer {
   padding: 2em;
@@ -49,7 +66,8 @@
 }
 
 .social-btn:hover {
-  color: #ff4444;
+  /* opacity: .5; */
+  color: maroon;
 }
 
 .form-footer {
@@ -68,9 +86,3 @@
 .menu-footer {
   padding: 2em;
 }
-
-.copy-footer {
-  font-size: 1rem;
-  padding-top: 2em;
-}
-
