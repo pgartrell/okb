@@ -3,10 +3,11 @@ import {
   Container,
   Navbar, 
   Nav,
-  NavbarBrand 
+  NavbarBrand,
+  Button
 } from "react-bootstrap";
 import {NavLink} from "react-router-dom"
-import LogoImage from '../images/okb-logo.png';
+import LogoImage from '../images/new-okb-logo.png';
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
         <NavbarBrand href="#">
             <img
               src={LogoImage}
+              height={50}
             />
         </NavbarBrand>     
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,6 +26,9 @@ const Header = () => {
             <NavLink className="items-navigation" to="/mobileClinicPage">Mobile Clinic</NavLink>
             <NavLink className="items-navigation" to="/onlineTherapyPage">Online Therapy</NavLink>
             <NavLink className="items-navigation" to="/resourcesPage">Resources</NavLink>
+            <NavLink className="items-navigation" to="#">
+              <Button className="btn btn-danger">Donate</Button>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
