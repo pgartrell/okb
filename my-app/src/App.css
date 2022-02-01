@@ -38,6 +38,15 @@
 }
 
 
+
+
+.main-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("./components/images/faceCollection.jpg");
+  background-size: cover;
+}
+/* Footer */
+
 /* Footer CSS */
 .site-footer {
   padding: 2em;
