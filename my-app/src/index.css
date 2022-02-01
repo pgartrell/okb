@@ -18,6 +18,6 @@ img {
 
 .main-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url("./components/images/faceCollection.jpg");
+    url("../images/testHospitalImage.jpg");
   background-size: cover;
 }
