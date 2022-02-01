@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+/* Footer */
+/* Footer CSS */
+.site-footer {
+  padding: 2em;
+  background-color: rgb(22, 21, 21);
+  color: white;
+}
+
+.social-btn {
+  color: white;
+}
+
+.social-btn:hover {
+  /* opacity: .5; */
+  color: maroon;
+}
+
+.form-footer {
+  margin-top: 1em;
+}
+
+.btn-signup {
+  margin: 1em;
+}
+
+.menu-item-footer {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.menu-footer {
+  padding: 2em;
+}
