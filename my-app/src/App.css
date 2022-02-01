@@ -45,7 +45,10 @@
     url("./components/images/faceCollection.jpg");
   background-size: cover;
 }
+
+
 /* Footer */
+
 
 /* Footer CSS */
 .site-footer {
@@ -79,3 +82,21 @@
 .menu-footer {
   padding: 2em;
 }
+
+/* Navbar CSS */
+.custom-navbar {
+  margin-bottom: 2em;
+}
+
+.items-navigation {
+  text-decoration: none;
+  padding: 1rem 2.65rem;
+  color: #282c34;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.items-navigation:hover {
+  color: #ff4444;
+}
+
