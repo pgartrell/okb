@@ -8,6 +8,9 @@ import {
     FormControl, 
     Button
 } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     const [formData, setFormData] = React.useState({
@@ -38,11 +41,21 @@ export default function Footer() {
                 <Row> 
                     <Col xs={12} lg={6}>
                     <h3 className="mb-3">Follow Us</h3>
-                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/" target="_blank"><i className="social-btn fa fa-facebook fa-2x" /></a>{' '}
-                        <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/" target="_blank"><i className="social-btn fa fa-twitter fa-2x" /></a>{' '}
-                        <a className="btn btn-social-icon btn-instagram" href="http://instagram.com/" target="_blank"><i className="social-btn fa fa-instagram fa-2x" /></a>{' '}
-                        <a className="btn btn-social-icon btn-linkedin" href="http://linkedin.com/" target="_blank"><i className="social-btn fa fa-linkedin fa-2x" /></a> 
-                        <a className="btn btn-social-icon btn-envelope" href="#" target="_blank"><i className="social-btn fa fa-envelope fa-2x" /></a>
+                        <a className="social-btn" href="http://www.facebook.com/" target="_blank">
+                            <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                        </a>
+                        <a className="social-btn" href="http://twitter.com/" target="_blank">
+                            <FontAwesomeIcon icon={faTwitter} size="2x"/>
+                        </a>
+                        <a className="social-btn" href="http://instagram.com/" target="_blank">
+                            <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                        </a>
+                        <a className="social-btn" href="http://linkedin.com/" target="_blank">
+                            <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+                        </a> 
+                        <a className="social-btn" href="mailto:you@yourEmail.com" target="_blank">
+                            <FontAwesomeIcon icon={faEnvelope} size="2x"/>
+                        </a>
                         <p className="mt-3">Join us in our effort to increase access to healthcare across Ghana!</p>
                         <p className="mt-3 text-muted">OKB is a 501c(3) Tax-Exempt Nonprofit</p>
                         <p className="text-muted">EIN: 85-2646352</p>
