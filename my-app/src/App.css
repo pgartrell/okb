@@ -109,3 +109,17 @@
   margin-left: auto;
 }
 
+
+/* Home Resources CSS */
+.homeresources-container {
+  padding: 1em 0 5em 0;
+}
+
+.homeresources-title {
+  padding-bottom: .5em;
+}
+
+.homeresources-btn {
+  margin: 0 1em;
+}
+
