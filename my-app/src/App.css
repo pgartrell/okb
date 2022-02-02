@@ -88,11 +88,16 @@
   margin-bottom: 2em;
 }
 
+.navbar-logo:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
 .items-navigation {
   text-decoration: none;
-  margin: 1rem 2.65rem;
+  margin: 1rem 3rem;
   color: #282c34;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
