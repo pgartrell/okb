@@ -90,7 +90,7 @@
 
 .items-navigation {
   text-decoration: none;
-  padding: 1rem 2.65rem;
+  margin: 1rem 2.65rem;
   color: #282c34;
   font-size: 1.2rem;
   font-weight: 500;
@@ -98,5 +98,9 @@
 
 .items-navigation:hover {
   color: #ff4444;
+}
+
+.navBarLinks {
+  margin-left: auto;
 }
 

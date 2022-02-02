@@ -21,15 +21,11 @@ const Header = () => {
         </NavbarBrand>     
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="navBarLinks">
-            <NavLink className="items-navigation" to="/landingPage">Home</NavLink>
-            <NavLink className="items-navigation" to="/mobileClinicPage">Mobile Clinic</NavLink>
-            <NavLink className="items-navigation" to="/onlineTherapyPage">Online Therapy</NavLink>
-            <NavLink className="items-navigation" to="/resourcesPage">Resources</NavLink>
-            <NavLink className="items-navigation" to="#">
-              <Button className="btn btn-danger">Donate</Button>
-            </NavLink>
-          </Nav>
+            <Nav className="navBarLinks">
+                <NavLink className="items-navigation" to="#">About</NavLink>
+                <NavLink className="items-navigation" to="#">Work With Us</NavLink>
+            </Nav>
+                <Button className="items-navigation navigation-btn btn btn-danger">Donate</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
