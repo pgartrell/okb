@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import { JoinLinkSection } from "../styles/HomeJoinLink.styles.js"
+import { Link } from 'react-router-dom';
+import { JoinLinkSection } from "../styles/HomeJoinLink.styles.js";
 
 const JoinButton = styled(Button)({
     boxShadow: 'none',
@@ -46,9 +47,9 @@ export default function HomeJoinLink() {
         <JoinLinkSection>
             <h3 style={{color: 'white'}}>Our Team</h3>
             <p className="m-5" style={{color: 'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <JoinButton variant="contained" disableRipple>
+            <Link to='/workWithUsPage' style={{textDecoration: 'none'}}><JoinButton variant="contained" disableRipple>
         Join our team
-      </JoinButton>
+      </JoinButton></Link>
       </JoinLinkSection>
     );
 }
