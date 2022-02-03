@@ -37,18 +37,14 @@
   }
 }
 
-
-
-
+/* Home Join Link CSS */
 .main-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url("./components/images/faceCollection.jpg");
+    url("./images/faceCollection.jpg");
   background-size: cover;
 }
 
-
 /* Footer */
-
 
 /* Footer CSS */
 .site-footer {
@@ -88,11 +84,17 @@
   margin-bottom: 2em;
 }
 
+.navbar-logo:hover {
+  opacity: 0.7;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .items-navigation {
   text-decoration: none;
-  padding: 1rem 2.65rem;
+  margin: 1rem 3rem;
   color: #282c34;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -100,3 +102,20 @@
   color: #ff4444;
 }
 
+.navBarLinks {
+  margin-left: auto;
+}
+
+/* Home Resources CSS */
+.homeresources-container {
+  padding: 1em 0 5em 0;
+}
+
+.homeresources-title {
+  padding-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.homeresources-btn {
+  margin: 0 1em;
+}
