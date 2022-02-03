@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-
-// const facePicture = new URL("./images/faceCollection.jpg", import.meta.url)
+import { JoinLinkSection } from "../styles/HomeJoinLink.styles.js"
 
 const JoinButton = styled(Button)({
     boxShadow: 'none',
@@ -44,12 +43,12 @@ const JoinButton = styled(Button)({
 
 export default function HomeJoinLink() {
     return (
-        <div className="m-5 p-5 main-container">
+        <JoinLinkSection>
             <h3 style={{color: 'white'}}>Our Team</h3>
             <p className="m-5" style={{color: 'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <JoinButton variant="contained" disableRipple>
         Join our team
       </JoinButton>
-      </div>
+      </JoinLinkSection>
     );
 }
