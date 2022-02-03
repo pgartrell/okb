@@ -15,8 +15,7 @@ import Footer from './components/Footer'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HomeAccordion from './components/HomeAccordion';
-import HomeJoinLink from './components/HomeJoinLink';
+
 
 
 function App() {
@@ -29,9 +28,7 @@ function App() {
           <Route>
             <Route path="/landingPage" element={<LandingPage />} />
             <Route path="/mobileClinicPage" element={<MobileClinicPage />} />
-
             <Route path="/onlineTherapyPage" element={<OnlineTherapyPage />} />
-
             <Route path="/resourcesPage" element={<ResourcesPage />} />
           </Route>
         </Routes>

@@ -86,14 +86,15 @@
 
 .navbar-logo:hover {
   opacity: 0.7;
+  opacity: 0.7;
   cursor: pointer;
 }
 
 .items-navigation {
   text-decoration: none;
-  padding: 1rem 2.65rem;
+  margin: 1rem 3rem;
   color: #282c34;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -111,6 +112,7 @@
 }
 
 .homeresources-title {
+  padding-bottom: 0.5em;
   padding-bottom: 0.5em;
 }
 
