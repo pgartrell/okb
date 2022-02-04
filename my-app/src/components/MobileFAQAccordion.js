@@ -4,11 +4,11 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { FAQS } from '../shared/faqs';
+import { MOBILEFAQS } from '../shared/mobilefaqs';
 
 
-export default function HomeAccordion() {
-  const faqAccordion = FAQS.map(question => {
+export default function MobileAccordion() {
+  const mobileFaqAccordion = MOBILEFAQS.map(question => {
     return (
       <Accordion>
         <AccordionSummary
@@ -31,7 +31,7 @@ export default function HomeAccordion() {
   return (
     <div className="m-5">
       <h2>FAQ</h2>
-      {faqAccordion}
+      {mobileFaqAccordion}
     </div>
   );
 }

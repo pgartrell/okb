@@ -37,18 +37,14 @@
   }
 }
 
-
-
-
+/* Home Join Link CSS */
 .main-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url("./components/images/faceCollection.jpg");
+    url("./images/faceCollection.jpg");
   background-size: cover;
 }
 
-
 /* Footer */
-
 
 /* Footer CSS */
 .site-footer {
@@ -106,7 +102,12 @@
 }
 
 .navbar-logo:hover {
+
   opacity: .8;
+
+  opacity: 0.7;
+  opacity: 0.7;
+
   cursor: pointer;
 }
 
@@ -126,17 +127,25 @@
   margin-left: auto;
 }
 
-
 /* Home Resources CSS */
 .homeresources-container {
   padding: 1em 0 5em 0;
 }
 
 .homeresources-title {
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .homeresources-btn {
   margin: 0 1em;
 }
 
+/* How It Works Mobile */
+.works-mobile-container {
+  padding: 4em;
+}
+
+.works-mobile-title {
+  padding: 1em;
+}
