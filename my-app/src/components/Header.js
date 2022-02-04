@@ -3,8 +3,7 @@ import {
   Container,
   Navbar, 
   Nav,
-  NavbarBrand,
-  Button
+  NavbarBrand
 } from "react-bootstrap";
 import {NavLink} from "react-router-dom"
 import LogoImage from '../images/new-okb-logo.png';
@@ -24,7 +23,7 @@ const Header = () => {
     <Navbar className="custom-navbar" transparent bg={colorChange ? "light": ""} sticky="top" expand="lg">
       <Container fluid>  
         <NavbarBrand href="./LandingPage">
-            <img className='navbar-logo' src={LogoImage}/>
+            <img className='navbar-logo' src={LogoImage} alt="the okb logo"/>
         </NavbarBrand>     
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
