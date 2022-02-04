@@ -23,7 +23,7 @@ const Header = () => {
     <Navbar className="custom-navbar" transparent bg={colorChange ? "light": ""} sticky="top" expand="lg">
       <Container fluid>  
         <NavbarBrand href="./LandingPage">
-            <img className='navbar-logo' src={LogoImage} alt="the okb logo"/>
+            <img className='navbar-logo' src={LogoImage} alt="okb logo"/>
         </NavbarBrand>     
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
