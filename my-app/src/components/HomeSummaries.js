@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// import data from "../data/data.js";
-import { Card } from "react-bootstrap";
-import testDoctorImage from "../images/testDoctorImage.jpg"
-import { HomeSummariesButton, HomeSummariesCard, HomeSummariesCardBody, HomeSummariesCardImage, HomeSummariesText, HomeSummariesTitle } from "../styles/HomeSummaries.styles";
+import testDoctorImage from "../images/testDoctorImage.jpg";
+import "../styles/HomeSummaries.css"
 
 export default function HomeSummaries() {
   const [summaries, setSummaries] = useState([
@@ -21,16 +19,17 @@ export default function HomeSummaries() {
 
   const cards = summaries.map((item) => {
     return (
-      <ul>
-        <HomeSummariesCard>          
-            <HomeSummariesCardImage src={item.img} />
-          <HomeSummariesCardBody>
-            <HomeSummariesTitle>{item.title}</HomeSummariesTitle>
-            <HomeSummariesText>{item.text}</HomeSummariesText>
-            <HomeSummariesButton>Get Started</HomeSummariesButton>
-          </HomeSummariesCardBody>
-        </HomeSummariesCard>
-      </ul>
+      
+        <div className="homeSummariesContainer">
+          <div className="homeSummariesImage">
+            <img src={item.img} />
+          </div>
+          <div className="homeSummariesText">
+            <h1 className="homeSummariesTitle">{item.title}</h1>
+            <p className="homeSummariesParagraph">{item.text}</p>
+            <button className="homeSummariesButton">Get Started</button>
+          </div>
+        </div>      
     );
   });
 
