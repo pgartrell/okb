@@ -8,17 +8,19 @@ export default function HowItWorksMobile() {
     const [howItWorksData] = React.useState(HOWITWORKSDATA);
     const RenderHowItWorks = howItWorksData.map(data => {
         return (
-            <Col>
-                <Card style={{ margin: '1em', width: '15rem'}}>
+            <Col xs={{span: 6, offset: 3}} md={{span: 4, offset: 0}} lg={{span: 3, offset: 0}} xl={{span: 3}} xxl={{span: 2}}>
+                <Card style={{margin: '.5em'}}>
                     <Card.Img variant='top' src={HowItWorksImage}/>
-                    <Card.Title style={{padding: '.5em'}}>{data.step}</Card.Title>
-                    <Card.Text style={{paddingBottom: '1em'}}>{data.description}</Card.Text>
+                    <Card.Body>
+                        <Card.Title variant='primary'>{data.step}</Card.Title>
+                        <Card.Text>{data.description}</Card.Text>
+                    </Card.Body>
                 </Card>
             </Col>
         );
     })
     return (
-            <Container>
+            <Container fluid>
                 <Row>
                     <h1 className="works-mobile-title">How It Works</h1>
                 </Row>
