@@ -1,6 +1,6 @@
 import React from 'react';
 import { HOWITWORKSDATA } from '../data/howitworksdata';
-import { Card, CardImg, Container, Row, Col } from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import HowItWorksImage from '../images/doctor.jpeg';
 
 
