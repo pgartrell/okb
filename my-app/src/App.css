@@ -101,13 +101,14 @@
   margin-bottom: 2em;
 }
 
+.navbar-logo {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+}
+
 .navbar-logo:hover {
-
   opacity: .8;
-
-  opacity: 0.7;
-  opacity: 0.7;
-
   cursor: pointer;
 }
 

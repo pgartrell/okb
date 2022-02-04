@@ -12,7 +12,7 @@ import LogoImage from '../images/new-okb-logo.png';
 const Header = () => {
   const [colorChange, setColorChange] = React.useState(false);
   const changeNavbarColor = () => {
-    if(window.scrollY >= 50) {
+    if(window.scrollY >= 40) {
       setColorChange(true);
     }
     else {
@@ -24,11 +24,7 @@ const Header = () => {
     <Navbar className="custom-navbar" transparent bg={colorChange ? "light": ""} sticky="top" expand="lg">
       <Container fluid>  
         <NavbarBrand href="./LandingPage">
-            <img
-              className='navbar-logo'
-              src={LogoImage}
-              height={60}
-            />
+            <img className='navbar-logo' src={LogoImage}/>
         </NavbarBrand>     
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
