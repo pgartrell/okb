@@ -16,8 +16,8 @@ export default function HomeResources() {
             </Row>
             <Row>
                 <Col>
-                    <Button href="./MobileClinicPage" className="homeresources-btn" variant="danger">Mobile Clinic</Button>
-                    <Button href="./OnlineTherapyPage" className="homeresources-btn" variant="danger">Online Therapy</Button>
+                    <button href="#" className="homeresources-btn">Mobile Clinic</button>
+                    <button href="#" className="homeresources-btn">Online Therapy</button>
                 </Col>
             </Row>
         </Container>
