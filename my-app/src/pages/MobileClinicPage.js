@@ -1,9 +1,10 @@
 import React from "react";
+import MobileHeroSection from "../components/MobileHeroSection";
 
 const MobileClinicPage = () => {
   return (
     <div>
-      <h1>Mobile Clinic Page</h1>
+      <MobileHeroSection />
     </div>
   );
 };
