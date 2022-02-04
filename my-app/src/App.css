@@ -59,7 +59,7 @@
 }
 
 .social-btn:hover {
-  color: #ff4444;
+  color: #FF0000;
 }
 
 .form-footer {
@@ -80,13 +80,34 @@
 }
 
 /* Navbar CSS */
+.btn-navbar {
+  background-color: #FF0000;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: .5em 1.5em;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn-navbar:hover {
+  background-color: #e70a0a;
+}
+
 .custom-navbar {
   margin-bottom: 2em;
 }
 
 .navbar-logo:hover {
+
+  opacity: .8;
+
   opacity: 0.7;
   opacity: 0.7;
+
   cursor: pointer;
 }
 
@@ -99,7 +120,7 @@
 }
 
 .items-navigation:hover {
-  color: #ff4444;
+  color: #ff0000;
 }
 
 .navBarLinks {
