@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import testDoctorImage from "../images/testDoctorImage.jpg";
 import "../styles/HomeSummaries.css"
+import {Link} from "react-router-dom"
 
 export default function HomeSummaries() {
   const [summaries, setSummaries] = useState([
@@ -27,7 +28,7 @@ export default function HomeSummaries() {
           <div className="homeSummariesText">
             <h1 className="homeSummariesTitle">{item.title}</h1>
             <p className="homeSummariesParagraph">{item.text}</p>
-            <button className="homeSummariesButton">Get Started</button>
+            <Link to='/mobileClinicPage'><button className="homeSummariesButton">Get Started</button></Link>
           </div>
         </div>      
     );
