@@ -36,7 +36,7 @@ const Header = () => {
                 <NavLink className="items-navigation" to="#">About</NavLink>
                 <NavLink className="items-navigation" to="#">Work With Us</NavLink>
             </Nav>
-                <Button className="items-navigation btn btn-danger">Donate</Button>
+                <button className="btn-navbar">Donate</button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
