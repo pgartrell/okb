@@ -59,11 +59,15 @@
 }
 
 .social-btn:hover {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .form-footer {
   margin-top: 1em;
+}
+
+.btn-signup {
+  margin: 0 1em;
 }
 
 .menu-item-footer {
@@ -75,13 +79,9 @@
   padding: 2em;
 }
 
-
-.btn-signup {
-
 /* Navbar CSS */
 .btn-navbar {
-
-  background-color: #FF0000;
+  background-color: #ff0000;
   border: none;
   color: white;
   padding: 10px 50px;
@@ -91,12 +91,11 @@
 
   margin: 1em;
 
-  margin: .5em 1.5em;
+  margin: 0.5em 1.5em;
 
   cursor: pointer;
   border-radius: 20px;
 }
-
 
 .btn-signup:hover {
   background-color: #e70a0a;
@@ -110,13 +109,14 @@
   margin-bottom: 2em;
 }
 
+.navbar-logo {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+}
+
 .navbar-logo:hover {
-
-  opacity: .8;
-
-  opacity: 0.7;
-  opacity: 0.7;
-
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -147,8 +147,7 @@
 }
 
 .homeresources-btn {
-
-  background-color: #FF0000;
+  background-color: #ff0000;
   border: none;
   color: white;
   padding: 10px 50px;
@@ -164,10 +163,6 @@
   background-color: #d60f0f;
 }
 
-
-  margin: 0 1em;
-}
-
 /* How It Works Mobile */
 .works-mobile-container {
   padding: 4em;
@@ -177,4 +172,8 @@
   padding: 1em;
 }
 
-
+/* Accordions */
+.accordion-margins {
+  margin-left: 15%;
+  margin-right: 15%;
+}

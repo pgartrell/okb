@@ -10,7 +10,7 @@ import { FAQS } from '../shared/faqs';
 export default function HomeAccordion() {
   const faqAccordion = FAQS.map(question => {
     return (
-      <Accordion>
+      <Accordion className="accordion-margins">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"

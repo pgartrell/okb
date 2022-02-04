@@ -10,7 +10,7 @@ import { MOBILEFAQS } from '../shared/mobilefaqs';
 export default function MobileAccordion() {
   const mobileFaqAccordion = MOBILEFAQS.map(question => {
     return (
-      <Accordion>
+      <Accordion className="accordion-margins">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
