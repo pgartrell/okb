@@ -4,6 +4,7 @@ import MobileHeroSection from "../components/MobileHeroSection";
 import HowItWorksMobile from "../components/HowItWorksMobile";
 
 import MobileAccordion from '../components/MobileFAQAccordion';
+import OurTherapistSection from "../components/MobileOurTherapists";
 
 
 const MobileClinicPage = () => {
@@ -13,6 +14,8 @@ const MobileClinicPage = () => {
       <MobileHeroSection />
 
       <HowItWorksMobile />
+
+      <OurTherapistSection />
 
       <MobileAccordion />
 
