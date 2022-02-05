@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { OurTherapistStyles, DoctorImage } from "../styles/OurTherapistStyles.styles.js";
 import DoctorImage1 from '../images/doctor1.jpg';
+import { Card } from '@mui/material';
+import { THERAPISTS } from '../shared/therapists';
 
 
 const JoinButton = styled(Button)({
@@ -44,6 +46,13 @@ const JoinButton = styled(Button)({
     },
   });
 
+  const mobileOurTherapists = THERAPISTS.map(therapist => {
+    return (<Card className='mobile-clinic-doctor-avatar-card'>
+    <DoctorImage src={therapist.image}></DoctorImage>
+    <h5 style={{marginBottom:0}}>{therapist.name}</h5>
+    <p>{therapist.specialty}</p>
+</Card>)})
+
 export default function OurTherapistSection() {
     return (
         <OurTherapistStyles className='container'>
@@ -52,17 +61,22 @@ export default function OurTherapistSection() {
                 <p className="m-1" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
             <div className='row m-4'>
+                {mobileOurTherapists}
+                {/* <Card className='mobile-clinic-doctor-avatar-card'>
+                    <DoctorImage src={DoctorImage1}></DoctorImage>
+                    <h5 style={{marginBottom:0}}>Dr. Name</h5>
+                    <p>specialty</p>
+                </Card>
                 <DoctorImage src={DoctorImage1}></DoctorImage>
                 <DoctorImage src={DoctorImage1}></DoctorImage>
                 <DoctorImage src={DoctorImage1}></DoctorImage>
                 <DoctorImage src={DoctorImage1}></DoctorImage>
                 <DoctorImage src={DoctorImage1}></DoctorImage>
-                <DoctorImage src={DoctorImage1}></DoctorImage>
-                <DoctorImage src={DoctorImage1}></DoctorImage>
+                <DoctorImage src={DoctorImage1}></DoctorImage> */}
             </div>
             <div className='row m-2'>
                 <Link to='/onlineTherapyPage' style={{textDecoration: 'none'}}><JoinButton variant="contained" disableRipple>
-                Join our team
+                Meet Our Volunteers
                 </JoinButton></Link>
             </div>
       </OurTherapistStyles>

@@ -8,6 +8,7 @@ export const OurTherapistStyles = styled.div`
 
 export const DoctorImage = styled.img`
   padding: 0px;
+  margin: 0px;
   width: 80px;
   border-radius: 40px;
 `
