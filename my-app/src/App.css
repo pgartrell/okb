@@ -186,3 +186,8 @@
   margin-left: 15%;
   margin-right: 15%;
 }
+
+/* Mobile Success Stories */
+.carousel-item {
+  padding: 4em;
+}

@@ -5,6 +5,8 @@ import HowItWorksMobile from "../components/HowItWorksMobile";
 
 import MobileAccordion from '../components/MobileFAQAccordion';
 
+import MobileSuccessStories from "../components/MobileSuccessStories";
+
 
 const MobileClinicPage = () => {
   return (
@@ -13,7 +15,7 @@ const MobileClinicPage = () => {
       <MobileHeroSection />
 
       <HowItWorksMobile />
-
+      <MobileSuccessStories />
       <MobileAccordion />
 
 
