@@ -1,0 +1,14 @@
+/* .howItWorksContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 25%; 
+    height: 25%;
+}
+
+.howItWorksCard{
+    flex-wrap: nowrap;
+    display: flex;
+    flex: 1;
+} */

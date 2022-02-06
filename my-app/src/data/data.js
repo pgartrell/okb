@@ -1,3 +1,5 @@
+//import for HomeSummaries data
+
 import testDoctorImage from "../images/testDoctorImage.jpg"
 
 export const HomeSummariesData = [
