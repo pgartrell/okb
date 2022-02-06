@@ -3,6 +3,8 @@ import { HOWITWORKSDATA } from "../data/howitworksdata";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import HowItWorksImage from "../images/doctor.jpeg";
 import "../styles/HowItWorksMobile.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export default function HowItWorksMobile() {
   const [howItWorksData] = React.useState(HOWITWORKSDATA);
@@ -10,9 +12,9 @@ export default function HowItWorksMobile() {
   const RenderHowItWorks = howItWorksData.map((data) => {
     return (
       <Col>
-        <Card>
-          <Card.Img variant="top" src={HowItWorksImage} />
+        <Card border='white'>
           <Card.Body>
+          <FontAwesomeIcon icon={data.img} size='5x' className='fontawesome-icon'/>
             <Card.Title variant="primary">{data.step}</Card.Title>
             <Card.Text>{data.description}</Card.Text>
           </Card.Body>
