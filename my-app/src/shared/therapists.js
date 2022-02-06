@@ -35,4 +35,22 @@ export const THERAPISTS = [
         specialty: "Consecteturology",
         image: "../assets/images/doctor6.png"
     },
+    {
+        id: 6,
+        name: "Dr. Seven",
+        specialty: "Consecteturology",
+        image: "../assets/images/doctor6.png"
+    },
+    {
+        id: 7,
+        name: "Dr. Eight",
+        specialty: "Consecteturology",
+        image: "../assets/images/doctor6.png"
+    },
+    {
+        id: 8,
+        name: "Dr. Nine",
+        specialty: "Consecteturology",
+        image: "../assets/images/doctor6.png"
+    },
 ];

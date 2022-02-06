@@ -6,7 +6,9 @@ import { OurTherapistStyles, DoctorImage } from "../styles/OurTherapistStyles.st
 import DoctorImage1 from '../images/doctor1.jpg';
 import { Card } from '@mui/material';
 import { THERAPISTS } from '../shared/therapists';
-
+import { Carousel } from '@trendyol-js/react-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 const JoinButton = styled(Button)({
     boxShadow: 'none',
@@ -60,19 +62,25 @@ export default function OurTherapistSection() {
                 <h1>Our Therapists</h1>
                 <p className="m-1" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
-            <div className='row m-4'>
+            <div className='row m-4 d-none d-xl-block'>
+              <Carousel show={7} slide={3} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={false} />} leftArrow={<FontAwesomeIcon icon={false} />}>
                 {mobileOurTherapists}
-                {/* <Card className='mobile-clinic-doctor-avatar-card'>
-                    <DoctorImage src={DoctorImage1}></DoctorImage>
-                    <h5 style={{marginBottom:0}}>Dr. Name</h5>
-                    <p>specialty</p>
-                </Card>
-                <DoctorImage src={DoctorImage1}></DoctorImage>
-                <DoctorImage src={DoctorImage1}></DoctorImage>
-                <DoctorImage src={DoctorImage1}></DoctorImage>
-                <DoctorImage src={DoctorImage1}></DoctorImage>
-                <DoctorImage src={DoctorImage1}></DoctorImage>
-                <DoctorImage src={DoctorImage1}></DoctorImage> */}
+                </Carousel>
+            </div>
+            <div className='row m-4 d-none d-lg-block d-xl-none'>
+              <Carousel show={6} slide={3} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={false} />} leftArrow={<FontAwesomeIcon icon={false} />}>
+                {mobileOurTherapists}
+                </Carousel>
+            </div>
+            <div className='row m-4 d-none d-md-block d-lg-none'>
+              <Carousel show={5} slide={2} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={false} />} leftArrow={<FontAwesomeIcon icon={false} />}>
+                {mobileOurTherapists}
+                </Carousel>
+            </div>
+            <div className='row m-4 d-md-none'>
+              <Carousel show={4} slide={2} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={false} />} leftArrow={<FontAwesomeIcon icon={false} />}>
+                {mobileOurTherapists}
+                </Carousel>
             </div>
             <div className='row m-2'>
                 <Link to='/onlineTherapyPage' style={{textDecoration: 'none'}}><JoinButton variant="contained" disableRipple>
