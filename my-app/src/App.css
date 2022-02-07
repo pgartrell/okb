@@ -204,3 +204,12 @@
 .carousel-item {
   padding: 4em;
 }
+
+/* Therapy How It Works CSS */
+.therapy-works-container {
+  padding-bottom: .5em;
+}
+
+.therapy-card {
+  margin-bottom: 1em;
+}
