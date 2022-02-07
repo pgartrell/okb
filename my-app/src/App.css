@@ -181,6 +181,11 @@
   padding: 1em;
 }
 
+.fontawesome-icon {
+  margin: .2em;
+  color: #ff0000;
+}
+
 /* Accordions */
 .accordion-margins {
   margin-left: 15%;
