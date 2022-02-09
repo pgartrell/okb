@@ -181,13 +181,35 @@
   padding: 1em;
 }
 
+.fontawesome-icon {
+  margin: .2em;
+  color: #ff0000;
+}
+
 /* Accordions */
 .accordion-margins {
   margin-left: 15%;
   margin-right: 15%;
 }
 
+/* Mobile Clinic Our Therapists Section */
+.mobile-clinic-doctor-avatar-card {
+  width: 120px !important;
+  box-shadow: 5px 5px 5px white !important;
+  font-size: small;
+  font-weight: bold;
+  color: grey !important;
+}
 /* Mobile Success Stories */
 .carousel-item {
   padding: 4em;
+}
+
+/* Therapy How It Works CSS */
+.therapy-works-container {
+  padding-bottom: .5em;
+}
+
+.therapy-card {
+  margin-bottom: 1em;
 }
