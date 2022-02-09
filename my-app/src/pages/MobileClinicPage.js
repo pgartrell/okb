@@ -6,6 +6,7 @@ import HowItWorksMobile from "../components/HowItWorksMobile";
 import MobileAccordion from '../components/MobileFAQAccordion';
 
 import MobileSuccessStories from "../components/MobileSuccessStories";
+import MobileResourcesPreview from "../components/MobileResourcesPreview";
 
 
 const MobileClinicPage = () => {
@@ -13,9 +14,9 @@ const MobileClinicPage = () => {
     <div>
 
       <MobileHeroSection />
-
       <HowItWorksMobile />
       <MobileSuccessStories />
+      <MobileResourcesPreview />
       <MobileAccordion />
 
 
