@@ -8,10 +8,18 @@ export const FeatureImageContainer = styled.div`
   align-items: left;
 `;
 export const FeatureImage = styled.img`
-  width: 500px;
+  
+  &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
 `;
 export const FeatureContent = styled.div`
   padding-top: 5px;
+  &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
 `;
 export const FeatureContenth3 = styled.h3`
   text-align: left;
@@ -26,6 +34,10 @@ export const Resourcediv = styled.div`
   color: black;
   padding-left: 20px;
   margin-top: 10px;
+  &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
 
   
 `;

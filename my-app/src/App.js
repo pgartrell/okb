@@ -12,6 +12,7 @@ import OnlineTherapyPage from "./pages/OnlineTherapyPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import WorkWithUsPage from "./pages/WorkWithUsPage";
 import DoctorsPage from "./pages/DoctorsPage";
+import AppointmentPage from "./pages/AppointmentPage";
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/resourcesPage" element={<ResourcesPage />} />
             <Route path="/workWithUsPage" element={<WorkWithUsPage />} />
             <Route path="/doctorsPage" element={<DoctorsPage />} />
+            <Route path="/appointmentPage" element={<AppointmentPage />} />
           </Route>
         </Routes>
       </Router>
