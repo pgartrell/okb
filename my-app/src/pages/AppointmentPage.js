@@ -1,11 +1,12 @@
 import React from 'react'
+import MobileAppointmentRequest from '../components/MobileAppointmentRequest'
 
 const AppointmentPage = () => {
   return (
     <div>
-        <h1>Appointment Page</h1>        
+        <MobileAppointmentRequest />  
     </div>
   )
 }
 
-export default AppointmentPage
+export default AppointmentPage;
