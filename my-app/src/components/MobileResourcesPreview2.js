@@ -1,17 +1,9 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Card, Row, Col, CardGroup } from "react-bootstrap";
 import testMobileResourceImage from "../images/testMobileResourceImage.jpg";
-import {
-  FeatureContent,
-  FeatureImage,
-  FeatureImageContainer,
-  FeatureContentp,
-  FeatureContenth3,
-  Resourcediv,
-  Resourceh3,
-  Resourcep,
-} from "../styles/MobileResourcesPreview.styles.js";
+
+import "../styles/MobileResourcesPreview.css";
 
 const MobileResourcesPreview = () => {
   const mobileResourcesData = [
@@ -44,56 +36,51 @@ const MobileResourcesPreview = () => {
   // }
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Link to={"/resources/"} style={{ textDecoration: "none" }}>
-            {" "}
-            {/*  + featureId */}
-            <FeatureImageContainer>
-              <FeatureImage
-                style={{ paddingBottom: "0px", marginBottom: "0px" }}
-                src={testMobileResourceImage}
-              />
-            </FeatureImageContainer>
-            <FeatureContent
-              style={{
-                padding: "0.5rem 1rem",
-                boxShadow: "0 2px 4px 4px #EEE",
-              }}
-            >
-              <FeatureContenth3>Test Header</FeatureContenth3>
-              <FeatureContentp>
-                Test Content Est tempor irure commodo amet. Irure cillum minim
-                aliquip quis ut consequat fugiat. Est commodo eu elit consequat
-                elit in ullamco minim reprehenderit duis nostrud cupidatat.
-                Nulla tempor consectetur cupidatat labore ipsum exercitation
-                proident fugiat tempor cillum quis est sint exercitation.
-              </FeatureContentp>
-            </FeatureContent>
-          </Link>
-        </Col>
-
-        <Col>
+    <Row className="resourceRow" sm={12} md={12}>
+      <h1 className="resourceh1" style={{ paddingLeft: "100px" }}>
+        Resources
+      </h1>
+      <Col className="featureCol" sm={12} md={12} lg={6} xl={6}>
+        <Link to={"/resources/"} style={{ textDecoration: "none" }}>
+          {" "}
+          {/*  + featureId */}
+          <Card className="featureImageContainer">
+            <Card.Img
+              className="featureImage"
+              variant="top"
+              src={testMobileResourceImage}
+            />
+            <Card.Body className="featureBody">
+              <Card.Title className="featureTitle">Card Title</Card.Title>
+              <Card.Text className="featureText">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Link>
+      </Col>
+      <Col className="resourceCol">
+        <Card className="resourceContainer">
           {mobileResourcesData.map((resource) => (
             <Link
               to={"/resources/" + resource.id}
               key={resource.id}
               style={{ textDecoration: "none" }}
             >
-              <Resourcediv
-                style={{
-                  boxShadow: "0 2px 4px 4px #EEE",
-                }}
-              >
-                <Resourceh3>{resource.title}</Resourceh3>
-                <Resourcep>{resource.content}</Resourcep>
-              </Resourcediv>{" "}
+              <Card.Body className="resourceBody">
+                <Card.Title className="resourceTitle">
+                  {resource.title}
+                </Card.Title>
+                <Card.Text className="resourceText">
+                  {resource.content}
+                </Card.Text>
+              </Card.Body>{" "}
             </Link>
           ))}
-        </Col>
-      </Row>
-    </Container>
+        </Card>
+      </Col>
+    </Row>
   );
 };
 
