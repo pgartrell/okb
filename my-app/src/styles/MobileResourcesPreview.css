@@ -1,0 +1,97 @@
+@media (max-width: 1199px) {
+  .resourceRow {
+
+  }
+  .featureImageContainer {
+    margin: auto;
+    width: 50%;
+    
+  }
+  .resourceContainer { 
+    margin: auto;
+    width: 50%;
+  }
+
+}
+
+.featureImageContainer {
+  width: 30vw;
+  min-width: 440px;
+  box-shadow: 0 2px 4px 4px #eee;
+  justify-content: center;
+  position: relative;
+  left: 100px;
+  margin-top: 50px;
+}
+
+.featureBody:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.featureImage {
+  width: 100%;
+}
+
+.featureTitle {
+  text-align: left;
+  color: black;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+
+.featureText {
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 15px;
+  margin-left: 20px;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+.resourceh1 {
+  text-align: left;
+  padding-left: 200px;
+  padding-top: 60px;
+}
+
+.resourceContainer {
+  width: 45vw;
+  margin-top: 100px;
+}
+
+.resourceRow {
+  padding-bottom: 100px;
+  border-bottom: 1px solid black;
+}
+
+.resourceBody {
+  box-shadow: 0 2px 4px 4px #eee;
+}
+
+.resourceBody:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.resourceTitle {
+  text-align: left;
+  color: black;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.resourceText {
+  text-align: left;
+  color: black;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
