@@ -11,11 +11,14 @@ import MobileClinicPage from "./pages/MobileClinicPage";
 import OnlineTherapyPage from "./pages/OnlineTherapyPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import WorkWithUsPage from "./pages/WorkWithUsPage";
+import DoctorsPage from "./pages/DoctorsPage";
+import AppointmentPage from "./pages/AppointmentPage";
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -31,7 +34,9 @@ function App() {
             <Route path="/mobileClinicPage" element={<MobileClinicPage />} />
             <Route path="/onlineTherapyPage" element={<OnlineTherapyPage />} />
             <Route path="/resourcesPage" element={<ResourcesPage />} />
-            <Route path="/workWithUsPage" element={<WorkWithUsPage />} />       
+            <Route path="/workWithUsPage" element={<WorkWithUsPage />} />
+            <Route path="/doctorsPage" element={<DoctorsPage />} />
+            <Route path="/appointmentPage" element={<AppointmentPage />} />
           </Route>
         </Routes>
       </Router>
