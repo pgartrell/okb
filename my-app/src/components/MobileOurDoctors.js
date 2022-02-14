@@ -1,27 +1,24 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { OurTherapistStyles, DoctorImage } from "../styles/OurTherapistStyles.styles.js";
-import DoctorImage1 from '../images/doctor1.jpg';
 import { Card } from '@mui/material';
-import { THERAPISTS } from '../shared/therapists';
+import { DOCTORS } from '../shared/doctors';
 import { Carousel } from '@trendyol-js/react-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
-  const mobileOurTherapists = THERAPISTS.map(therapist => {
+  const mobileOurTherapists = DOCTORS.map(therapist => {
     return (<Card className='mobile-clinic-doctor-avatar-card'>
     <DoctorImage src={therapist.image} alt={therapist.alt}></DoctorImage>
     <h5 style={{marginBottom:0}}>{therapist.name}</h5>
     <p>{therapist.specialty}</p>
 </Card>)})
 
-export default function OurTherapistCarouselSection() {
+export default function OurDoctorCarouselSection() {
     return (
         <OurTherapistStyles className='container'>
             <div className='row'>
-                <h1>Our Therapists</h1>
+                <h1>Our Doctors</h1>
                 <p className="m-1" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
             <div className='row m-4 d-none d-xl-block'>
@@ -45,8 +42,8 @@ export default function OurTherapistCarouselSection() {
                 </Carousel>
             </div>
             <div className='row m-2'>
-                <Link to='/therapistsPage' style={{textDecoration: 'none'}}><button className="page-intro-button-white">
-                Meet Our Therapists
+                <Link to='/DoctorsPage' style={{textDecoration: 'none'}}><button className="page-intro-button-white">
+                Meet Our Doctors
                 </button></Link>
             </div>
       </OurTherapistStyles>
