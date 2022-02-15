@@ -1,9 +1,10 @@
 import React from "react";
+import ResourceList from "../components/ResourceList";
 
 const ResourcesPage = () => {
   return (
     <div>
-      <h1>Resources Page</h1>
+      <ResourceList />
     </div>
   );
 };

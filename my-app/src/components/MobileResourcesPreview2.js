@@ -27,13 +27,15 @@ const MobileResourcesPreview = () => {
     },
   ];
 
-  // let featureId;
-  // for (let i= 0; i<mobileResourcesData.length; i++) {
-  //   if(mobileResourcesData.id === 2){
-  //     featureId === 2
-  //   }
-  //   null
-  // }
+  const featureResourceData = [
+    {
+      id: 1,
+      title: "Feature Resource",
+      content: "Est tempor irure commodo amet. Irure cillum minim aliquip quis ut consequat fugiat. Est commodo "
+    }
+  ]
+
+const featureResourceID = featureResourceData.find(x => x.id === '1').id
 
   return (
     <Row className="resourceRow" sm={12} md={12}>
@@ -41,7 +43,7 @@ const MobileResourcesPreview = () => {
         Resources
       </h1>
       <Col className="featureCol" sm={12} md={12} lg={6} xl={6}>
-        <Link to={"/resources/"} style={{ textDecoration: "none" }}>
+        <Link to={"/resources/" + {featureResourceID}} style={{ textDecoration: "none" }}>
           {" "}
           {/*  + featureId */}
           <Card className="featureImageContainer">
