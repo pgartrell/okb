@@ -4,10 +4,9 @@ import MobileHeroSection from "../components/MobileHeroSection";
 import HowItWorksMobile from "../components/HowItWorksMobile";
 
 import MobileAccordion from '../components/MobileFAQAccordion';
-import OurTherapistSection from "../components/MobileOurTherapists";
-
 import MobileSuccessStories from "../components/MobileSuccessStories";
-import MobileResourcesPreview from "../components/MobileResourcesPreview";
+import MobileResourcesPreview2 from "../components/MobileResourcesPreview2";
+import OurDoctorCarouselSection from "../components/MobileOurDoctors";
 
 
 const MobileClinicPage = () => {
@@ -17,10 +16,10 @@ const MobileClinicPage = () => {
       <MobileHeroSection />
       <HowItWorksMobile />
 
-      <OurTherapistSection />
+      <OurDoctorCarouselSection />
 
       <MobileSuccessStories />
-      <MobileResourcesPreview />
+      <MobileResourcesPreview2 />
       <MobileAccordion />
 
 
