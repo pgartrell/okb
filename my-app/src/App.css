@@ -217,15 +217,15 @@
 /* Mobile Appointment Request Form */
 .appointment-image {
   background-image: url(./images/appointment-img.jpeg);
-  height: 75rem;
-  max-width: 200rem;
-  padding: 5em;
+  height: 1250px;
+  width: 100%;
+  padding-top: 5em;
 }
 
 .appointment-container {
   background-color: white;
   opacity: .95;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .btn-clear {
@@ -248,3 +248,16 @@
 .appointment-form {
   padding: .5em 1.5em;
 }
+
+.hr-appointment {
+  border-top: 2px solid #000;
+}
+
+/* .appointment-title {
+  color: white;
+} */
+
+.appointment-input {
+  margin-bottom: 1em;
+}
+

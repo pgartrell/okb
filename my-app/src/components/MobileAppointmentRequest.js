@@ -28,15 +28,30 @@ export default function MobileAppointmentRequest() {
         alert(`Form State: ${JSON.stringify(formData)}`);
     }
 
+    function handleClear() {
+        setFormData({
+            firstName: '',
+            surName: '',
+            gender: '',
+            phone: '',
+            birth: '',
+            clinicSite: '',
+            firstTime: '',
+            reason: ''
+        });
+        console.log(formData);
+    };  
+
     return (
         <div className="appointment-image">
-            <h1>Client's Details</h1>
+            <h1 className="appointment-title">Client's Details</h1>
             <Container className="appointment-container">
                 <Row>
                     <Col xs={12} lg={6}>
                         <Form onSubmit={handleSubmit} className="appointment-form">
                                 <h3>Personal Details</h3>
-                                <FormGroup controlId="firstName" className="">
+                                <hr className="hr-appointment" />
+                                <FormGroup controlId="firstName" className="appointment-input">
                                     <FormLabel>First Name</FormLabel>
                                     <FormControl
                                         model='.firstName'
@@ -47,7 +62,7 @@ export default function MobileAppointmentRequest() {
                                         value={formData.firstName}
                                     />
                                 </FormGroup>
-                                <FormGroup controlId="surName" className="">
+                                <FormGroup controlId="surName" className="appointment-input">
                                     <FormLabel>Surname</FormLabel>
                                     <FormControl
                                         model='.surName'
@@ -58,7 +73,7 @@ export default function MobileAppointmentRequest() {
                                         value={formData.surName}
                                     />
                                 </FormGroup>
-                                <FormGroup controlId="gender" className="">
+                                <FormGroup controlId="gender" className="appointment-input">
                                     <FormLabel>Gender</FormLabel>
                                     <FormSelect
                                         model='.gender'
@@ -72,7 +87,7 @@ export default function MobileAppointmentRequest() {
                                             <option value="male">Male</option>
                                         </FormSelect>
                                 </FormGroup>
-                                <FormGroup controlId="phone" className="">
+                                <FormGroup controlId="phone" className="appointment-input">
                                     <FormLabel>Phone Number</FormLabel>
                                     <FormControl
                                         model='.phone'
@@ -83,7 +98,7 @@ export default function MobileAppointmentRequest() {
                                         value={formData.phone}
                                     />
                                 </FormGroup>
-                                <FormGroup controlId="birth" className="">
+                                <FormGroup controlId="birth" className="appointment-input">
                                     <FormLabel>Date of Birth</FormLabel>
                                     <FormControl
                                         model='.birth'
@@ -100,7 +115,8 @@ export default function MobileAppointmentRequest() {
                     <Col xs={12} lg={6}>
                         <Form onSubmit={handleSubmit} className="appointment-form">
                                 <h3>Additional Info</h3>
-                                <FormGroup controlId="clinicSite" className="">
+                                <hr className="hr-appointment" />
+                                <FormGroup controlId="clinicSite" className="appointment-input">
                                     <FormLabel>Mobile Clinic Site</FormLabel>
                                     <FormSelect
                                         model='.clinicSite'
@@ -115,7 +131,7 @@ export default function MobileAppointmentRequest() {
                                             <option value="clinic3">Clinic 3</option>
                                         </FormSelect>
                                 </FormGroup>
-                                <FormGroup check>
+                                <FormGroup className="appointment-input" check>
                                     <p>First time visiting our mobile clinic?</p>
                                     <FormCheck
                                         inline
@@ -140,7 +156,7 @@ export default function MobileAppointmentRequest() {
                                         checked={formData.firstTime === 'no'}
                                     />
                                 </FormGroup>
-                                <FormGroup controlId="reason" className="">
+                                <FormGroup controlId="reason" className="appointment-input">
                                     <FormLabel>Reason for Appointment</FormLabel>
                                     <FormControl
                                         model='.reason'
@@ -152,7 +168,7 @@ export default function MobileAppointmentRequest() {
                                         value={formData.reason}
                                     />
                                 </FormGroup>
-                                <button className="btn-clear" type='submit'>Clear</button>
+                                <button onPress={handleClear} className="btn-clear" type='reset'>Clear</button>
                                 <button className="btn-signup" type='submit'>Save</button>
                         </Form>
                     </Col>
