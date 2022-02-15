@@ -221,6 +221,25 @@
   margin-bottom: 1em;
 }
 
+
+/* Mobile Appointment Request Form */
+.appointment-image {
+  background-image: url(./images/appointment-img.jpeg);
+  height: 1250px;
+  width: 100%;
+  padding-top: 5em;
+}
+
+.appointment-container {
+  background-color: white;
+  opacity: .95;
+  padding: 2rem;
+}
+
+.btn-clear {
+  background-color: white;
+  color: black;
+
 /* Intro to Doc and Ther Pages CSS */
 .page-intro-title {
   text-align: left;
@@ -239,6 +258,7 @@
   background-color: white;
   border: solid #ff0000;
   color: #ff0000;
+
   padding: 10px 50px;
   text-align: center;
   text-decoration: none;
@@ -246,6 +266,31 @@
   margin: 1em;
   cursor: pointer;
   border-radius: 20px;
+
+  border: .5px solid #282c34;
+}
+
+.btn-clear:hover {
+  opacity: .5;
+}
+
+.appointment-form {
+  padding: .5em 1.5em;
+}
+
+.hr-appointment {
+  border-top: 2px solid #000;
+}
+
+/* .appointment-title {
+  color: white;
+} */
+
+.appointment-input {
+  margin-bottom: 1em;
+}
+
+
 }
 
 .page-intro-button-white:hover {
@@ -268,3 +313,4 @@
 .page-intro-button-red:hover {
   background-color: #d60f0f;
 }
+
