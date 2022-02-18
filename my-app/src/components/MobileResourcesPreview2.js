@@ -27,62 +27,59 @@ const MobileResourcesPreview = () => {
     },
   ];
 
-  const featureResourceData = [
-    {
-      id: 1,
-      title: "Feature Resource",
-      content: "Est tempor irure commodo amet. Irure cillum minim aliquip quis ut consequat fugiat. Est commodo "
-    }
-  ]
-
-const featureResourceID = featureResourceData.find(x => x.id === '1').id
+  const featureResourceData = {
+    id: 1,
+    title: "Feature Resource",
+    content:
+      "Est tempor irure commodo amet. Irure cillum minim aliquip quis ut consequat fugiat. Est commodo ",
+  };
 
   return (
-    <Row className="resourceRow" sm={12} md={12}>
-      <h1 className="resourceh1" style={{ paddingLeft: "100px" }}>
-        Resources
-      </h1>
-      <Col className="featureCol" sm={12} md={12} lg={6} xl={6}>
-        <Link to={"/resources/" + {featureResourceID}} style={{ textDecoration: "none" }}>
-          {" "}
-          {/*  + featureId */}
-          <Card className="featureImageContainer">
-            <Card.Img
-              className="featureImage"
-              variant="top"
-              src={testMobileResourceImage}
-            />
-            <Card.Body className="featureBody">
-              <Card.Title className="featureTitle">Card Title</Card.Title>
-              <Card.Text className="featureText">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
+    <div className=" resource-container">
+      <div className="row">
+      <h1 className="resourceh1" >
+            Resources
+          </h1>
+        <div className="col-md-6 p-3">
+
+          <Link
+            to={"/resources/" + featureResourceData.id}
+            style={{ textDecoration: "none" }}
+          >
+            <div className="feature-card">
+              <img className="feature-card-image" src={testMobileResourceImage} />
+              <div className="feature-card-body" >
+                <h5 className="feature-title">Card title</h5>
+                <p className="feature-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className="col-md-6 ">
+          <Card className="resourceListContainer border-0">
+            {mobileResourcesData.map((resource) => (
+              <Link
+                to={"/resources/" + resource.id}
+                key={resource.id}
+                style={{ textDecoration: "none" }}
+              >
+                <Card.Body className="resourceBody">
+                  <Card.Title className="resourceTitle">
+                    {resource.title}
+                  </Card.Title>
+                  <Card.Text className="resourceText">
+                    {resource.content}
+                  </Card.Text>
+                </Card.Body>{" "}
+              </Link>
+            ))}
           </Card>
-        </Link>
-      </Col>
-      <Col className="resourceCol">
-        <Card className="resourceContainer">
-          {mobileResourcesData.map((resource) => (
-            <Link
-              to={"/resources/" + resource.id}
-              key={resource.id}
-              style={{ textDecoration: "none" }}
-            >
-              <Card.Body className="resourceBody">
-                <Card.Title className="resourceTitle">
-                  {resource.title}
-                </Card.Title>
-                <Card.Text className="resourceText">
-                  {resource.content}
-                </Card.Text>
-              </Card.Body>{" "}
-            </Link>
-          ))}
-        </Card>
-      </Col>
-    </Row>
+        </div>
+      </div>
+    </div>
   );
 };
 
