@@ -1,5 +1,5 @@
 import React from "react";
-import testResourceImage from "../images/mountains.jpg";
+// import testResourceImage from "../images/mountains.jpg";
 import {
   ResourceListContainer,
   ResourceListImg,
@@ -17,9 +17,9 @@ const ResourceList = () => {
         key={resource.id}
         style={{ textDecoration: "none" }}
       > */}
-        <ResourceListImgContainer>
-          <ResourceListImg src={testResourceImage} />
-        </ResourceListImgContainer>
+        {/* <ResourceListImgContainer> */}
+          <ResourceListImg />
+        {/* </ResourceListImgContainer> */}
         <ResourceListContentContainer>
           <ResourceListh1>Resource 1</ResourceListh1>
           <ResourceListp>
