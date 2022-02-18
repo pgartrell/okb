@@ -1,46 +1,94 @@
-@media (max-width: 1199px) {
-  .resourceRow {
+/* 770px and below  */
+@media (max-width: 770px) {
+ .resourceListContainer {
+   margin-right: 10px;
+ }
 
+ } 
+
+ /* 770px and above */
+@media (min-width: 770px) {
+  .resourceListContainer {
+    padding-right: 50px;
+    margin-top: 20px;
   }
-  .featureImageContainer {
-    margin: auto;
-    width: 50%;
+
+  .feature-card{
+    margin-left: 50px;
     
   }
-  .resourceContainer { 
-    margin: auto;
-    width: 50%;
+
+  .resourceh1 {
+    padding-left: 65px!important;
   }
+ } 
 
+/* 1400px and above */
+@media (min-width: 1400px) {
+  .feature-card {
+    width: 80%;
+    margin-left: 100px;
+  }
+  .resourceh1 {
+    padding-left: 110px!important;
+  }
 }
 
-.featureImageContainer {
-  width: 30vw;
-  min-width: 440px;
-  box-shadow: 0 2px 4px 4px #eee;
-  justify-content: center;
-  position: relative;
-  left: 100px;
-  margin-top: 50px;
+/* 1650px and above */
+@media (min-width: 1650px) {
+  .feature-card {
+    width: 70%; 
+    margin-left: 200px;   
+  }
+  .resourceh1 {
+    padding-left: 210px!important;
+  }
 }
 
-.featureBody:hover {
+/* 1860px and above */
+@media (min-width: 1860px) {
+  .feature-card {
+    width: 60%;  
+    margin-left: 250px;  
+  }
+  .resourceListContainer {
+    margin-right: 150px;
+  }
+  .resourceh1 {
+    padding-left: 260px!important;
+  }
+}
+
+.resource-container {
+  padding: 0rem 5px;
+}
+
+.feature-card:hover {
   cursor: pointer;
   opacity: 0.8;
 }
 
-.featureImage {
-  width: 100%;
+.feature-card-image {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  width: 500px; 
+  height: auto; 
+  object-fit: contain;
 }
 
-.featureTitle {
+.feature-card {
+  box-shadow:0 2px 4px 4px #eee;
+
+}
+
+.feature-title {
   text-align: left;
   color: black;
   padding-top: 30px;
   margin-left: 20px;
 }
 
-.featureText {
+.feature-text {
   text-align: left;
   padding-top: 20px;
   padding-right: 15px;
@@ -49,27 +97,22 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 400px;
 }
 
 .resourceh1 {
   text-align: left;
-  padding-left: 200px;
+  
   padding-top: 60px;
 }
 
-.resourceContainer {
-  width: 45vw;
-  margin-top: 100px;
-}
-
-.resourceRow {
-  padding-bottom: 100px;
-  border-bottom: 1px solid black;
+.resourceListContainer {
+  margin-left: 20px;
+  padding-top: 2rem;
 }
 
 .resourceBody {
   box-shadow: 0 2px 4px 4px #eee;
+  margin-bottom: 20px !important;
 }
 
 .resourceBody:hover {
@@ -81,7 +124,6 @@
   text-align: left;
   color: black;
   padding-top: 10px;
-  margin-left: 20px;
 }
 
 .resourceText {
@@ -90,7 +132,6 @@
   padding-top: 10px;
   padding-right: 15px;
   padding-bottom: 15px;
-  margin-left: 20px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
