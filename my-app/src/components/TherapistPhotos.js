@@ -1,30 +1,48 @@
 import * as React from 'react';
 import { THERAPISTS } from '../shared/therapists';
 import { CaptionStyle, DoctorImage, DoctorImageContainer, SubCaptionStyle } from '../styles/OurDoctorStyles.styles';
+import { Row, Col } from 'react-bootstrap';
 
-const therapistPagePics = THERAPISTS.map(doctor => {
+const therapistPagePicsTop = THERAPISTS.map((doctor, index) => {
+    if (index < 12) {
     return (
+        <Col xs={4} sm={3} lg={2}>
         <DoctorImageContainer className="col-2 m-3">
         <DoctorImage src={doctor.image} alt={doctor.alt}></DoctorImage>
         <CaptionStyle>
             {doctor.name}
             <SubCaptionStyle>{doctor.specialty}</SubCaptionStyle>
-        </CaptionStyle></DoctorImageContainer>
+        </CaptionStyle></DoctorImageContainer></Col>
 
 
-    )})
+    )}})
 
-export default function TherapistPhotos() {
+    const therapistPagePicsBottom = THERAPISTS.map((doctor, index) => {
+        if (index > 11) {
+        return (
+            <Col xs={4} sm={3} lg={2}>
+            <DoctorImageContainer className="col-2 m-3">
+            <DoctorImage src={doctor.image} alt={doctor.alt}></DoctorImage>
+            <CaptionStyle>
+                {doctor.name}
+                <SubCaptionStyle>{doctor.specialty}</SubCaptionStyle>
+            </CaptionStyle></DoctorImageContainer></Col>
+    
+    
+        )}})
+
+export function TherapistPhotosTop() {
     return (
-        <div className="container">
-        <div className="row">
-            {therapistPagePics}
-        {/* <DoctorImageContainer className="col-2 m-3">
-        <DoctorImage src={DOCTORS[1].image}></DoctorImage><CaptionStyle>Dr. One</CaptionStyle></DoctorImageContainer>
-        <DoctorImageContainer className="col-2 m-3">
-        <DoctorImage src={DOCTORS[1].image}></DoctorImage><CaptionStyle>Dr. One</CaptionStyle></DoctorImageContainer> */}
-        </div>
+        <Row>
+            {therapistPagePicsTop}
+        </Row>
+    )
+}
 
-        </div>
+export function TherapistPhotosBottom() {
+    return (
+        <Row>
+            {therapistPagePicsBottom}
+        </Row>
     )
 }
