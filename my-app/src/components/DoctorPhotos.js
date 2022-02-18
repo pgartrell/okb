@@ -1,30 +1,47 @@
 import * as React from 'react';
 import { DOCTORS } from '../shared/doctors';
 import { CaptionStyle, DoctorImage, DoctorImageContainer, SubCaptionStyle } from '../styles/OurDoctorStyles.styles';
+import { Row, Col } from 'react-bootstrap';
 
-const doctorPagePics = DOCTORS.map(doctor => {
+const doctorPagePicsTop = DOCTORS.map((doctor, index) => {
+    if (index < 12) {
     return (
-        <DoctorImageContainer className="col-2 m-3">
+        <Col xs={4} sm={3} lg={2}>
+            <DoctorImageContainer className="m-3">
         <DoctorImage src={doctor.image} alt={doctor.alt}></DoctorImage>
         <CaptionStyle>
             {doctor.name}
             <SubCaptionStyle>{doctor.specialty}</SubCaptionStyle>
-        </CaptionStyle></DoctorImageContainer>
+        </CaptionStyle></DoctorImageContainer></Col>
 
 
-    )})
+    )}})
+    const doctorPagePicsBottom = DOCTORS.map((doctor, index) => {
+        if (index > 11) {
+        return (
+            <Col xs={4} sm={3} lg={2}>
+                <DoctorImageContainer className="m-3">
+            <DoctorImage src={doctor.image} alt={doctor.alt}></DoctorImage>
+            <CaptionStyle>
+                {doctor.name}
+                <SubCaptionStyle>{doctor.specialty}</SubCaptionStyle>
+            </CaptionStyle></DoctorImageContainer></Col>
+    
+    
+        )}})
 
-export default function DoctorPhotos() {
+export function DoctorPhotosTop() {
     return (
-        <div className="container">
-        <div className="row">
-            {doctorPagePics}
-        {/* <DoctorImageContainer className="col-2 m-3">
-        <DoctorImage src={DOCTORS[1].image}></DoctorImage><CaptionStyle>Dr. One</CaptionStyle></DoctorImageContainer>
-        <DoctorImageContainer className="col-2 m-3">
-        <DoctorImage src={DOCTORS[1].image}></DoctorImage><CaptionStyle>Dr. One</CaptionStyle></DoctorImageContainer> */}
-        </div>
+        <Row>
+            {doctorPagePicsTop}
+        </Row>
+    )
+}
 
-        </div>
+export function DoctorPhotosBottom() {
+    return (
+        <Row>
+            {doctorPagePicsBottom}
+        </Row>
     )
 }
