@@ -10,10 +10,10 @@ export default function DoctorPageIntro() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor dui, cursus sit amet consectetur vitae, condimentum a libero. Etiam vestibulum orci nec eleifend pretium. In ornare justo a arcu pellentesque, non tempor enim pretium. Integer blandit dolor turpis. Nam tristique vestibulum dolor at interdum. Ut scelerisque mattis lorem tincidunt maximus.
             </p>
             <div  className="d-flex text-left">
-            <button className='page-intro-button-white'>
+            <button className='btn-okb-secondary'>
                 Back
             </button>
-            <button className='page-intro-button-red'>
+            <button className='btn-okb-primary'>
                 Get Started
             </button>
             </div>

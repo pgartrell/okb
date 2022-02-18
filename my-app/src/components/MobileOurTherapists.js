@@ -45,7 +45,7 @@ export default function OurTherapistCarouselSection() {
                 </Carousel>
             </div>
             <div className='row m-2'>
-                <Link to='/therapistsPage' style={{textDecoration: 'none'}}><button className="page-intro-button-white">
+                <Link to='/therapistsPage' style={{textDecoration: 'none'}}><button className="btn-okb-secondary">
                 Meet Our Therapists
                 </button></Link>
             </div>
