@@ -36,4 +36,9 @@ export const CaptionStyle = styled.div`
   left: 14px;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  font-size: 14px;
+`
+
+export const SubCaptionStyle = styled.p`
+  font-size: 10px;
 `
