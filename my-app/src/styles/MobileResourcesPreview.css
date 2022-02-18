@@ -136,3 +136,27 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.resource-button {
+background-color: white; 
+border: 2px solid black;
+color: black;
+padding: 15px;
+text-align: center;
+text-decoration: none;
+font-size: 20px;
+font-weight: bold;
+margin-top: 10px;
+margin-left: 20px;
+cursor: pointer;
+border-radius: 20px;
+
+float: right;
+
+}
+
+.resource-button:hover {
+  cursor: pointer;
+  background-color: #0d6efd;
+  color: black;
+}
