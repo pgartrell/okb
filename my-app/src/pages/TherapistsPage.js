@@ -1,13 +1,27 @@
 import React from "react";
-import TherapistPhotos from "../components/TherapistPhotos";
+import { Container, Row } from 'react-bootstrap';
+import { TherapistPhotosTop, TherapistPhotosBottom } from "../components/TherapistPhotos";
+import TherapistPageBottomButtons from "../components/TherapistPageBottomButtons";
 import TherapistsPageIntro from "../components/TherapistsPageIntro";
+import MobileSuccessStories from "../components/MobileSuccessStories";
 
 const TherapistsPage = () => {
   return (
-    <div>
+    <Container>
+      <Row>
       <TherapistsPageIntro />
-      <TherapistPhotos />
-    </div>
+      </Row>
+      <TherapistPhotosTop />
+
+      <MobileSuccessStories />
+
+      <TherapistPhotosBottom />
+
+      <MobileSuccessStories />
+
+      <TherapistPageBottomButtons />
+
+    </Container>
   );
 };
 

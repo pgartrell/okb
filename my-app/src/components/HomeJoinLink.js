@@ -7,7 +7,7 @@ export default function HomeJoinLink() {
         <JoinLinkSection>
             <h3 style={{color: 'white'}}>Our Team</h3>
             <p className="m-5" style={{color: 'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <Link to='/workWithUsPage' style={{textDecoration: 'none'}}><button className="page-intro-button-white">
+            <Link to='/workWithUsPage' style={{textDecoration: 'none'}}><button className="btn-okb-secondary">
         Join our team
       </button></Link>
       </JoinLinkSection>

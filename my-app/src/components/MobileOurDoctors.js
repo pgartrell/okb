@@ -42,7 +42,7 @@ export default function OurDoctorCarouselSection() {
                 </Carousel>
             </div>
             <div className='row m-2'>
-                <Link to='/DoctorsPage' style={{textDecoration: 'none'}}><button className="page-intro-button-white">
+                <Link to='/DoctorsPage' style={{textDecoration: 'none'}}><button className="btn-okb-secondary">
                 Meet Our Doctors
                 </button></Link>
             </div>
