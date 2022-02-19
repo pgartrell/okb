@@ -28,8 +28,8 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navBarLinks">
-                <NavLink className="items-navigation" to="#">About</NavLink>
-                <NavLink className="items-navigation" to="#">Work With Us</NavLink>
+                <NavLink to="/aboutPage" className="items-navigation">About</NavLink>
+                <NavLink to="workWithUsPage" className="items-navigation">Work With Us</NavLink>
             </Nav>
                 <button className="btn-navbar">Donate</button>
         </Navbar.Collapse>
