@@ -168,8 +168,8 @@ export default function MobileAppointmentRequest() {
                                         value={formData.reason}
                                     />
                                 </FormGroup>
-                                <button onPress={handleClear} className="btn-clear" type='reset'>Clear</button>
-                                <button className="btn-signup" type='submit'>Save</button>
+                                <button onPress={handleClear} className="btn-okb-secondary" type='reset'>Clear</button>
+                                <button className="btn-okb-primary" type='submit'>Save</button>
                         </Form>
                     </Col>
                 </Row>

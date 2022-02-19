@@ -152,9 +152,9 @@
   background-color: #e70a0a;
 }
 
-.custom-navbar {
+/* .custom-navbar {
   margin-bottom: 2em;
-}
+} */
 
 .navbar-logo {
   width: 70px;
@@ -291,7 +291,6 @@
   margin-left: 15px;
 }
 
-<<<<<<< HEAD
 .page-intro-button-white {
   background-color: white;
   border: solid #ff0000;
@@ -306,8 +305,6 @@
   border: .5px solid #282c34;
 }
 
-=======
->>>>>>> 5d98689d9326b961fee588dc1d11209c2f465068
 .btn-clear:hover {
   opacity: 0.5;
 }
@@ -327,7 +324,6 @@
 .appointment-input {
   margin-bottom: 1em;
 }
-<<<<<<< HEAD
 
 
 .page-intro-button-white:hover {
@@ -351,5 +347,3 @@
   background-color: #d60f0f;
 }
 
-=======
->>>>>>> 5d98689d9326b961fee588dc1d11209c2f465068
