@@ -239,7 +239,7 @@
 .btn-clear {
   background-color: white;
   color: black;
-
+}
 /* Intro to Doc and Ther Pages CSS */
 .page-intro-title {
   text-align: left;
@@ -258,7 +258,6 @@
   background-color: white;
   border: solid #ff0000;
   color: #ff0000;
-
   padding: 10px 50px;
   text-align: center;
   text-decoration: none;
@@ -266,7 +265,6 @@
   margin: 1em;
   cursor: pointer;
   border-radius: 20px;
-
   border: .5px solid #282c34;
 }
 
@@ -290,8 +288,6 @@
   margin-bottom: 1em;
 }
 
-
-}
 
 .page-intro-button-white:hover {
   background-color: #f4ebeb;
