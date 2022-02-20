@@ -8,6 +8,7 @@ import {
   ResourceListp,
   ResourceListh1,
 } from "../styles/ResourceList.styles";
+import testResourceImage from "../images/mountains.jpg"
 
 const ResourceList = () => {
   return (
@@ -17,10 +18,15 @@ const ResourceList = () => {
         key={resource.id}
         style={{ textDecoration: "none" }}
       > */}
+      <div className="row">
+        <div className= "col-6">
         {/* <ResourceListImgContainer> */}
-          <ResourceListImg />
+          <ResourceListImg/>
+          {/* <ResourceListImg /> */}
         {/* </ResourceListImgContainer> */}
-        <ResourceListContentContainer>
+        </div>
+        
+        <ResourceListContentContainer className="col-md-6">
           <ResourceListh1>Resource 1</ResourceListh1>
           <ResourceListp>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -33,6 +39,8 @@ const ResourceList = () => {
           </ResourceListp>
         </ResourceListContentContainer>
       {/* </Link> */}
+      
+      </div>
     </ResourceListContainer>
   );
 };
