@@ -347,3 +347,14 @@
   background-color: #d60f0f;
 }
 
+/* About Founder's Story */
+.founders-container {
+  padding: 4rem;
+}
+
+.founders-title {
+  font-size: 3em;
+  font-weight: 600;
+  padding-bottom: .5em;
+}
+
