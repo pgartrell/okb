@@ -2,8 +2,7 @@ import React from 'react';
 import { 
     Container, 
     Row, 
-    Col, 
-    Button
+    Col
 } from "react-bootstrap";
 
 export default function HomeResources() {
@@ -16,8 +15,8 @@ export default function HomeResources() {
             </Row>
             <Row>
                 <Col>
-                    <button href="#" className="homeresources-btn">Mobile Clinic</button>
-                    <button href="#" className="homeresources-btn">Online Therapy</button>
+                    <button href="#" className="btn-okb-primary">Mobile Clinic</button>
+                    <button href="#" className="btn-okb-primary">Online Therapy</button>
                 </Col>
             </Row>
         </Container>

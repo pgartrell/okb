@@ -76,7 +76,7 @@ const MobileResourcesPreview = () => {
                 </Card.Body>{" "}
               </Link>
             ))}
-            <Link to = "/resourcesPage" style={{textDecoration: 'none'}}><button className="resource-button">View More</button></Link>
+            <Link to = "/resourcesPage" style={{textDecoration: 'none'}}><button className="btn-okb-secondary" style={{float:"right"}}>View More</button></Link>
           </Card>
           
         </div>

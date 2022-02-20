@@ -11,7 +11,7 @@ import LogoImage from '../images/new-okb-logo.png';
 const Header = () => {
   const [colorChange, setColorChange] = React.useState(false);
   const changeNavbarColor = () => {
-    if(window.scrollY >= 40) {
+    if(window.scrollY >= 10) {
       setColorChange(true);
     }
     else {
@@ -28,10 +28,10 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navBarLinks">
-                <NavLink className="items-navigation" to="#">About</NavLink>
-                <NavLink className="items-navigation" to="#">Work With Us</NavLink>
+                <NavLink to="/aboutPage" className="items-navigation">About</NavLink>
+                <NavLink to="workWithUsPage" className="items-navigation">Work With Us</NavLink>
             </Nav>
-                <button className="btn-navbar">Donate</button>
+                <button className="btn-okb-primary">Donate</button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
