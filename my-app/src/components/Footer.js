@@ -97,7 +97,7 @@ export default function Footer() {
                                      value={formData.lastName}
                                 />
                             </FormGroup>
-                            <button className="btn-signup" type='submit'>Sign-up</button>
+                            <button className="btn-okb-primary" type='submit'>Sign-up</button>
                         </Form>
                         <p>Sign-up for our newsletter to learn more about our upcoming projects and how you can get involved!</p>
                     </Col>
