@@ -11,8 +11,8 @@ const MobileHeroSection = () => {
         <HomeHeroTitle className="display-4">Mobile Clinic</HomeHeroTitle>
         <HomeHeroSubtitle className="lead">This will hold text about Mobile Clinic</HomeHeroSubtitle>
         <div style={{paddingLeft:"50px"}}>
-        <Link to='/appointmentPage'><MobileHeroButton className="homeSummariesButton">Get Started</MobileHeroButton></Link>
-        <Link to=''><MobileHeroButton backgroundColor={"white"} textColor={"black"} hoverColor={"#FF0000"} className="homeSummariesButton">Meet All Doctors</MobileHeroButton></Link>   
+        <Link to='/appointmentPage'><button className="btn-okb-primary">Get Started</button></Link>
+        <Link to=''><button className="btn-okb-secondary">Meet All Doctors</button></Link>   
         </div>     
       </Jumbotron>
            

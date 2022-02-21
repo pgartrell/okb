@@ -14,12 +14,12 @@ import WorkWithUsPage from "./pages/WorkWithUsPage";
 import DoctorsPage from "./pages/DoctorsPage";
 import TherapistsPage from "./pages/TherapistsPage.js"
 import AppointmentPage from "./pages/AppointmentPage";
+import AboutPage from "./pages/AboutPage";
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 
 
@@ -39,6 +39,7 @@ function App() {
             <Route path="/doctorsPage" element={<DoctorsPage />} />
             <Route path="/therapistsPage" element={<TherapistsPage />} />
             <Route path="/appointmentPage" element={<AppointmentPage />} />
+            <Route path="/aboutPage" element={<AboutPage />} />
           </Route>
         </Routes>
       </Router>
