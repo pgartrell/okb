@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardImgOverlay, Breadcrumb, BreadcrumbItem,
     Button, Modal, ModalHeader, ModalBody, Label } from 'reactstrap';
+import { DOCTORS } from '../shared/doctors';
 
 function RenderBio({doctor}) {
     return (
@@ -20,7 +21,7 @@ function FullBio(props) {
         return (
             <div className="container">
                 <div className="row">
-                    <RenderCampsite doctor={props.doctor} />
+                    <RenderBio doctor={props.doctor} />
                 </div>
             </div>
         );
