@@ -358,3 +358,23 @@
   padding-bottom: .5em;
 }
 
+/* About Vision */
+.about-vision-container {
+  margin: 3em;
+  padding: 4em
+}
+
+.about-vision-title {
+  padding: .5em;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.about-vision-text {
+  font-size: 1.15rem;
+}
+
+.about-vision-image {
+  width: 8rem;
+}
+
