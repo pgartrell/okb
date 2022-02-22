@@ -4,6 +4,7 @@ import { DoctorPhotosTop, DoctorPhotosBottom } from "../components/DoctorPhotos"
 import DoctorPageIntro from "../components/DoctorPageIntro";
 import MobileSuccessStories from "../components/MobileSuccessStories";
 import DoctorPageBottomButtons from "../components/DoctorPageBottomButtons";
+import { RenderDoctorPhotosOrBios } from "../components/DoctorPhotos";
 
 const DoctorsPage = () => {
   return (
@@ -20,6 +21,8 @@ const DoctorsPage = () => {
       <MobileSuccessStories />
 
       <DoctorPageBottomButtons />
+
+{/* <RenderDoctorPhotosOrBios /> */}
 
     </Container>
   );
