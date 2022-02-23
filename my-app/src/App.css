@@ -302,7 +302,7 @@
   margin: 1em;
   cursor: pointer;
   border-radius: 20px;
-  border: .5px solid #282c34;
+  border: 0.5px solid #282c34;
 }
 
 .btn-clear:hover {
@@ -324,7 +324,6 @@
 .appointment-input {
   margin-bottom: 1em;
 }
-
 
 .page-intro-button-white:hover {
   background-color: #f4ebeb;
@@ -355,17 +354,17 @@
 .founders-title {
   font-size: 3em;
   font-weight: 600;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 /* About Vision */
 .about-vision-container {
   margin: 3em;
-  padding: 4em
+  padding: 4em;
 }
 
 .about-vision-title {
-  padding: .5em;
+  padding: 0.5em;
   font-size: 3rem;
   font-weight: 600;
 }
@@ -399,4 +398,24 @@
   width: 50rem;
 }
 
+/* Work With Us Volunteer In Ghana */
+.volunteer-title {
+  font-size: 3em;
+  font-weight: 600;
+  padding-top: 1em;
+  color: #ff0000;
+}
+
+.volunteer-card-text {
+  text-align: left;
+}
+
+.volunteer-card-title {
+  font-weight: bold !important;
+  text-align: left;
+}
+
+.volunteer-card {
+  box-shadow: 2px 2px 2px 2px lightgrey !important;
+}
 
