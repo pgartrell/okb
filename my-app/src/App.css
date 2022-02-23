@@ -378,3 +378,25 @@
   width: 8rem;
 }
 
+/* About Mission */
+.about-mission-container {
+  padding: 6em
+}
+
+.about-mission-title {
+  padding: .5em;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.about-mission-text {
+  text-align: center;
+  font-size: 1.15rem;
+  word-wrap: break-word;
+}
+
+.about-mission-image {
+  width: 50rem;
+}
+
+
