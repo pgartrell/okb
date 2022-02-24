@@ -1,9 +1,14 @@
 import React from "react";
+import WorkWithUsHero from "../components/WorkWithUsHero";
+import VolunteerInGhana from "../components/VolunteerInGhana";
+import VolunteerTestimonials from "../components/VolunteerTestimonials";
 
 const WorkWithUsPage = () => {
   return (
     <div>
-      <h1>Work With Us Page</h1>
+      <WorkWithUsHero />
+      <VolunteerInGhana />
+      <VolunteerTestimonials />
     </div>
   );
 };
