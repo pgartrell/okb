@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import testResourceImage from "../images/mountains.jpg";
 import {
   ResourceListContainer,
@@ -8,40 +8,47 @@ import {
   ResourceListp,
   ResourceListh1,
 } from "../styles/ResourceList.styles";
-import testResourceImage from "../images/mountains.jpg"
+import testResourceImage from "../images/mountains.jpg";
+import { Link } from "react-router-dom";
 
 const ResourceList = () => {
+  const [resources, setResources] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:1337/api/resources?populate=*")
+      .then((data) => data.json())
+      .then((data) => {
+        setResources(data.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  let imageurl = `http://localhost:1337/${setResources.data}/`
+  console.log(imageurl)
   return (
-    <ResourceListContainer>
-      {/* <Link
-        to={"/resources/" + resource.id}
-        key={resource.id}
-        style={{ textDecoration: "none" }}
-      > */}
-      <div className="row">
-        <div className= "col-6">
-        {/* <ResourceListImgContainer> */}
-          <ResourceListImg/>
-          {/* <ResourceListImg /> */}
-        {/* </ResourceListImgContainer> */}
+    <div>
+      {resources.map((resource) => (
+        <div className="row">
+          <Link
+            to={"/resources/" + resource.id}
+            key={resource.id}
+            style={{ textDecoration: "none" }}
+          >
+            <div key={resource.id} className="col-6">
+              {/* <ResourceListImgContainer> */}
+              <img src="http://localhost:1337/uploads/thumbnail_mountains_456f150d8e.jpg" />
+              {/* <img src = {imageurl}/> */}
+              {/* <ResourceListImg /> */}
+              {/* </ResourceListImgContainer> */}
+            </div>
+
+            <ResourceListContentContainer className="col-md-6">
+              <ResourceListh1>{resource.attributes.title}</ResourceListh1>
+              <ResourceListp>{resource.attributes.description}</ResourceListp>
+            </ResourceListContentContainer>
+          </Link>
         </div>
-        
-        <ResourceListContentContainer className="col-md-6">
-          <ResourceListh1>Resource 1</ResourceListh1>
-          <ResourceListp>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </ResourceListp>
-        </ResourceListContentContainer>
-      {/* </Link> */}
-      
-      </div>
-    </ResourceListContainer>
+      ))}
+    </div>
   );
 };
 
