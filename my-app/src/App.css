@@ -396,11 +396,11 @@
 
 /* About Mission */
 .about-mission-container {
-  padding: 6em
+  padding: 6em;
 }
 
 .about-mission-title {
-  padding: .5em;
+  padding: 0.5em;
   font-size: 3rem;
   font-weight: 600;
 }
@@ -435,6 +435,7 @@
   box-shadow: 2px 2px 2px 2px lightgrey !important;
 }
 
+
 /* About Mission */
 .about-team-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0.562)) , url(./images/okb-team.jpeg);
@@ -460,5 +461,40 @@
   font-size: 1.15rem;
   margin: 0;
   padding: .5em;
+}
+
+
+/*Work With Us Volunter Testimonials */
+.testimonial-section {
+  margin-bottom: 3em;
+}
+
+.testimonial-title {
+  font-size: 3em;
+  font-weight: 600;
+  padding-top: 1em;
+  color: black;
+}
+
+.volunteer-avatar-card {
+  box-shadow: 5px 5px 5px white !important;
+  border: none !important;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  position: flex;
+  padding: 1em;
+}
+
+.volunteer-subcaption {
+  color: gray;
+}
+
+.volunteer-statement {
+  color: rgb(42, 42, 42);
+  font-family: Arial;
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 500;
 }
 

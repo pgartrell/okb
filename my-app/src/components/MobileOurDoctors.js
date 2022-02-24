@@ -7,7 +7,7 @@ import { Carousel } from '@trendyol-js/react-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
-  const mobileOurTherapists = DOCTORS.map(therapist => {
+  const mobileOurDoctors = DOCTORS.map(therapist => {
     return (<Card className='mobile-clinic-doctor-avatar-card'>
     <DoctorImage src={therapist.image} alt={therapist.alt}></DoctorImage>
     <h5 style={{marginBottom:0}}>{therapist.name}</h5>
@@ -23,22 +23,22 @@ export default function OurDoctorCarouselSection() {
             </div>
             <div className='row m-4 d-none d-xl-block'>
               <Carousel show={7} slide={3} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={faAngleRight} size='2x' className='fontawesome-carousel-icon'/>} leftArrow={<FontAwesomeIcon icon={faAngleLeft} size='2x' className='fontawesome-carousel-icon'/>}>
-                {mobileOurTherapists}
+                {mobileOurDoctors}
                 </Carousel>
             </div>
             <div className='row m-4 d-none d-lg-block d-xl-none'>
               <Carousel show={6} slide={3} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={faAngleRight} size='2x' className='fontawesome-carousel-icon'/>} leftArrow={<FontAwesomeIcon icon={faAngleLeft} size='2x' className='fontawesome-carousel-icon'/>}>
-                {mobileOurTherapists}
+                {mobileOurDoctors}
                 </Carousel>
             </div>
             <div className='row m-4 d-none d-md-block d-lg-none'>
               <Carousel show={5} slide={2} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={faAngleRight} size='2x' className='fontawesome-carousel-icon'/>} leftArrow={<FontAwesomeIcon icon={faAngleLeft} size='2x' className='fontawesome-carousel-icon'/>}>
-                {mobileOurTherapists}
+                {mobileOurDoctors}
                 </Carousel>
             </div>
             <div className='row m-4 d-md-none'>
               <Carousel show={4} slide={2} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={faAngleRight} size='2x' className='fontawesome-carousel-icon'/>} leftArrow={<FontAwesomeIcon icon={faAngleLeft} size='2x' className='fontawesome-carousel-icon'/>}>
-                {mobileOurTherapists}
+                {mobileOurDoctors}
                 </Carousel>
             </div>
             <div className='row m-2'>
