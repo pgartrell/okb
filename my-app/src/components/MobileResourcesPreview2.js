@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card, Row, Col, CardGroup } from "react-bootstrap";
 import testMobileResourceImage from "../images/testMobileResourceImage.jpg";
-
 import "../styles/MobileResourcesPreview.css";
 
 const MobileResourcesPreview = () => {
