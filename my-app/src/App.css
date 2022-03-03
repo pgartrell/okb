@@ -498,3 +498,24 @@
   font-weight: 500;
 }
 
+/* Donation Helps Section */
+.donation-helps-container {
+  margin: 5rem;
+}
+
+.donation-helps-title {
+  color:#ff0000;
+  font-size: 3rem;
+  padding: .5em;
+}
+
+.donation-helps-list {
+  list-style-type: none;
+  text-align: left;
+  line-height: 2em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: .5em;
+}
+
+
