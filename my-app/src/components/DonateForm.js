@@ -1,9 +1,147 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Form, FormGroup, FormControl, FormLabel, FormSelect, Label, CustomInput } from 'react-bootstrap';
 
 export default function DonateForm() {
+    const [frequencyInfo, setFrequencyInfo] = React.useState()
+
+   function showAmounts() {
+       if (frequencyInfo === 'monthly') {
+            return(
+                <><Col>
+                <button className="btn-donate">
+                    $5
+                </button>
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $10
+                </button>
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $25
+                </button> 
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $50
+                </button>
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $100
+                </button> 
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $250
+                </button> 
+            </Col></>
+            )
+       } else if (frequencyInfo === 'quarterly') {
+            return(
+                <><Col>
+                <button className="btn-donate">
+                    $15
+                </button>
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $30
+                </button>
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $75
+                </button> 
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $150
+                </button>
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $300
+                </button> 
+            </Col>
+            <Col>
+                <button className="btn-donate">
+                    $750
+                </button> 
+            </Col></>
+            )
+      } else if (frequencyInfo === 'annually') {
+        return(<>
+            <Col>
+            <button className="btn-donate">
+                $60
+            </button>
+        </Col>
+        <Col>
+            <button className="btn-donate">
+                $120
+            </button>
+        </Col>
+        <Col>
+            <button className="btn-donate">
+                $300
+            </button> 
+        </Col>
+        <Col>
+            <button className="btn-donate">
+                $600
+            </button>
+        </Col>
+        <Col>
+            <button className="btn-donate">
+                $1200
+            </button> 
+        </Col>
+        <Col>
+            <button className="btn-donate">
+                $3000
+            </button> 
+        </Col></>
+        )
+  } else {
+      return (
+        <><Col>
+        <button className="btn-donate">
+            $25
+        </button>
+    </Col>
+    <Col>
+        <button className="btn-donate">
+            $50
+        </button>
+    </Col>
+    <Col>
+        <button className="btn-donate">
+            $100
+        </button> 
+    </Col>
+    <Col>
+        <button className="btn-donate">
+            $250
+        </button>
+    </Col>
+    <Col>
+        <button className="btn-donate">
+            $500
+        </button> 
+    </Col>
+    <Col>
+        <button className="btn-donate">
+            $1000
+        </button> 
+    </Col></>
+      )
+  }
+   };
+
     return (
         <div>
             <div className="donateSection">
@@ -14,74 +152,47 @@ export default function DonateForm() {
                 <p>Use the form below to enter a donation amount.</p>
             </div>
             <Container className="donateSection">
-                <Row>
-                    <h3>Choose Your Donation Frequency</h3>
-                    <Col>
+                    <Row>
+                    <FormGroup controlId="frequency">
+                        <h3>Choose Your Donation Frequency</h3>
+                        <Col>
+                            <button className="btn-donate" onClick={() => {setFrequencyInfo("oneTime")}}>
+                                One Time
+                            </button>
+                        </Col>
+                        <Col>
+                        <button className="btn-donate" onClick={() => {setFrequencyInfo("monthly")}}>
+                                Monthly
+                            </button>
+                        </Col>
+                        <Col>
+                            <button className="btn-donate" onClick={() => {setFrequencyInfo("quarterly")}}>
+                                Quarterly
+                            </button>
+                        </Col>
+                        <Col>
+                            <button className="btn-donate" onClick={() => {setFrequencyInfo("annually")}}>
+                                Annually
+                            </button>
+                        </Col>
+                        </FormGroup>
+                    </Row>
+                    <Row>
+                        <h3>Choose a Donation Level</h3>
+                        {showAmounts()}
+                    </Row>
+                    <Row>
+                        <Col>
+                        <form>
+                        <label><h4>Or enter your own amount:</h4>
+                            $<input type="text" />
+                        </label>
+                        </form>
                         <button className="btn-donate">
-                            One Time
+                            Continue
                         </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            Monthly
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            Quarterly
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            Annually
-                        </button>
-                    </Col>
-                </Row>
-                <Row>
-                    <h3>Choose a Donation Level</h3>
-                    <Col>
-                        <button className="btn-donate">
-                            $25
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            $50
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            $100
-                        </button> 
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            $250
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            $500
-                        </button> 
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            $1000
-                        </button> 
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                    <form>
-                    <label><h4>Or enter your own amount:</h4>
-                        $<input type="text" />
-                    </label>
-                    </form>
-                    <button className="btn-donate">
-                        Continue
-                    </button>
-                    </Col>
-                </Row>
+                        </Col>
+                    </Row>
       </Container>
         </div>
     );
