@@ -6,46 +6,82 @@ import { Container, Row, Col } from 'react-bootstrap';
 export default function DonateForm() {
     return (
         <div>
-            <FontAwesomeIcon icon={faHeart} size="5x" style={{color: "red"}}/>
-            <h1>Donate to Our Cause</h1>
-            <p>Use the form below to enter a donation amount.</p>
-            <Container>
-            <h3>Choose Your Donation Frequency</h3>
-            <button className="btn-okb-secondary">
-        One Time
-      </button>
-      <button className="btn-okb-secondary">
-        Monthly
-      </button>
-      <button className="btn-okb-secondary">
-        Quarterly
-      </button>
-      <button className="btn-okb-secondary">
-        Annually
-      </button>
-            <h3>Choose a Donation Level</h3>
-            <button className="btn-okb-secondary">
-        $25
-      </button>
-      <button className="btn-okb-secondary">
-        $50
-      </button><button className="btn-okb-secondary">
-        $100
-      </button><button className="btn-okb-secondary">
-        $250
-      </button><button className="btn-okb-secondary">
-        $500
-      </button><button className="btn-okb-secondary">
-        $1000
-      </button>
-      <form>
-      <label><h4>Or enter your own amount:</h4>
-        <p>$</p><input type="text" />
-      </label>
-    </form>
-      <button className="btn-okb-secondary">
-        Continue
-      </button>
+            <div className="donateSection">
+                <FontAwesomeIcon icon={faHeart} size="5x" style={{color: "red"}}/>
+            </div>
+            <div className="donateSection">
+                <h1 className="donateFormHeader">Donate to Our Cause</h1>
+                <p>Use the form below to enter a donation amount.</p>
+            </div>
+            <Container className="donateSection">
+                <Row>
+                    <h3>Choose Your Donation Frequency</h3>
+                    <Col>
+                        <button className="btn-donate">
+                            One Time
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            Monthly
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            Quarterly
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            Annually
+                        </button>
+                    </Col>
+                </Row>
+                <Row>
+                    <h3>Choose a Donation Level</h3>
+                    <Col>
+                        <button className="btn-donate">
+                            $25
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            $50
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            $100
+                        </button> 
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            $250
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            $500
+                        </button> 
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            $1000
+                        </button> 
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                    <form>
+                    <label><h4>Or enter your own amount:</h4>
+                        $<input type="text" />
+                    </label>
+                    </form>
+                    <button className="btn-donate">
+                        Continue
+                    </button>
+                    </Col>
+                </Row>
       </Container>
         </div>
     );
