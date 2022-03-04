@@ -5,7 +5,7 @@ import {
   Nav,
   NavbarBrand
 } from "react-bootstrap";
-import {NavLink} from "react-router-dom"
+import {NavLink, Link} from "react-router-dom"
 import LogoImage from '../images/new-okb-logo.png';
 
 const Header = () => {
@@ -31,7 +31,9 @@ const Header = () => {
                 <NavLink to="/aboutPage" className="items-navigation">About</NavLink>
                 <NavLink to="workWithUsPage" className="items-navigation">Work With Us</NavLink>
             </Nav>
-                <button className="btn-okb-primary">Donate</button>
+                <Link to="/donatePage">
+                    <button className="btn-okb-primary">Donate</button>
+                </Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
