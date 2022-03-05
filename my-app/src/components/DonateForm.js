@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Container, Row, Col, Form, FormGroup, FormControl, FormLabel, FormSelect, Label, CustomInput } from 'react-bootstrap';
 
 export default function DonateForm() {
-    const [frequencyInfo, setFrequencyInfo] = React.useState()
+    const [frequencyInfo, setFrequencyInfo] = React.useState();
+    // const [selectedButton, setSelectedButton] = React.useState();
+    // let selectedButton = "btn-okb-secondary";
+   
+        const [style, setStyle] = useState("btn-okb-secondary");
+
+        // const changeStyle = () => {
+        //     setStyle("btn-okb-primary");
+        //   };
 
    function showAmounts() {
        if (frequencyInfo === 'monthly') {
+        //    selectedButton = "btn-okb-primary";
             return(
                 <><Col>
                 <button className="btn-donate">
@@ -142,6 +151,12 @@ export default function DonateForm() {
   }
    };
 
+//    function buttonOnSelect() {
+//        if (selectedButton === 'monthly') {
+
+//        }
+//    }
+
     return (
         <div>
             <div className="donateSection">
@@ -161,7 +176,7 @@ export default function DonateForm() {
                             </button>
                         </Col>
                         <Col>
-                        <button className="btn-donate" onClick={() => {setFrequencyInfo("monthly")}}>
+                        <button className={style} onClick={() => {setFrequencyInfo("monthly"); setStyle("btn-okb-primary")}}>
                                 Monthly
                             </button>
                         </Col>
