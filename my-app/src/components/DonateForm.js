@@ -1,161 +1,21 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { Container, Row, Col, Form, FormGroup, FormControl, FormLabel, FormSelect, Label, CustomInput } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export default function DonateForm() {
-    const [frequencyInfo, setFrequencyInfo] = React.useState();
-    // const [selectedButton, setSelectedButton] = React.useState();
-    // let selectedButton = "btn-okb-secondary";
    
-        const [style, setStyle] = useState("btn-okb-secondary");
+    const [styleOneTime, setStyleOneTime] = useState("btn-donate-selected");
+    const [styleMonthly, setStyleMonthly] = useState("btn-donate");
+    const [styleQuarterly, setStyleQuarterly] = useState("btn-donate");
+    const [styleAnnually, setStyleAnnually] = useState("btn-donate");
 
-        // const changeStyle = () => {
-        //     setStyle("btn-okb-primary");
-        //   };
-
-   function showAmounts() {
-       if (frequencyInfo === 'monthly') {
-        //    selectedButton = "btn-okb-primary";
-            return(
-                <><Col>
-                <button className="btn-donate">
-                    $5
-                </button>
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $10
-                </button>
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $25
-                </button> 
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $50
-                </button>
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $100
-                </button> 
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $250
-                </button> 
-            </Col></>
-            )
-       } else if (frequencyInfo === 'quarterly') {
-            return(
-                <><Col>
-                <button className="btn-donate">
-                    $15
-                </button>
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $30
-                </button>
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $75
-                </button> 
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $150
-                </button>
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $300
-                </button> 
-            </Col>
-            <Col>
-                <button className="btn-donate">
-                    $750
-                </button> 
-            </Col></>
-            )
-      } else if (frequencyInfo === 'annually') {
-        return(<>
-            <Col>
-            <button className="btn-donate">
-                $60
-            </button>
-        </Col>
-        <Col>
-            <button className="btn-donate">
-                $120
-            </button>
-        </Col>
-        <Col>
-            <button className="btn-donate">
-                $300
-            </button> 
-        </Col>
-        <Col>
-            <button className="btn-donate">
-                $600
-            </button>
-        </Col>
-        <Col>
-            <button className="btn-donate">
-                $1200
-            </button> 
-        </Col>
-        <Col>
-            <button className="btn-donate">
-                $3000
-            </button> 
-        </Col></>
-        )
-  } else {
-      return (
-        <><Col>
-        <button className="btn-donate">
-            $25
-        </button>
-    </Col>
-    <Col>
-        <button className="btn-donate">
-            $50
-        </button>
-    </Col>
-    <Col>
-        <button className="btn-donate">
-            $100
-        </button> 
-    </Col>
-    <Col>
-        <button className="btn-donate">
-            $250
-        </button>
-    </Col>
-    <Col>
-        <button className="btn-donate">
-            $500
-        </button> 
-    </Col>
-    <Col>
-        <button className="btn-donate">
-            $1000
-        </button> 
-    </Col></>
-      )
-  }
-   };
-
-//    function buttonOnSelect() {
-//        if (selectedButton === 'monthly') {
-
-//        }
-//    }
+    const [bronzeAmount, setBronzeAmount] = useState(25);
+    const [silverAmount, setSilverAmount] = useState(50);
+    const [goldAmount, setGoldAmount] = useState(100);
+    const [platinumAmount, setPlatinumAmount] = useState(250);
+    const [diamondAmount, setDiamondAmount] = useState(500);
+    const [philanthropistAmount, setPhilanthropistAmount] = useState(1000);
 
     return (
         <div>
@@ -168,33 +28,105 @@ export default function DonateForm() {
             </div>
             <Container className="donateSection">
                     <Row>
-                    <FormGroup controlId="frequency">
                         <h3>Choose Your Donation Frequency</h3>
                         <Col>
-                            <button className="btn-donate" onClick={() => {setFrequencyInfo("oneTime")}}>
+                            <button className={styleOneTime} onClick={() => {
+                                setStyleMonthly("btn-donate"); 
+                                setStyleOneTime("btn-donate-selected");
+                                setStyleQuarterly("btn-donate");
+                                setStyleAnnually("btn-donate"); 
+                                setBronzeAmount(25); 
+                                setSilverAmount(50); 
+                                setGoldAmount(100); 
+                                setPlatinumAmount(250); 
+                                setDiamondAmount(500); 
+                                setPhilanthropistAmount(1000);
+                            }}>
                                 One Time
                             </button>
                         </Col>
                         <Col>
-                        <button className={style} onClick={() => {setFrequencyInfo("monthly"); setStyle("btn-okb-primary")}}>
+                            <button className={styleMonthly} onClick={() => {
+                                setStyleMonthly("btn-donate-selected"); 
+                                setStyleOneTime("btn-donate");
+                                setStyleQuarterly("btn-donate");
+                                setStyleAnnually("btn-donate"); 
+                                setBronzeAmount(5); 
+                                setSilverAmount(10); 
+                                setGoldAmount(25); 
+                                setPlatinumAmount(50); 
+                                setDiamondAmount(100); 
+                                setPhilanthropistAmount(250);
+                            }}>
                                 Monthly
                             </button>
                         </Col>
                         <Col>
-                            <button className="btn-donate" onClick={() => {setFrequencyInfo("quarterly")}}>
+                            <button className={styleQuarterly} onClick={() => {
+                                setStyleMonthly("btn-donate"); 
+                                setStyleOneTime("btn-donate");
+                                setStyleQuarterly("btn-donate-selected");
+                                setStyleAnnually("btn-donate"); 
+                                setBronzeAmount(15); 
+                                setSilverAmount(30); 
+                                setGoldAmount(75); 
+                                setPlatinumAmount(150); 
+                                setDiamondAmount(300); 
+                                setPhilanthropistAmount(750);
+                            }}>
                                 Quarterly
                             </button>
                         </Col>
                         <Col>
-                            <button className="btn-donate" onClick={() => {setFrequencyInfo("annually")}}>
+                            <button className={styleAnnually} onClick={() => {
+                                setStyleMonthly("btn-donate"); 
+                                setStyleOneTime("btn-donate");
+                                setStyleQuarterly("btn-donate");
+                                setStyleAnnually("btn-donate-selected"); 
+                                setBronzeAmount(60); 
+                                setSilverAmount(120); 
+                                setGoldAmount(300); 
+                                setPlatinumAmount(600); 
+                                setDiamondAmount(1200); 
+                                setPhilanthropistAmount(3000);
+                            }}>
                                 Annually
                             </button>
                         </Col>
-                        </FormGroup>
                     </Row>
                     <Row>
                         <h3>Choose a Donation Level</h3>
-                        {showAmounts()}
+                        <Col>
+                            <button className="btn-donate">
+                                ${bronzeAmount}
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            ${silverAmount}
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            ${goldAmount}
+                        </button> 
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            ${platinumAmount}
+                        </button>
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            ${diamondAmount}
+                        </button> 
+                    </Col>
+                    <Col>
+                        <button className="btn-donate">
+                            ${philanthropistAmount}
+                        </button> 
+                    </Col>
+
                     </Row>
                     <Row>
                         <Col>

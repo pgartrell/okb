@@ -526,3 +526,16 @@
   color: white;
   border: solid white;
 }
+
+.btn-donate-selected {
+  background-color: #ff0000;
+  border: solid white;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 1em;
+  cursor: pointer;
+  /* border-radius: 20px; */
+}
