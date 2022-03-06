@@ -533,4 +533,16 @@
   margin: auto;
 }
 
+/* We Need Your Help Section */
+.donation-need-container {
+  background-color: #ff00001a;
+  padding: 5em;
+}
+
+.donation-need-title {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: .5em;
+}
+
 
