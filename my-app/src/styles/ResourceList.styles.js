@@ -31,16 +31,20 @@ export const ResourceListContainer = styled.div`
   padding: 30px;
 `;
 
-export const ResourceListImg = styled.div`
-  display: flex;
-  align-items: flex-start;
-  max-width: 80%;
+export const ResourceListImg = styled.img`
+  
+  /* align-items: flex-start;
+  max-width: 50%; */
   
   background-image: url(${testResourceImage});
   background-size: contain;
+  background-repeat: no-repeat;
   height: auto;
   width: 100%;
-  background-repeat: no-repeat;
+  
+  /* ;
+
+  */
 `;
 
 // export const ResourceListImgContainer = styled.div`
@@ -57,12 +61,12 @@ export const ResourceListContentContainer = styled.div`
 export const ResourceListp = styled.p`
   text-align: left;
   font-size: 20px;
-  padding-left: 100px;
+  
 `;
 
 export const ResourceListh1 = styled.h1`
   text-align: left;
   font-size: 30px;
-  padding-left: 100px;
+  
 
 `;
