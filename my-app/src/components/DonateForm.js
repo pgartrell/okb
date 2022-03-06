@@ -26,6 +26,7 @@ export default function DonateForm() {
 
     const [donateMessage, setDonateMessage] = useState(<div><p>Please select an amount.</p></div>)
 
+    const [donationAmount, setDonationAmount] = useState(0)
 
     return (
         <div>
@@ -142,6 +143,7 @@ export default function DonateForm() {
                                 setStylePlatinum("btn-donate");
                                 setStyleDiamond("btn-donate");
                                 setStylePhilanthropist("btn-donate");
+                                setDonationAmount(bronzeAmount);
                                 setDonateMessage(<div><h4>Bronze(${bronzeAmount})</h4><p>Thanks so much for your sustaining gift!</p></div>);
                             }}>
                                 ${bronzeAmount}
@@ -155,6 +157,7 @@ export default function DonateForm() {
                                 setStylePlatinum("btn-donate");
                                 setStyleDiamond("btn-donate");
                                 setStylePhilanthropist("btn-donate");
+                                setDonationAmount(silverAmount);
                                 setDonateMessage(<div><h4>Silver(${silverAmount})</h4><p>You're a beacon of good in the world.</p></div>);
                             }}>
                                 ${silverAmount}
@@ -168,6 +171,7 @@ export default function DonateForm() {
                                     setStylePlatinum("btn-donate");
                                     setStyleDiamond("btn-donate");
                                     setStylePhilanthropist("btn-donate");
+                                    setDonationAmount(goldAmount);
                                     setDonateMessage(<div><h4>Gold(${goldAmount})</h4><p>Your support helps us create long-lasting impact.</p></div>);
                                 }}>
                                 ${goldAmount}
@@ -181,6 +185,7 @@ export default function DonateForm() {
                                     setStylePlatinum("btn-donate-selected");
                                     setStyleDiamond("btn-donate");
                                     setStylePhilanthropist("btn-donate");
+                                    setDonationAmount(platinumAmount);
                                     setDonateMessage(<div><h4>Platinum(${platinumAmount})</h4><p>Grab a mirror - you're what making a difference looks like!</p></div>);
 
                                 }}>
@@ -195,6 +200,7 @@ export default function DonateForm() {
                                     setStylePlatinum("btn-donate");
                                     setStyleDiamond("btn-donate-selected");
                                     setStylePhilanthropist("btn-donate");
+                                    setDonationAmount(diamondAmount);
                                     setDonateMessage(<div><h4>Diamond(${diamondAmount})</h4><p>Your kind-o-meter score is way off the charts!</p></div>);
                                 }}>
                                 ${diamondAmount}
@@ -208,6 +214,7 @@ export default function DonateForm() {
                                     setStylePlatinum("btn-donate");
                                     setStyleDiamond("btn-donate");
                                     setStylePhilanthropist("btn-donate-selected");
+                                    setDonationAmount(philanthropistAmount);
                                     setDonateMessage(<div><h4>Philanthropist(${philanthropistAmount})</h4><p>Where's your cape? You're a philanthropic superhero.</p></div>);
                                 }}>
                                 ${philanthropistAmount}
@@ -220,13 +227,18 @@ export default function DonateForm() {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
+                        
                         <h4>Or enter your own amount:</h4>
-                            $<input type="number" value="0" />
-                        <button className="btn-donate">
+                        <Col></Col>
+                        <Col>
+                        <div className="input-group">
+                            <span className="input-group-addon">$</span><input type="number" placeholder={donationAmount} className="form-control" /></div>
+                            </Col><Col>
+                        <button className="btn-donate-selected">
                             Continue
                         </button>
                         </Col>
+                        <Col></Col>
                     </Row>
       </Container>
         </div>
