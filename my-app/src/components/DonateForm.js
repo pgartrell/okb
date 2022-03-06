@@ -10,12 +10,22 @@ export default function DonateForm() {
     const [styleQuarterly, setStyleQuarterly] = useState("btn-donate");
     const [styleAnnually, setStyleAnnually] = useState("btn-donate");
 
+    const [styleBronze, setStyleBronze] = useState("btn-donate");
+    const [styleSilver, setStyleSilver] = useState("btn-donate");
+    const [styleGold, setStyleGold] = useState("btn-donate");
+    const [stylePlatinum, setStylePlatinum] = useState("btn-donate");
+    const [styleDiamond, setStyleDiamond] = useState("btn-donate");
+    const [stylePhilanthropist, setStylePhilanthropist] = useState("btn-donate");
+
     const [bronzeAmount, setBronzeAmount] = useState(25);
     const [silverAmount, setSilverAmount] = useState(50);
     const [goldAmount, setGoldAmount] = useState(100);
     const [platinumAmount, setPlatinumAmount] = useState(250);
     const [diamondAmount, setDiamondAmount] = useState(500);
     const [philanthropistAmount, setPhilanthropistAmount] = useState(1000);
+
+    const [donateMessage, setDonateMessage] = useState(<div><p>Please select an amount.</p></div>)
+
 
     return (
         <div>
@@ -34,13 +44,20 @@ export default function DonateForm() {
                                 setStyleMonthly("btn-donate"); 
                                 setStyleOneTime("btn-donate-selected");
                                 setStyleQuarterly("btn-donate");
-                                setStyleAnnually("btn-donate"); 
+                                setStyleAnnually("btn-donate");
+                                setStyleBronze("btn-donate");
+                                setStyleSilver("btn-donate");
+                                setStyleGold("btn-donate");
+                                setStylePlatinum("btn-donate");
+                                setStyleDiamond("btn-donate");
+                                setStylePhilanthropist("btn-donate"); 
                                 setBronzeAmount(25); 
                                 setSilverAmount(50); 
                                 setGoldAmount(100); 
                                 setPlatinumAmount(250); 
                                 setDiamondAmount(500); 
                                 setPhilanthropistAmount(1000);
+                                setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 One Time
                             </button>
@@ -50,13 +67,20 @@ export default function DonateForm() {
                                 setStyleMonthly("btn-donate-selected"); 
                                 setStyleOneTime("btn-donate");
                                 setStyleQuarterly("btn-donate");
-                                setStyleAnnually("btn-donate"); 
+                                setStyleAnnually("btn-donate");
+                                setStyleBronze("btn-donate");
+                                setStyleSilver("btn-donate");
+                                setStyleGold("btn-donate");
+                                setStylePlatinum("btn-donate");
+                                setStyleDiamond("btn-donate");
+                                setStylePhilanthropist("btn-donate");  
                                 setBronzeAmount(5); 
                                 setSilverAmount(10); 
                                 setGoldAmount(25); 
                                 setPlatinumAmount(50); 
                                 setDiamondAmount(100); 
                                 setPhilanthropistAmount(250);
+                                setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Monthly
                             </button>
@@ -66,13 +90,20 @@ export default function DonateForm() {
                                 setStyleMonthly("btn-donate"); 
                                 setStyleOneTime("btn-donate");
                                 setStyleQuarterly("btn-donate-selected");
-                                setStyleAnnually("btn-donate"); 
+                                setStyleAnnually("btn-donate");
+                                setStyleBronze("btn-donate");
+                                setStyleSilver("btn-donate");
+                                setStyleGold("btn-donate");
+                                setStylePlatinum("btn-donate");
+                                setStyleDiamond("btn-donate");
+                                setStylePhilanthropist("btn-donate");  
                                 setBronzeAmount(15); 
                                 setSilverAmount(30); 
                                 setGoldAmount(75); 
                                 setPlatinumAmount(150); 
                                 setDiamondAmount(300); 
                                 setPhilanthropistAmount(750);
+                                setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Quarterly
                             </button>
@@ -82,13 +113,20 @@ export default function DonateForm() {
                                 setStyleMonthly("btn-donate"); 
                                 setStyleOneTime("btn-donate");
                                 setStyleQuarterly("btn-donate");
-                                setStyleAnnually("btn-donate-selected"); 
+                                setStyleAnnually("btn-donate-selected");
+                                setStyleBronze("btn-donate");
+                                setStyleSilver("btn-donate");
+                                setStyleGold("btn-donate");
+                                setStylePlatinum("btn-donate");
+                                setStyleDiamond("btn-donate");
+                                setStylePhilanthropist("btn-donate");  
                                 setBronzeAmount(60); 
                                 setSilverAmount(120); 
                                 setGoldAmount(300); 
                                 setPlatinumAmount(600); 
                                 setDiamondAmount(1200); 
                                 setPhilanthropistAmount(3000);
+                                setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Annually
                             </button>
@@ -97,44 +135,94 @@ export default function DonateForm() {
                     <Row>
                         <h3>Choose a Donation Level</h3>
                         <Col>
-                            <button className="btn-donate">
+                            <button className={styleBronze} onClick={() => {
+                                setStyleBronze("btn-donate-selected");
+                                setStyleSilver("btn-donate");
+                                setStyleGold("btn-donate");
+                                setStylePlatinum("btn-donate");
+                                setStyleDiamond("btn-donate");
+                                setStylePhilanthropist("btn-donate");
+                                setDonateMessage(<div><h4>Bronze(${bronzeAmount})</h4><p>Thanks so much for your sustaining gift!</p></div>);
+                            }}>
                                 ${bronzeAmount}
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            ${silverAmount}
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            ${goldAmount}
-                        </button> 
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            ${platinumAmount}
-                        </button>
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            ${diamondAmount}
-                        </button> 
-                    </Col>
-                    <Col>
-                        <button className="btn-donate">
-                            ${philanthropistAmount}
-                        </button> 
-                    </Col>
+                            </button>
+                        </Col>
+                        <Col>
+                            <button className={styleSilver} onClick={() => {
+                                setStyleBronze("btn-donate");
+                                setStyleSilver("btn-donate-selected");
+                                setStyleGold("btn-donate");
+                                setStylePlatinum("btn-donate");
+                                setStyleDiamond("btn-donate");
+                                setStylePhilanthropist("btn-donate");
+                                setDonateMessage(<div><h4>Silver(${silverAmount})</h4><p>You're a beacon of good in the world.</p></div>);
+                            }}>
+                                ${silverAmount}
+                            </button>
+                        </Col>
+                        <Col>
+                            <button className={styleGold} onClick={() => {
+                                    setStyleBronze("btn-donate");
+                                    setStyleSilver("btn-donate");
+                                    setStyleGold("btn-donate-selected");
+                                    setStylePlatinum("btn-donate");
+                                    setStyleDiamond("btn-donate");
+                                    setStylePhilanthropist("btn-donate");
+                                    setDonateMessage(<div><h4>Gold(${goldAmount})</h4><p>Your support helps us create long-lasting impact.</p></div>);
+                                }}>
+                                ${goldAmount}
+                            </button> 
+                        </Col>
+                        <Col>
+                            <button className={stylePlatinum} onClick={() => {
+                                    setStyleBronze("btn-donate");
+                                    setStyleSilver("btn-donate");
+                                    setStyleGold("btn-donate");
+                                    setStylePlatinum("btn-donate-selected");
+                                    setStyleDiamond("btn-donate");
+                                    setStylePhilanthropist("btn-donate");
+                                    setDonateMessage(<div><h4>Platinum(${platinumAmount})</h4><p>Grab a mirror - you're what making a difference looks like!</p></div>);
 
+                                }}>
+                                ${platinumAmount}
+                            </button>
+                        </Col>
+                        <Col>
+                            <button className={styleDiamond} onClick={() => {
+                                    setStyleBronze("btn-donate");
+                                    setStyleSilver("btn-donate");
+                                    setStyleGold("btn-donate");
+                                    setStylePlatinum("btn-donate");
+                                    setStyleDiamond("btn-donate-selected");
+                                    setStylePhilanthropist("btn-donate");
+                                    setDonateMessage(<div><h4>Diamond(${diamondAmount})</h4><p>Your kind-o-meter score is way off the charts!</p></div>);
+                                }}>
+                                ${diamondAmount}
+                            </button> 
+                        </Col>
+                        <Col>
+                            <button className={stylePhilanthropist} onClick={() => {
+                                    setStyleBronze("btn-donate");
+                                    setStyleSilver("btn-donate");
+                                    setStyleGold("btn-donate");
+                                    setStylePlatinum("btn-donate");
+                                    setStyleDiamond("btn-donate");
+                                    setStylePhilanthropist("btn-donate-selected");
+                                    setDonateMessage(<div><h4>Philanthropist(${philanthropistAmount})</h4><p>Where's your cape? You're a philanthropic superhero.</p></div>);
+                                }}>
+                                ${philanthropistAmount}
+                            </button> 
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="donation-message-box">
+                                {donateMessage}
+                        </Col>
                     </Row>
                     <Row>
                         <Col>
-                        <form>
-                        <label><h4>Or enter your own amount:</h4>
-                            $<input type="text" />
-                        </label>
-                        </form>
+                        <h4>Or enter your own amount:</h4>
+                            $<input type="number" value="0" />
                         <button className="btn-donate">
                             Continue
                         </button>
