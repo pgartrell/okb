@@ -16,6 +16,7 @@ import TherapistsPage from "./pages/TherapistsPage.js"
 import AppointmentPage from "./pages/AppointmentPage";
 import AboutPage from "./pages/AboutPage";
 import DonatePage from "./pages/DonatePage";
+import ImpactPage from "./pages/ImpactPage";
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/appointmentPage" element={<AppointmentPage />} />
             <Route path="/aboutPage" element={<AboutPage />} />
             <Route path="/donatePage" element={<DonatePage />} />
+            <Route path="/impactPage" element={<ImpactPage />} />
           </Route>
         </Routes>
       </Router>
