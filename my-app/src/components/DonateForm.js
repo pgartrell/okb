@@ -58,6 +58,7 @@ export default function DonateForm() {
                                 setPlatinumAmount(250); 
                                 setDiamondAmount(500); 
                                 setPhilanthropistAmount(1000);
+                                setDonationAmount(0);
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 One Time
@@ -81,6 +82,7 @@ export default function DonateForm() {
                                 setPlatinumAmount(50); 
                                 setDiamondAmount(100); 
                                 setPhilanthropistAmount(250);
+                                setDonationAmount(0);
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Monthly
@@ -104,6 +106,7 @@ export default function DonateForm() {
                                 setPlatinumAmount(150); 
                                 setDiamondAmount(300); 
                                 setPhilanthropistAmount(750);
+                                setDonationAmount(0);
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Quarterly
@@ -127,6 +130,7 @@ export default function DonateForm() {
                                 setPlatinumAmount(600); 
                                 setDiamondAmount(1200); 
                                 setPhilanthropistAmount(3000);
+                                setDonationAmount(0);
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Annually
