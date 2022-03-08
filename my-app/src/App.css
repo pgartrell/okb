@@ -614,3 +614,13 @@
   font-weight: 600;
   padding-bottom: 0.5em;
 }
+
+/* Our Impact Page */
+
+.impact-cards {
+  text-align: left;
+}
+
+.impact-card-title {
+  font-weight: bold;
+}
