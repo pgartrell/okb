@@ -15,6 +15,8 @@ import DoctorsPage from "./pages/DoctorsPage";
 import TherapistsPage from "./pages/TherapistsPage.js"
 import AppointmentPage from "./pages/AppointmentPage";
 import AboutPage from "./pages/AboutPage";
+import DonatePage from "./pages/DonatePage";
+import ImpactPage from "./pages/ImpactPage";
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
@@ -36,10 +38,14 @@ function App() {
             <Route path="/onlineTherapyPage" element={<OnlineTherapyPage />} />
             <Route path="/resourcesPage" element={<ResourcesPage />} />
             <Route path="/workWithUsPage" element={<WorkWithUsPage />} />
-            <Route path="/doctorsPage" element={<DoctorsPage />} />
+            <Route exact path="/doctorsPage" element={<DoctorsPage />} />
             <Route path="/therapistsPage" element={<TherapistsPage />} />
             <Route path="/appointmentPage" element={<AppointmentPage />} />
             <Route path="/aboutPage" element={<AboutPage />} />
+            <Route path="/donatePage" element={<DonatePage />} />
+            <Route path="/impactPage" element={<ImpactPage />} />
+            {/* <Route path="/doctorsPage/:id" element={<DoctorInfoCard />}>
+              </Route> */}
           </Route>
         </Routes>
       </Router>
