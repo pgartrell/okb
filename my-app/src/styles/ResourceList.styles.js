@@ -26,36 +26,24 @@ export const ResourceListContainer = styled.div`
   justify-content: center;
   box-shadow: 0 2px 4px 4px #eee;
   margin-bottom: 30px;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-right: 100px;
   padding: 30px;
+  
 `;
 
-export const ResourceListImg = styled.img`
-  
-  /* align-items: flex-start;
-  max-width: 50%; */
-  
-  background-image: url(${testResourceImage});
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: auto;
+
+export const ResourceListImgContainer = styled.div`
+  max-width: 30%;  
+  padding-bottom: 20px;
+  height: 100%;
   width: 100%;
   
-  /* ;
-
-  */
 `;
-
-// export const ResourceListImgContainer = styled.div`
-//   max-width: 30%;  
-//   padding-bottom: 20px;
-//   height: 100%;
-//   width: 100%;
-// `;
 
 export const ResourceListContentContainer = styled.div`
   padding-right: 100px;
+  float: right;
 `;
 
 export const ResourceListp = styled.p`
@@ -70,3 +58,11 @@ export const ResourceListh1 = styled.h1`
   
 
 `;
+
+export const ResourceSearchInput = styled.input `
+  padding: 10px
+`
+export const ResourceSearchButton = styled.button `
+  margin-left: 30px;
+  margin-right: 30px;
+`

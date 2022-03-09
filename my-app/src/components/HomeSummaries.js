@@ -20,7 +20,7 @@ export default function HomeSummaries() {
       text: "This will explain the online Therapy",
       img: testDoctorImage,      
       href: "/onlineTherapyPage",
-      href: "/therapistsPage"
+      href: "/onlineTherapyPage"
     },
   ]);
 

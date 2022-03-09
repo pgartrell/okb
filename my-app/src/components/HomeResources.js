@@ -4,6 +4,7 @@ import {
     Row, 
     Col
 } from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 export default function HomeResources() {
     return (
@@ -15,8 +16,8 @@ export default function HomeResources() {
             </Row>
             <Row>
                 <Col>
-                    <button href="#" className="btn-okb-primary">Mobile Clinic</button>
-                    <button href="#" className="btn-okb-primary">Online Therapy</button>
+                    <Link to='/mobileClinicPage'><button href="#" className="btn-okb-primary">Mobile Clinic</button></Link>
+                    <Link to='/onlineTherapyPage'><button href="#" className="btn-okb-primary">Online Therapy</button></Link>
                 </Col>
             </Row>
         </Container>
