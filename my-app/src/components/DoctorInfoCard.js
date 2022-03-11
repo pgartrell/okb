@@ -14,23 +14,23 @@ const BioList = () => {
         .catch((error) => console.log(error));
     }, {});
 
+    let imageurl = `http://localhost:1337`
+
+
     return (
         <div>
             {biographies.map((biography) => (
                 <div className="row">
-                    <Link 
-                      to={"/biographies/" + biography.id}
-                      key = {biography.id}
-                      style={{ textDecoration: "none" }}
-                    >
+                    
                         <div key={biography.id} className="col-6">
+                        <img src={imageurl + biography.attributes.pics.data[0].attributes.url} />
                             {biography.attributes.name}
                         </div>
 
                         <div className="col-md-6">
                             {biography.attributes.bio}
                         </div>
-                        </Link>
+                        
                 </div>
             ))}
         </div>

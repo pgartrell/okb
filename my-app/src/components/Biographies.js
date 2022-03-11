@@ -13,7 +13,9 @@ const BioPics = () => {
         .catch((error) => console.log(error));
     }, {});
 
-    let imageurl = `http://localhost:1337/${setBiographies.data}/`
+    // let imageurl = `http://localhost:1337/${setBiographies.data}/`
+
+    let imageurl = `http://localhost:1337`
 
     return (
         <div>
@@ -26,7 +28,7 @@ const BioPics = () => {
                     >
                         <div key={biography.id} className="col-6">
                             {biography.attributes.name}
-                            <img src={imageurl} />
+                            <img src={imageurl + biography.attributes.pics.data[0].attributes.formats.thumbnail.url} />
                         </div>
 
                         </Link>
