@@ -3,7 +3,7 @@ import { CaptionStyle, DoctorImage, DoctorImageContainer, SubCaptionStyle } from
 import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const TopBioPics = () => {
+const LowerBioPics = () => {
     const [biographies, setBiographies] = useState([]);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const TopBioPics = () => {
 
     return (
         <Row>
-            {biographies.filter(biography => biography.attributes.topfeature===true).map((biography) => (
+            {biographies.filter(biography => biography.attributes.topfeature===false).map((biography) => (
                     <Col xs={4} sm={3} lg={2}>
                     <Link 
                       to={"/biographies/" + biography.id}
@@ -43,4 +43,4 @@ const TopBioPics = () => {
     )
 }
 
-export default TopBioPics;
+export default LowerBioPics;
