@@ -624,3 +624,28 @@
 .impact-card-title {
   font-weight: bold;
 }
+
+/* Dr. Biography Pages */
+
+.dr-bio-pic {
+  height: 400px;
+  width: auto;
+  min-width: 400px;
+}
+
+.dr-bio-info {
+  text-align: left;
+}
+
+.nomarge {
+  margin: 0 !important;
+}
+
+ul {
+  line-height: 12px;
+}
+
+/* ul.space_list li {
+  margin-bottom: 2px !important;
+  margin-top: 2px !important;
+} */
