@@ -1,4 +1,6 @@
 import React, {useEffect, useState } from 'react';
+import { CaptionStyle, DoctorImage, DoctorImageContainer, SubCaptionStyle } from '../styles/OurDoctorStyles.styles';
+import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const BioPics = () => {
@@ -18,23 +20,26 @@ const BioPics = () => {
     let imageurl = `http://localhost:1337`
 
     return (
-        <div>
+        <Row>
             {biographies.map((biography) => (
-                <div className="row">
+                    <Col xs={4} sm={3} lg={2}>
                     <Link 
                       to={"/biographies/" + biography.id}
                       key = {biography.id}
                       style={{ textDecoration: "none" }}
                     >
-                        <div key={biography.id} className="col-6">
+                        <DoctorImageContainer  key={biography.id} className="m-3">
+                            <DoctorImage  src={imageurl + biography.attributes.pics.data[0].attributes.formats.thumbnail.url} alt={biography.attributes.name} />
+                            <CaptionStyle>
                             {biography.attributes.name}
-                            <img src={imageurl + biography.attributes.pics.data[0].attributes.formats.thumbnail.url} />
-                        </div>
+                            <SubCaptionStyle>{biography.attributes.specialty}</SubCaptionStyle>
+                        </CaptionStyle>
+                        </DoctorImageContainer>
 
                         </Link>
-                </div>
+                        </Col>
             ))}
-        </div>
+        </Row>
     )
 }
 

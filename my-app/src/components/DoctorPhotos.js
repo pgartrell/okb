@@ -9,7 +9,7 @@ const doctorPagePicsTop = DOCTORS.map((doctor, index) => {
         return (
             <Col xs={4} sm={3} lg={2}>
                 <Link to={`/doctorPage/${doctor.id}`}>
-                    <DoctorImageContainer key = {doctor.id} lassName="m-3">
+                    <DoctorImageContainer key = {doctor.id} className="m-3">
                         <DoctorImage src={doctor.image} alt={doctor.alt}></DoctorImage>
                         <CaptionStyle>
                             {doctor.name}
