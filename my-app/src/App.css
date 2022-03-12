@@ -626,7 +626,6 @@
 }
 
 /* Dr. Biography Pages */
-
 .dr-bio-pic {
   height: 400px;
   width: auto;
@@ -644,8 +643,3 @@
 ul {
   line-height: 12px;
 }
-
-/* ul.space_list li {
-  margin-bottom: 2px !important;
-  margin-top: 2px !important;
-} */

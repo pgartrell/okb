@@ -15,7 +15,6 @@ const TopBioPics = () => {
         .catch((error) => console.log(error));
     }, {});
 
-    // let imageurl = `http://localhost:1337/${setBiographies.data}/`
 
     let imageurl = `http://localhost:1337`
 
