@@ -1,10 +1,13 @@
 import React, {useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Container, Col, Row } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 
 
 const BioList = () => {
     const [biographies, setBiographies] = useState([]);
+
+let everest = useParams()
+console.log(everest.id);
 
     useEffect(() => {
         fetch("http://localhost:1337/api/biographies?populate=*")
@@ -20,7 +23,7 @@ const BioList = () => {
 
     return (
         <Container>
-            {biographies.map((biography) => (
+            {biographies.filter(biography => biography.id==everest.id).map((biography) => (
                 <Row>
                     
                         <Col key={biography.id}>
