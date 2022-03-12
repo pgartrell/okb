@@ -12,7 +12,7 @@ const MobileHeroSection = () => {
         <HomeHeroSubtitle className="lead">This will hold text about Mobile Clinic</HomeHeroSubtitle>
         <div style={{paddingLeft:"50px"}}>
         <Link to='/appointmentPage'><button className="btn-okb-primary">Get Started</button></Link>
-        <Link to=''><button className="btn-okb-secondary">Meet All Doctors</button></Link>   
+        <Link to='/doctorsPage'><button className="btn-okb-secondary">Meet All Doctors</button></Link>   
         </div>     
       </Jumbotron>
            
