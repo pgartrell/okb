@@ -47,10 +47,3 @@ export const ImpactBottomHeroSubtitle = styled.p `
     float: left;
     
 `
-export const JCtext = styled.div `
-
-
-`
-export const JCButton = styled.div `
-  
-`
