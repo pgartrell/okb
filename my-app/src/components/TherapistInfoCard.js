@@ -5,17 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
-const BioList = () => {
-    const [biographies, setBiographies] = useState([]);
+const TherapistBioList = () => {
+    const [tbiographies, setTBiographies] = useState([]);
 
 let everest = useParams()
 console.log(everest.id);
 
     useEffect(() => {
-        fetch("http://localhost:1337/api/biographies?populate=*")
+        fetch("http://localhost:1337/api/therapist-biographies?populate=*")
         .then((data) => data.json())
         .then((data) => {
-            setBiographies(data.data);
+            setTBiographies(data.data);
         })
         .catch((error) => console.log(error));
     }, {});
@@ -25,15 +25,15 @@ console.log(everest.id);
     return (
         <Container>
             <Row style={{textAlign: 'left'}}>
-                <Link to='/doctorsPage' style={{textDecoration: 'none'}}><button className="btn-okb-secondary"><FontAwesomeIcon icon={faAngleLeft} /> Back</button></Link>
+                <Link to='/therapistsPage' style={{textDecoration: 'none'}}><button className="btn-okb-secondary"><FontAwesomeIcon icon={faAngleLeft} /> Back</button></Link>
             </Row>
-            {biographies.filter(biography => biography.id==everest.id).map((biography) => (
+            {tbiographies.filter(biography => biography.id==everest.id).map((biography) => (
                 <Row>
                     
-                        <Col key={biography.id}>
+                        {/* <Col key={biography.id}>
                         <img className="dr-bio-pic" src={imageurl + biography.attributes.pics.data[0].attributes.url} />
  
-                        </Col>
+                        </Col> */}
 
                         <Col className="dr-bio-info">
                         <h1>{biography.attributes.name}</h1>
@@ -64,4 +64,4 @@ console.log(everest.id);
     )
 }
 
-export default BioList;
+export default TherapistBioList;
