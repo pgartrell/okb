@@ -29,7 +29,7 @@ const TherapistLowerBioPics = () => {
                   style={{ textDecoration: "none" }}
                 >
                     <DoctorImageContainer  key={biography.id} className="m-3">
-                        {/* <DoctorImage  src={imageurl + biography.attributes.pics.data[0].attributes.formats.thumbnail.url} alt={biography.attributes.name} /> */}
+                        <DoctorImage  src={imageurl + biography.attributes.pics.data[0].attributes.formats.thumbnail.url} alt={biography.attributes.name} />
                         <CaptionStyle>
                         {biography.attributes.name}
                         <SubCaptionStyle>{biography.attributes.credential}</SubCaptionStyle>

@@ -30,10 +30,10 @@ console.log(everest.id);
             {tbiographies.filter(biography => biography.id==everest.id).map((biography) => (
                 <Row>
                     
-                        {/* <Col key={biography.id}>
+                        <Col key={biography.id}>
                         <img className="dr-bio-pic" src={imageurl + biography.attributes.pics.data[0].attributes.url} />
  
-                        </Col> */}
+                        </Col>
 
                         <Col className="dr-bio-info">
                         <h1>{biography.attributes.name}</h1>
