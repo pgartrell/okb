@@ -1,6 +1,8 @@
 import React, {useEffect, useState } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 const BioList = () => {
@@ -20,9 +22,11 @@ console.log(everest.id);
 
     let imageurl = `http://localhost:1337`
 
-
     return (
         <Container>
+            <Row style={{textAlign: 'left'}}>
+                <Link to='/doctorsPage' style={{textDecoration: 'none'}}><button className="btn-okb-secondary"><FontAwesomeIcon icon={faAngleLeft} /> Back</button></Link>
+            </Row>
             {biographies.filter(biography => biography.id==everest.id).map((biography) => (
                 <Row>
                     
