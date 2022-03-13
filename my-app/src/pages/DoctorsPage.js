@@ -5,6 +5,9 @@ import DoctorPageIntro from "../components/DoctorPageIntro";
 import MobileSuccessStories from "../components/MobileSuccessStories";
 import DoctorPageBottomButtons from "../components/DoctorPageBottomButtons";
 import { RenderDoctorPhotosOrBios } from "../components/DoctorPhotos";
+import BioList from "../components/DoctorInfoCard";
+import TopBioPics from "../components/Biographies";
+import LowerBioPics from "../components/LowerBiographies";
 
 const DoctorsPage = () => {
   return (
@@ -12,15 +15,19 @@ const DoctorsPage = () => {
       <Row>
       <DoctorPageIntro />
       </Row>
+      <TopBioPics />
       <DoctorPhotosTop />
 
       <MobileSuccessStories />
 
+      <LowerBioPics />
       <DoctorPhotosBottom />
 
       <MobileSuccessStories />
 
       <DoctorPageBottomButtons />
+
+      <BioList />
 
 {/* <RenderDoctorPhotosOrBios /> */}
 
