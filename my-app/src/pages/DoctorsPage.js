@@ -16,12 +16,12 @@ const DoctorsPage = () => {
       <DoctorPageIntro />
       </Row>
       <TopBioPics />
-      {/* <DoctorPhotosTop /> */}
+      <DoctorPhotosTop />
 
       <MobileSuccessStories />
 
       <LowerBioPics />
-      {/* <DoctorPhotosBottom /> */}
+      <DoctorPhotosBottom />
 
       <MobileSuccessStories />
 
