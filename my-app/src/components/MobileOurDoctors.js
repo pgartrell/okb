@@ -37,7 +37,7 @@ export default function OurDoctorCarouselSection() {
                 </Carousel>
             </div>
             <div className='row m-4 d-md-none'>
-              <Carousel show={4} slide={2} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={faAngleRight} size='2x' className='fontawesome-carousel-icon'/>} leftArrow={<FontAwesomeIcon icon={faAngleLeft} size='2x' className='fontawesome-carousel-icon'/>}>
+              <Carousel show={3} slide={2} responsive={true} swiping={true} rightArrow={<FontAwesomeIcon icon={faAngleRight} size='2x' className='fontawesome-carousel-icon'/>} leftArrow={<FontAwesomeIcon icon={faAngleLeft} size='2x' className='fontawesome-carousel-icon'/>}>
                 {mobileOurDoctors}
                 </Carousel>
             </div>

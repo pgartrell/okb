@@ -4,17 +4,22 @@ import { TherapistPhotosTop, TherapistPhotosBottom } from "../components/Therapi
 import TherapistPageBottomButtons from "../components/TherapistPageBottomButtons";
 import TherapistsPageIntro from "../components/TherapistsPageIntro";
 import MobileSuccessStories from "../components/MobileSuccessStories";
+import TherapistTopBioPics from "../components/TherapistBiographies";
+import TherapistLowerBioPics from "../components/TherapistLowerBiographies";
 
 const TherapistsPage = () => {
   return (
     <Container>
       <Row>
-      <TherapistsPageIntro />
+       <TherapistsPageIntro />
       </Row>
+
+      <TherapistTopBioPics />
       <TherapistPhotosTop />
 
       <MobileSuccessStories />
 
+      <TherapistLowerBioPics />
       <TherapistPhotosBottom />
 
       <MobileSuccessStories />

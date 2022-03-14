@@ -18,6 +18,8 @@ import AboutPage from "./pages/AboutPage";
 import DonatePage from "./pages/DonatePage";
 import ImpactPage from "./pages/ImpactPage";
 import WWDPage from "./pages/WWDPage"
+import BioList from "./components/DoctorInfoCard";
+import TherapistBioList from "./components/TherapistInfoCard";
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
@@ -48,6 +50,9 @@ function App() {
             <Route path="/WWDPage" element={<WWDPage />} />
             {/* <Route path="/doctorsPage/:id" element={<DoctorInfoCard />}>
               </Route> */}
+            <Route path="/biographies/:id" element={<BioList />} />
+            <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />
+              
           </Route>
         </Routes>
       </Router>
