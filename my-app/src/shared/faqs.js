@@ -12,7 +12,7 @@ export const FAQS = [
     {
         id: 2,
         title: "Question 3",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+        text: "Sed scelerisque dolor at ligula eleifend vehicula. Sed vel pharetra velit. Vestibulum nunc mauris, elementum vitae ex at, tempor faucibus mauris."
     },
     {
         id: 3,

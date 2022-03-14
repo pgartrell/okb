@@ -18,6 +18,7 @@ import AboutPage from "./pages/AboutPage";
 import DonatePage from "./pages/DonatePage";
 import ImpactPage from "./pages/ImpactPage";
 import BioList from "./components/DoctorInfoCard";
+import TherapistBioList from "./components/TherapistInfoCard";
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
@@ -45,8 +46,9 @@ function App() {
             <Route path="/aboutPage" element={<AboutPage />} />
             <Route path="/donatePage" element={<DonatePage />} />
             <Route path="/impactPage" element={<ImpactPage />} />
-            <Route path="/biographies/:id" element={<BioList />}>
-              </Route>
+            <Route path="/biographies/:id" element={<BioList />} />
+            <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />
+              
           </Route>
         </Routes>
       </Router>

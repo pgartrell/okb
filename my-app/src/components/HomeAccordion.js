@@ -13,7 +13,7 @@ export default function HomeAccordion() {
       <Accordion className="accordion-margins">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
+          aria-controls={question.id}
           id={question.id}
           className="m-1"
         >
