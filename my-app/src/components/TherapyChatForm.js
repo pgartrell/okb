@@ -16,6 +16,13 @@ export default function TherapyChatForm() {
     mood: "",
   });
 
+  console.log(formData.gender)
+  console.log(formData.age)
+  console.log(formData.relationship)
+  console.log(formData.beenintherapy)
+  console.log(formData.considertherapy)
+  
+
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
@@ -27,32 +34,35 @@ export default function TherapyChatForm() {
   }
 
   function handleSubmit() {
+    
     console.log(`Form State: ${JSON.stringify(formData)}`);
     alert(`Form State: ${JSON.stringify(formData)}`);
+
+    console.log(formData)
   }
 
-  function handleClear() {
-    setFormData({
-      gender: "",
-      age: "",
-      relationship: "",
-      beenintherapy: "",
-      considertherapy: "",
-      session: "",
-      physicalhealth: "",
-      eatinghabits: "",
-      mood: "",
-    });
-    console.log(formData);
-  }
+  // function handleClear() {
+  //   setFormData({
+  //     gender: "",
+  //     age: "",
+  //     relationship: "",
+  //     beenintherapy: "",
+  //     considertherapy: "",
+  //     session: "",
+  //     physicalhealth: "",
+  //     eatinghabits: "",
+  //     mood: "",
+  //   });
+  //   console.log(formData);
+  // }
 
   return (
     <div className="therapy-form-image">
       <h1 className="therapy-appointment-title">Before we chat...</h1>
-      <Container className="therapy-appointment-container">
+      <Container style={{alignContent:"right"}}className="therapy-appointment-container">
         <Row>
           <Col>
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <fieldset className="gender-input">
                 <FormP>What is your gender?</FormP>
 
@@ -177,7 +187,7 @@ export default function TherapyChatForm() {
                 </FormCheck>
               </fieldset>
 
-              <fieldset className="gender-input">
+              <fieldset className="beenintherapy-input">
                 <FormP>Have you ever been in therapy?</FormP>
 
                 <FormCheck>
@@ -205,224 +215,231 @@ export default function TherapyChatForm() {
                 </FormCheck>
               </fieldset>
 
+              <Form.Group className="mb-3" controlId="textarea1">
+                <Form.Label>What made you consider therapy?</Form.Label>
+                <Form.Control as="textarea" rows={3} 
+                value={formData.considertherapy}
+                placeholder="Please insert input here"
+                onChange={handleChange}
+                name="considertherapy"
+                />              
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="textarea1">
+                <Form.Label>What do you hope to gain from today's session</Form.Label>
+                <Form.Control as="textarea" rows={3} 
+                value={formData.session}
+                placeholder="Please insert input here"
+                onChange={handleChange}
+                name="session"
+                />              
+              </Form.Group>
+
               <fieldset className="physical-health-input">
-                <FormP>On a scale of 1-10, how would you rate your current physical health?</FormP>{" "}
+                <FormP>
+                  On a scale of 1-10, how would you rate your current physical
+                  health?
+                </FormP>{" "}
                 {/* "FormP" is From styled components */}
-                
-                
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="1"
-                    value="1"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "1"}
-                  />
-                  <LabelsRating htmlFor="1">1</LabelsRating>{" "} {/* "Labels" is From styled components */}                  
-                
-                
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="2"
-                    value="2"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "2"}
-                  />
-                  <LabelsRating htmlFor="2">2</LabelsRating>{" "} {/* "Labels" is From styled components */} 
-                
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="3"
-                    value="3"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "3"}
-                  />
-                  <LabelsRating htmlFor="3">3</LabelsRating>{" "} {/* "Labels" is From styled components */} 
-
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="4"
-                    value="4"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "4"}
-                  />
-                  <LabelsRating htmlFor="4">4</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="5"
-                    value="5"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "5"}
-                  />
-                  <LabelsRating htmlFor="5">5</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="6"
-                    value="6"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "6"}
-                  />
-                  <LabelsRating htmlFor="6">6</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="7"
-                    value="7"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "7"}
-                  />
-                  <LabelsRating htmlFor="7">7</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="8"
-                    value="8"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "8"}
-                  />
-                  <LabelsRating htmlFor="8">8</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="9"
-                    value="9"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "9"}
-                  />
-                  <LabelsRating htmlFor="9">9</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="10"
-                    value="10"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "10"}
-                  />
-                  <LabelsRating htmlFor="10">10</LabelsRating>{" "}
-
-
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="1"
+                  value="1"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "1"}
+                />
+                <LabelsRating htmlFor="1">1</LabelsRating>{" "}
+                {/* "Labels" is From styled components */}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="2"
+                  value="2"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "2"}
+                />
+                <LabelsRating htmlFor="2">2</LabelsRating>{" "}
+                {/* "Labels" is From styled components */}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="3"
+                  value="3"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "3"}
+                />
+                <LabelsRating htmlFor="3">3</LabelsRating>{" "}
+                {/* "Labels" is From styled components */}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="4"
+                  value="4"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "4"}
+                />
+                <LabelsRating htmlFor="4">4</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="5"
+                  value="5"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "5"}
+                />
+                <LabelsRating htmlFor="5">5</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="6"
+                  value="6"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "6"}
+                />
+                <LabelsRating htmlFor="6">6</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="7"
+                  value="7"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "7"}
+                />
+                <LabelsRating htmlFor="7">7</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="8"
+                  value="8"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "8"}
+                />
+                <LabelsRating htmlFor="8">8</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="9"
+                  value="9"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "9"}
+                />
+                <LabelsRating htmlFor="9">9</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="physicalhealth"
+                  id="10"
+                  value="10"
+                  onChange={handleChange}
+                  checked={formData.physicalhealth === "10"}
+                />
+                <LabelsRating htmlFor="10">10</LabelsRating>{" "}
               </fieldset>
 
-              <fieldset className="physical-health-input">
-                <FormP>On a scale of 1-10, how would you rate your current eating habits?</FormP>{" "}
+              <fieldset className="eating-habits-input">
+                <FormP>
+                  On a scale of 1-10, how would you rate your current eating
+                  habits?
+                </FormP>{" "}
                 {/* "FormP" is From styled components */}
-                
-                
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="1"
-                    value="1"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "1"}
-                  />
-                  <LabelsRating htmlFor="1">1</LabelsRating>{" "} {/* "Labels" is From styled components */}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="2"
-                    value="2"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "2"}
-                  />
-                  <LabelsRating htmlFor="2">2</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="3"
-                    value="3"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "3"}
-                  />
-                  <LabelsRating htmlFor="3">3</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="4"
-                    value="4"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "4"}
-                  />
-                  <LabelsRating htmlFor="4">4</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="5"
-                    value="5"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "5"}
-                  />
-                  <LabelsRating htmlFor="5">5</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="6"
-                    value="6"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "6"}
-                  />
-                  <LabelsRating htmlFor="6">6</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="7"
-                    value="7"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "7"}
-                  />
-                  <LabelsRating htmlFor="7">7</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="8"
-                    value="8"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "8"}
-                  />
-                  <LabelsRating htmlFor="8">8</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="9"
-                    value="9"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "9"}
-                  />
-                  <LabelsRating htmlFor="9">9</LabelsRating>{" "}
-
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="10"
-                    value="10"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "10"}
-                  />
-                  <LabelsRating htmlFor="10">10</LabelsRating>{" "}
-
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="1"
+                  value="1"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "1"}
+                />
+                <LabelsRating htmlFor="1">1</LabelsRating>{" "}
+                {/* "Labels" is From styled components */}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="2"
+                  value="2"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "2"}
+                />
+                <LabelsRating htmlFor="2">2</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="3"
+                  value="3"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "3"}
+                />
+                <LabelsRating htmlFor="3">3</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="4"
+                  value="4"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "4"}
+                />
+                <LabelsRating htmlFor="4">4</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="5"
+                  value="5"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "5"}
+                />
+                <LabelsRating htmlFor="5">5</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="6"
+                  value="6"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "6"}
+                />
+                <LabelsRating htmlFor="6">6</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="7"
+                  value="7"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "7"}
+                />
+                <LabelsRating htmlFor="7">7</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="8"
+                  value="8"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "8"}
+                />
+                <LabelsRating htmlFor="8">8</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="9"
+                  value="9"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "9"}
+                />
+                <LabelsRating htmlFor="9">9</LabelsRating>{" "}
+                <input
+                  type="radio"
+                  name="eatinghabits"
+                  id="10"
+                  value="10"
+                  onChange={handleChange}
+                  checked={formData.eatinghabits === "10"}
+                />
+                <LabelsRating htmlFor="10">10</LabelsRating>{" "}
               </fieldset>
 
               <fieldset className="mood-input">
-                <FormP>Are you currently experiencing overwhelming sadness, grief, or depression?</FormP>
+                <FormP>
+                  Are you currently experiencing overwhelming sadness, grief, or
+                  depression?
+                </FormP>
 
                 <FormCheck>
                   <input
@@ -448,6 +465,10 @@ export default function TherapyChatForm() {
                   <Labels htmlFor="no">No</Labels>
                 </FormCheck>
               </fieldset>
+
+            <br />
+            <br />
+            <button className="btn-okb-primary" onPress={handleSubmit}>Submit</button>
             </Form>
           </Col>
         </Row>
