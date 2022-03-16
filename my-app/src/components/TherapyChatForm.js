@@ -1,7 +1,8 @@
 import { Container } from "@mui/material";
 import React, { useState } from "react";
-import { Form, FormGroup, Row, Col, FormCheck } from "react-bootstrap";
-import { FormP, Labels, LabelsRating } from "../styles/TherapyChatForm.styles";
+import { Form, FormGroup, Row, Col, FormCheck} from "react-bootstrap";
+import { FormP, Labels, LabelsRating, FormInputs  } from "../styles/TherapyChatForm.styles";
+import "../../src/App.css"
 
 export default function TherapyChatForm() {
   const [formData, setFormData] = useState({
@@ -59,26 +60,27 @@ export default function TherapyChatForm() {
   return (
     <div className="therapy-form-image">
       <h1 className="therapy-appointment-title">Before we chat...</h1>
-      <Container style={{alignContent:"right"}}className="therapy-appointment-container">
-        <Row>
-          <Col>
-            <Form onSubmit={handleSubmit}>
-              <fieldset className="gender-input">
+      <Container className="therapy-appointment-container" >
+        <Row className="tcfRow" style={{backgroundColor:"#e6e6e6"}}>
+          <Col xs={12} lg={6}>
+            <Form className="form-inline" onSubmit={handleSubmit}>
+              <div className="form-group col-sm-12 gender-input" style={{float:"left", textAlign:"left"}}>
                 <FormP>What is your gender?</FormP>
-
+              <fieldset>
                 <FormCheck>
-                  <input
+                  <FormInputs
                     type="radio"
                     name="gender"
                     id="male"
                     value="male"
                     onChange={handleChange}
                     checked={formData.gender === "male"}
+                    
                   />
                   <Labels htmlFor="male">Male</Labels>
                 </FormCheck>
 
-                <FormCheck>
+                <FormCheck >
                   <input
                     type="radio"
                     name="gender"
@@ -90,7 +92,7 @@ export default function TherapyChatForm() {
                   <Labels htmlFor="female">Female</Labels>
                 </FormCheck>
 
-                <FormCheck>
+                <FormCheck >
                   <input
                     type="radio"
                     name="gender"
@@ -102,7 +104,7 @@ export default function TherapyChatForm() {
                   <Labels htmlFor="non-binary">Non-binary</Labels>
                 </FormCheck>
 
-                <FormCheck>
+                <FormCheck >
                   <input
                     type="radio"
                     name="gender"
@@ -113,11 +115,13 @@ export default function TherapyChatForm() {
                   />
                   <Labels htmlFor="other">Other</Labels>
                 </FormCheck>
-              </fieldset>
+                </fieldset>
+              </div>
 
-              <fieldset className="relationship-input">
+              <div className="form-group col-sm-12 relationship-input" style={{textAlign:"left", float:"left"}}>
                 <FormP>What is your Relationship status?</FormP>{" "}
                 {/* "FormP" is From styled components */}
+                <fieldset>
                 <FormCheck>
                   <input
                     type="radio"
@@ -185,11 +189,13 @@ export default function TherapyChatForm() {
                   />
                   <Labels htmlFor="other">Other</Labels>
                 </FormCheck>
-              </fieldset>
+                </fieldset>
+              </div>
 
-              <fieldset className="beenintherapy-input">
-                <FormP>Have you ever been in therapy?</FormP>
-
+              <div className="form-group col-sm-12 beenintherapy-input" style={{textAlign:"left", float:"left"}}>
+                <FormP>Have you been in therapy?</FormP>{" "}
+                {/* "FormP" is From styled components */}
+                <fieldset>
                 <FormCheck>
                   <input
                     type="radio"
@@ -214,9 +220,10 @@ export default function TherapyChatForm() {
                   <Labels htmlFor="no">No</Labels>
                 </FormCheck>
               </fieldset>
-
+              </div>
+              <div>
               <Form.Group className="mb-3" controlId="textarea1">
-                <Form.Label>What made you consider therapy?</Form.Label>
+                <FormP>What made you consider therapy?</FormP>
                 <Form.Control as="textarea" rows={3} 
                 value={formData.considertherapy}
                 placeholder="Please insert input here"
@@ -224,9 +231,9 @@ export default function TherapyChatForm() {
                 name="considertherapy"
                 />              
               </Form.Group>
-
+              
               <Form.Group className="mb-3" controlId="textarea1">
-                <Form.Label>What do you hope to gain from today's session</Form.Label>
+                <FormP>What do you hope to gain from today's session</FormP>
                 <Form.Control as="textarea" rows={3} 
                 value={formData.session}
                 placeholder="Please insert input here"
@@ -234,13 +241,13 @@ export default function TherapyChatForm() {
                 name="session"
                 />              
               </Form.Group>
-
-              <fieldset className="physical-health-input">
-                <FormP>
-                  On a scale of 1-10, how would you rate your current physical
-                  health?
-                </FormP>{" "}
+              </div>
+              
+              <div className="form-group col-sm-12 physical-health-input" style={{textAlign:"left", float:"left"}}>
+                <FormP>On a scale of 1-10 how would you rate your current physical health?</FormP>{" "}
                 {/* "FormP" is From styled components */}
+                <fieldset>
+                
                 <input
                   type="radio"
                   name="physicalhealth"
@@ -335,12 +342,14 @@ export default function TherapyChatForm() {
                 />
                 <LabelsRating htmlFor="10">10</LabelsRating>{" "}
               </fieldset>
+              </div>
 
-              <fieldset className="eating-habits-input">
-                <FormP>
-                  On a scale of 1-10, how would you rate your current eating
-                  habits?
-                </FormP>{" "}
+              
+              <div className="form-group col-sm-12 eating-habits-input" style={{textAlign:"left", float:"left"}}>
+                <FormP>On a scale of 1-10 how would you rate your current physical health?</FormP>{" "}
+                {/* "FormP" is From styled components */}
+                <fieldset>
+
                 {/* "FormP" is From styled components */}
                 <input
                   type="radio"
@@ -434,13 +443,13 @@ export default function TherapyChatForm() {
                 />
                 <LabelsRating htmlFor="10">10</LabelsRating>{" "}
               </fieldset>
+            </div>
 
-              <fieldset className="mood-input">
-                <FormP>
-                  Are you currently experiencing overwhelming sadness, grief, or
-                  depression?
-                </FormP>
 
+              <div className="form-group col-sm-12 mood-input" style={{textAlign:"left", float:"left"}}>
+                <FormP>Are you currently experiencing overwhelming sadness, grief, or depression?</FormP>{" "}
+                {/* "FormP" is From styled components */}
+                <fieldset>
                 <FormCheck>
                   <input
                     type="radio"
@@ -465,6 +474,7 @@ export default function TherapyChatForm() {
                   <Labels htmlFor="no">No</Labels>
                 </FormCheck>
               </fieldset>
+              </div>
 
             <br />
             <br />
