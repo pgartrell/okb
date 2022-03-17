@@ -1,0 +1,49 @@
+.therapy-form-image {
+    background-image: url("../images/mountains.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;  
+    padding-bottom: 100px
+  }
+ 
+.therapy-appointment-title {
+    text-align: left;
+    color: white;
+    font-size: 3rem;
+    
+}
+
+.radio-container {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+
+.radio-container label {
+    display: block;
+}
+
+.therapy-appointment-container {
+    margin-bottom: 100px;
+    
+}
+
+input {
+    border-radius:50%;
+    box-shadow: 0 0 #888888;
+}
+
+button {
+    
+}
+
+.tcfRow {
+    padding-bottom: 50px;
+}
+
+@media (max-width: 400px) {
+    .physical-health-input, .eating-habits-input {
+      padding: 0 !important;
+      padding-bottom: 20px !important;
+    }
+}
