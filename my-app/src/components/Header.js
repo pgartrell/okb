@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <Navbar className="custom-navbar" transparent bg="light" sticky="top" expand="lg">
       <Container fluid>  
-        <NavbarBrand href="./LandingPage">
+        <NavbarBrand href="/">
             <img className='navbar-logo' src={LogoImage} alt="okb logo"/>
         </NavbarBrand>     
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

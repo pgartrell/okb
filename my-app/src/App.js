@@ -31,8 +31,8 @@ function App() {
       <Router>
         <Header />
           <Routes>
-            <Route path="/" element={<LandingPage />}>
-              <Route path="/landingpage" element={<LandingPage />} />
+            <Route>
+              <Route path="/" element={<LandingPage />} />
               <Route path="/mobileClinicPage" element={<MobileClinicPage />} />
               <Route path="/onlineTherapyPage" element={<OnlineTherapyPage />} />
               <Route path="/resourcesPage" element={<ResourcesPage />} />
