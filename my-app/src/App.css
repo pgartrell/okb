@@ -108,7 +108,7 @@
 
 .social-btn {
   color: white;
-  padding: 1em;
+  padding: .75em;
 }
 
 .social-btn:hover {
@@ -193,7 +193,7 @@
 
 /* Home Resources CSS */
 .homeresources-container {
-  padding: 1em 0 5em 0;
+  padding: 5em;
 }
 
 .homeresources-title {
