@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardImgOverlay, Breadcrumb, BreadcrumbItem,
-    Button, Modal, ModalHeader, ModalBody, Label } from 'reactstrap';
+import React from 'react';
+import { Card, CardImg, CardText, CardBody } from 'reactstrap';
 import { DOCTORS } from '../shared/doctors';
 
 function RenderBio({doctor}) {

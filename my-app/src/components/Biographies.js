@@ -21,7 +21,7 @@ const TopBioPics = () => {
     return (
         <Row>
             {biographies.filter(biography => biography.attributes.topfeature==true).map((biography) => (
-                    <Col xs={4} sm={3} lg={2}>
+                <Col xs={4} sm={3} lg={2}>
                     <Link 
                       to={"/biographies/" + biography.id}
                       key = {biography.id}
@@ -30,13 +30,12 @@ const TopBioPics = () => {
                         <DoctorImageContainer  key={biography.id} className="m-3">
                             <DoctorImage  src={imageurl + biography.attributes.pics.data[0].attributes.formats.thumbnail.url} alt={biography.attributes.name} />
                             <CaptionStyle>
-                            {biography.attributes.name}
-                            <SubCaptionStyle>{biography.attributes.credential}</SubCaptionStyle>
-                        </CaptionStyle>
+                                {biography.attributes.name}
+                                <SubCaptionStyle>{biography.attributes.credential}</SubCaptionStyle>
+                            </CaptionStyle>
                         </DoctorImageContainer>
-
-                        </Link>
-                        </Col>
+                    </Link>
+                </Col>
             ))}
         </Row>
     )

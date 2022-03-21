@@ -108,7 +108,7 @@
 
 .social-btn {
   color: white;
-  padding: .75em;
+  padding: 0.75em;
 }
 
 .social-btn:hover {
@@ -644,14 +644,14 @@ ul {
   width: 100vw;
   background-size: cover;
   background-position: center center; /* or 50% 50% */
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
   background-image: url(./images/testHospitalImage.jpg);
 }
 
 .homehero-title {
   color: whitesmoke;
   font-size: 5rem;
-  text-shadow: .5px .5px black;
+  text-shadow: 0.5px 0.5px black;
   font-weight: normal;
   text-align: left;
   padding-left: 20px;
@@ -660,7 +660,7 @@ ul {
 .homehero-subtitle {
   color: whitesmoke;
   font-size: 2rem;
-  text-shadow: .5px .5px black;
+  text-shadow: 0.5px 0.5px black;
   font-weight: 600;
   text-align: left;
   padding-left: 20px;
@@ -670,7 +670,7 @@ ul {
 .joinlink-title {
   color: white;
   font-size: 3rem;
-  text-shadow: .5px .5px black;
+  text-shadow: 0.5px 0.5px black;
 }
 
 .joinlink-text-section {
@@ -682,5 +682,5 @@ ul {
   max-width: 1000px;
   font-size: 1.5rem;
   text-align: center;
-  text-shadow: .5px .5px black;
+  text-shadow: 0.5px 0.5px black;
 }

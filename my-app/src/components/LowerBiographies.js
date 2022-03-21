@@ -15,14 +15,12 @@ const LowerBioPics = () => {
         .catch((error) => console.log(error));
     }, {});
 
-    // let imageurl = `http://localhost:1337/${setBiographies.data}/`
-
     let imageurl = `http://localhost:1337`
 
     return (
         <Row>
         {biographies.filter(biography => biography.attributes.topfeature==false).map((biography) => (
-                <Col xs={4} sm={3} lg={2}>
+            <Col xs={4} sm={3} lg={2}>
                 <Link 
                   to={"/biographies/" + biography.id}
                   key = {biography.id}
@@ -31,15 +29,14 @@ const LowerBioPics = () => {
                     <DoctorImageContainer  key={biography.id} className="m-3">
                         <DoctorImage  src={imageurl + biography.attributes.pics.data[0].attributes.formats.thumbnail.url} alt={biography.attributes.name} />
                         <CaptionStyle>
-                        {biography.attributes.name}
-                        <SubCaptionStyle>{biography.attributes.credential}</SubCaptionStyle>
-                    </CaptionStyle>
+                            {biography.attributes.name}
+                            <SubCaptionStyle>{biography.attributes.credential}</SubCaptionStyle>
+                        </CaptionStyle>
                     </DoctorImageContainer>
-
-                    </Link>
-                    </Col>
+                </Link>
+            </Col>
         ))}
-    </Row>
+        </Row>
     )
 }
 

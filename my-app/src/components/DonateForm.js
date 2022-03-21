@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { Container, Row, Col } from 'react-bootstrap';
-
+import { Container, Row, Col, Form } from 'react-bootstrap';
+ 
 export default function DonateForm() {
    
     const [styleOneTime, setStyleOneTime] = useState("btn-donate-selected");
@@ -27,6 +27,13 @@ export default function DonateForm() {
     const [donateMessage, setDonateMessage] = useState(<div><p>Please select an amount.</p></div>)
 
     const [donationAmount, setDonationAmount] = useState(0)
+    const [donationFrequency, setDonationFrequency] = useState("One Time")
+
+    function handleSubmit() {
+        console.log(`Donation Choice: ${JSON.stringify(donationAmount)}, ${JSON.stringify(donationFrequency)}`);
+        alert(`Donation Choice: ${JSON.stringify(donationAmount)}, ${JSON.stringify(donationFrequency)}`);
+    }
+
 
     return (
         <div>
@@ -59,6 +66,7 @@ export default function DonateForm() {
                                 setDiamondAmount(500); 
                                 setPhilanthropistAmount(1000);
                                 setDonationAmount(0);
+                                setDonationFrequency("One Time");
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 One Time
@@ -83,6 +91,7 @@ export default function DonateForm() {
                                 setDiamondAmount(100); 
                                 setPhilanthropistAmount(250);
                                 setDonationAmount(0);
+                                setDonationFrequency("Monthly");
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Monthly
@@ -107,6 +116,7 @@ export default function DonateForm() {
                                 setDiamondAmount(300); 
                                 setPhilanthropistAmount(750);
                                 setDonationAmount(0);
+                                setDonationFrequency("Quarterly");
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Quarterly
@@ -131,6 +141,7 @@ export default function DonateForm() {
                                 setDiamondAmount(1200); 
                                 setPhilanthropistAmount(3000);
                                 setDonationAmount(0);
+                                setDonationFrequency("Annually");
                                 setDonateMessage(<div><p>Please select an amount.</p></div>)
                             }}>
                                 Annually
@@ -238,9 +249,11 @@ export default function DonateForm() {
                         <div className="input-group">
                             <span className="input-group-addon">$</span><input type="number" placeholder={donationAmount} className="form-control" /></div>
                             </Col><Col>
-                        <button className="btn-donate-selected">
+                            <Form onSubmit={handleSubmit}>
+                        <button className="btn-okb-primary" type='submit'>
                             Continue
                         </button>
+                        </Form>
                         </Col>
                         <Col></Col>
                     </Row>

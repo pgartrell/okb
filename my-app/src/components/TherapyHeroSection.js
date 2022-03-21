@@ -15,7 +15,7 @@ const TherapyHeroSection = () => {
           <Link to="/appointmentPage">
             <button className="btn-okb-primary">Get Started</button>
           </Link>
-          <Link to="">
+          <Link to='/therapistsPage' style={{textDecoration: 'none'}}>
             <button className="btn-okb-secondary">Meet All Therapists</button>
           </Link>
         </div>

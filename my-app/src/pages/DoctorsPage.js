@@ -13,18 +13,19 @@ const DoctorsPage = () => {
       <Row>
         <DoctorPageIntro /> 
       </Row>
+      
+      {/* The component called TopBioPics requires Strapi, but the one called DoctorPhotosTop does not - only one is needed overall */}
       <TopBioPics />
       <DoctorPhotosTop />
 
       <MobileSuccessStories />
 
+      {/* The component called LowerBioPics requires Strapi, but the one called DoctorPhotosBottom does not - only one is needed overall */}
       <LowerBioPics />
       <DoctorPhotosBottom />
 
       <MobileSuccessStories />
-
       <DoctorPageBottomButtons />
-
     </Container>
   );
 };

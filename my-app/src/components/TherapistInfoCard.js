@@ -29,35 +29,29 @@ console.log(everest.id);
             </Row>
             {tbiographies.filter(biography => biography.id==everest.id).map((biography) => (
                 <Row>
-                    
-                        <Col key={biography.id}>
+                    <Col key={biography.id}>
                         <img className="dr-bio-pic" src={imageurl + biography.attributes.pics.data[0].attributes.url} />
- 
-                        </Col>
-
-                        <Col className="dr-bio-info">
+                    </Col>
+                    <Col className="dr-bio-info">
                         <h1>{biography.attributes.name}</h1>
                         <h4>{biography.attributes.credential}</h4>
                         <br />
-                           <p>{biography.attributes.bio}</p>
+                        <p>{biography.attributes.bio}</p>
                         <br />
                         <h3>Specialties</h3>
-                        
                         {biography.attributes.specialty.map(specialty =>(
                             <ul className="space_list">
-                            <li className="nomarge">{specialty.singlecredential}</li>
+                                <li className="nomarge">{specialty.singlecredential}</li>
                             </ul>
-                            ))}
+                        ))}
                         <br />
                         <h3>Experiences</h3>
-
                         {biography.attributes.experience.map(experience =>(
                             <ul className="space_list">
-                            <li className="nomarge">{experience.singleexperience}</li>
+                                <li className="nomarge">{experience.singleexperience}</li>
                             </ul>
-                            ))}
-                        </Col>
-                        
+                        ))}
+                    </Col>
                 </Row>
             ))}
         </Container>
