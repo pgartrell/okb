@@ -39,47 +39,47 @@
 
 .btn-okb-primary {
   background-color: #ff0000;
-  border: solid #ff0000;
+  border: solid 2px #ff0000;
   color: white;
-  padding: 10px 50px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin: 1em;
   cursor: pointer;
   border-radius: 20px;
+  margin: 1em;
 }
 
 .btn-okb-primary:hover {
   background-color: white;
   color: #ff0000;
-  border: solid #ff0000;
+  border: solid 2px #ff0000;
 }
 
 .btn-okb-secondary {
   background-color: white;
-  border: solid #ff0000;
+  border: solid 2px #ff0000;
   color: #ff0000;
-  padding: 10px 50px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin: 1em;
   cursor: pointer;
   border-radius: 20px;
+  margin: 1em;
 }
 
 .btn-okb-secondary:hover {
   background-color: #ff0000;
   color: white;
-  border: solid white;
+  border: solid 2px white;
 }
 
 .btn-okb-clear {
   background-color: transparent;
-  border: solid white;
+  border: solid 2px white;
   color: white;
-  padding: 10px 50px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -99,8 +99,6 @@
   background-size: cover;
 }
 
-/* Footer */
-
 /* Footer CSS */
 .site-footer {
   padding: 2em;
@@ -110,7 +108,7 @@
 
 .social-btn {
   color: white;
-  padding: 1em;
+  padding: .75em;
 }
 
 .social-btn:hover {
@@ -152,11 +150,8 @@
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-
   margin: 1em;
-
   margin: 0.5em 1.5em;
-
   cursor: pointer;
   border-radius: 20px;
 }
@@ -168,10 +163,6 @@
 .btn-navbar:hover {
   background-color: #e70a0a;
 }
-
-/* .custom-navbar {
-  margin-bottom: 2em;
-} */
 
 .navbar-logo {
   width: 70px;
@@ -202,7 +193,7 @@
 
 /* Home Resources CSS */
 .homeresources-container {
-  padding: 1em 0 5em 0;
+  padding: 5em;
 }
 
 .homeresources-title {
@@ -644,3 +635,52 @@ ul {
   line-height: 12px;
 }
 
+/* Home Hero Section */
+.homehero-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 60vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center center; /* or 50% 50% */
+  background-repeat: no-repeat;  
+  background-image: url(./images/testHospitalImage.jpg);
+}
+
+.homehero-title {
+  color: whitesmoke;
+  font-size: 5rem;
+  text-shadow: .5px .5px black;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.homehero-subtitle {
+  color: whitesmoke;
+  font-size: 2rem;
+  text-shadow: .5px .5px black;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Join Link Section */
+.joinlink-title {
+  color: white;
+  font-size: 3rem;
+  text-shadow: .5px .5px black;
+}
+
+.joinlink-text-section {
+  display: flex;
+  justify-content: center;
+}
+
+.joinlink-text {
+  max-width: 1000px;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: .5px .5px black;
+}

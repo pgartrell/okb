@@ -5,15 +5,13 @@ import testImage from "../images/testHospitalImage.jpg"
 export const JumbotronContainer = styled.section`
   display: flex;
   justify-content: left;
-  align-items:left;
-  text-align: left;
-  height: 70vh;
+  align-items: center;
+  height: 60vh;
   width: 100vw;
   background-size: cover;
   background-position: center center; /* or 50% 50% */
   background-repeat: no-repeat;  
   background-image: url(${testImage});
-  
   
 `
 export const Jumbotron = styled.div`
@@ -31,7 +29,7 @@ export const Jumbotron = styled.div`
 `;
 
 export const HomeHeroTitle = styled.h1`
-  font-size: 100px;
+  font-size: 5.5rem;
   text-shadow: .5px .5px black;
   font-weight: normal;
   text-align: left;
@@ -41,7 +39,7 @@ export const HomeHeroTitle = styled.h1`
 `;
 
 export const HomeHeroSubtitle = styled.p `
-    font-size: 40px;
+    font-size: 2rem;
     text-shadow: .5px .5px black;
     font-weight: 600;
     text-align: left;

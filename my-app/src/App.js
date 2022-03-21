@@ -1,10 +1,9 @@
 
-import React, { Fragment } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Redirect,
+  Route
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import MobileClinicPage from "./pages/MobileClinicPage";
@@ -23,46 +22,38 @@ import TherapistBioList from "./components/TherapistInfoCard";
 import TherapyChatFormPage from "./pages/TherapyChatFormPage";
 import Header from "./components/Header";
 import Footer from './components/Footer'
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 function App() {
   return (
     <div className="App">
-
       <Router>
         <Header />
-        <Routes>
-          <Route>
-            <Route path="/landingPage" element={<LandingPage />} />
-            <Route path="/mobileClinicPage" element={<MobileClinicPage />} />
-            <Route path="/onlineTherapyPage" element={<OnlineTherapyPage />} />
-            <Route path="/resourcesPage" element={<ResourcesPage />} />
-            <Route path="/workWithUsPage" element={<WorkWithUsPage />} />
-            <Route exact path="/doctorsPage" element={<DoctorsPage />} />
-            <Route path="/therapistsPage" element={<TherapistsPage />} />
-            <Route path="/appointmentPage" element={<AppointmentPage />} />
-            <Route path="/aboutPage" element={<AboutPage />} />
-            <Route path="/donatePage" element={<DonatePage />} />
-            <Route path="/impactPage" element={<ImpactPage />} />
-            <Route path="/WWDPage" element={<WWDPage />} />
-            <Route path="/TherapyChatFormPage" element={<TherapyChatFormPage />} />
-            {/* <Route path="/doctorsPage/:id" element={<DoctorInfoCard />}>
+          <Routes>
+            <Route>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/mobileClinicPage" element={<MobileClinicPage />} />
+              <Route path="/onlineTherapyPage" element={<OnlineTherapyPage />} />
+              <Route path="/resourcesPage" element={<ResourcesPage />} />
+              <Route path="/workWithUsPage" element={<WorkWithUsPage />} />
+              <Route exact path="/doctorsPage" element={<DoctorsPage />} />
+              <Route path="/therapistsPage" element={<TherapistsPage />} />
+              <Route path="/appointmentPage" element={<AppointmentPage />} />
+              <Route path="/aboutPage" element={<AboutPage />} />
+              <Route path="/donatePage" element={<DonatePage />} />
+              <Route path="/impactPage" element={<ImpactPage />} />
+              <Route path="/WWDPage" element={<WWDPage />} />
+              <Route path="/TherapyChatFormPage" element={<TherapyChatFormPage />} />
+              {/* <Route path="/doctorsPage/:id" element={<DoctorInfoCard />}>
               </Route> */}
-            <Route path="/biographies/:id" element={<BioList />} />
-            <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />
-              
+              <Route path="/biographies/:id" element={<BioList />} />
+              <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />
           </Route>
         </Routes>
       </Router>
       <Footer />
-
-
     </div>
   );
 }
-
 export default App;
