@@ -29,13 +29,10 @@ console.log(everest.id);
             </Row>
             {biographies.filter(biography => biography.id==everest.id).map((biography) => (
                 <Row>
-                    
-                        <Col key={biography.id}>
+                    <Col key={biography.id}>
                         <img className="dr-bio-pic" src={imageurl + biography.attributes.pics.data[0].attributes.url} />
- 
-                        </Col>
-
-                        <Col className="dr-bio-info">
+                    </Col>
+                    <Col className="dr-bio-info">
                         <h1>{biography.attributes.name}</h1>
                         <h4>{biography.attributes.credential}</h4>
                         <br />
@@ -50,14 +47,12 @@ console.log(everest.id);
                             ))}
                         <br />
                         <h3>Experiences</h3>
-
                         {biography.attributes.experience.map(experience =>(
                             <ul className="space_list">
                             <li className="nomarge">{experience.singleexperience}</li>
                             </ul>
                             ))}
-                        </Col>
-                        
+                    </Col>
                 </Row>
             ))}
         </Container>

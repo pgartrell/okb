@@ -14,18 +14,18 @@ const TherapistsPage = () => {
        <TherapistsPageIntro />
       </Row>
 
+      {/* The component called TherapistTopBioPics requires Strapi, but the one called TherapistPhotosTop does not - only one is needed overall */}
       <TherapistTopBioPics />
       <TherapistPhotosTop />
 
       <MobileSuccessStories />
 
+      {/* The component called TherapistLowerBioPics requires Strapi, but the one called TherapistPhotosBottom does not - only one is needed overall */}
       <TherapistLowerBioPics />
       <TherapistPhotosBottom />
 
       <MobileSuccessStories />
-
       <TherapistPageBottomButtons />
-
     </Container>
   );
 };

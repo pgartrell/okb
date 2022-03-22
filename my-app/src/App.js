@@ -45,8 +45,6 @@ function App() {
               <Route path="/impactPage" element={<ImpactPage />} />
               <Route path="/WWDPage" element={<WWDPage />} />
               <Route path="/TherapyChatFormPage" element={<TherapyChatFormPage />} />
-              {/* <Route path="/doctorsPage/:id" element={<DoctorInfoCard />}>
-              </Route> */}
               <Route path="/biographies/:id" element={<BioList />} />
               <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />
           </Route>
