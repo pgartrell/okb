@@ -1,49 +1,56 @@
 .therapy-form-image {
-    background-image: url("../images/mountains.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;  
-    padding-bottom: 100px
-  }
- 
+  background-image: url("../images/mountains.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+}
+
 .therapy-appointment-title {
-    text-align: left;
-    color: white;
-    font-size: 3rem;
-    
+  text-align: left;
+  color: white;
+  font-size: 3rem;
+  padding-left: 22%;
+}
+
+@media (max-width: 450px) {
+  .therapy-appointment-title {
+    font-size: 2rem;
+  }
 }
 
 .radio-container {
-    display: inline-block;
-    text-align: center;
-    padding: 5px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
 }
 
 .radio-container label {
-    display: block;
+  display: block;
 }
 
 .therapy-appointment-container {
-    margin-bottom: 100px;
-    
+  margin-bottom: 100px;
 }
 
 input {
-    border-radius:50%;
-    box-shadow: 0 0 #888888;
+  border-radius: 50%;
+  box-shadow: 0 0 #888888;
 }
 
 button {
-    
+  float: right;
+  font-size: 25px !important;
 }
 
 .tcfRow {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 400px) {
-    .physical-health-input, .eating-habits-input {
-      padding: 0 !important;
-      padding-bottom: 20px !important;
-    }
+  .physical-health-input,
+  .eating-habits-input {
+    padding: 0 !important;
+    padding-bottom: 20px !important;
+  }
 }
