@@ -1,12 +1,7 @@
 import { Container } from "@mui/material";
 import React, { useState } from "react";
 import { Form, FormGroup, Row, Col, FormCheck } from "react-bootstrap";
-import {
-  FormP,
-  Labels, 
-  FormInputs,
-  
-} from "../styles/TherapyChatForm.styles";
+import { FormP, Labels, FormInputs } from "../styles/TherapyChatForm.styles";
 import "../styles/TherapyChatForm.styles.css";
 
 export default function TherapyChatForm() {
@@ -69,7 +64,7 @@ export default function TherapyChatForm() {
             <Form onSubmit={handleSubmit}>
               <div
                 className="form-group col-12 gender-input"
-                style={{ float: "left", textAlign: "left", padding:"20px" }}
+                style={{ float: "left", textAlign: "left", padding: "20px" }}
               >
                 <FormP>What is your gender?</FormP>
                 <fieldset>
@@ -125,7 +120,7 @@ export default function TherapyChatForm() {
 
               <div
                 className="form-group col-12 relationship-input"
-                style={{ float: "left", textAlign: "left", padding:"20px" }}
+                style={{ float: "left", textAlign: "left", padding: "20px" }}
               >
                 <FormP>What is your Relationship status?</FormP>{" "}
                 {/* "FormP" is From styled components */}
@@ -204,7 +199,7 @@ export default function TherapyChatForm() {
 
               <div
                 className="form-group col-12 beenintherapy-input"
-                style={{ textAlign: "left", float: "left", padding:"20px" }}
+                style={{ textAlign: "left", float: "left", padding: "20px" }}
               >
                 <FormP>Have you been in therapy?</FormP>{" "}
                 {/* "FormP" is From styled components */}
@@ -235,38 +230,39 @@ export default function TherapyChatForm() {
                 </fieldset>
               </div>
 
-              <div style={{ textAlign: "left", float: "left", padding:"20px" }}>
+              <div
+                style={{ textAlign: "left", float: "left", padding: "20px" }}
+              >
                 <Col>
-                <Form.Group className="mb-3" controlId="textarea1">
-                  <FormP>What made you consider therapy?</FormP>
-                  <Form.Control
-                    as="textarea"
-                    rows={3}
-                    value={formData.considertherapy}
-                    placeholder="Please insert input here"
-                    onChange={handleChange}
-                    name="considertherapy"
-                  />
-                </Form.Group>
+                  <Form.Group className="mb-3" controlId="textarea1">
+                    <FormP>What made you consider therapy?</FormP>
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      value={formData.considertherapy}
+                      placeholder="Please insert input here"
+                      onChange={handleChange}
+                      name="considertherapy"
+                    />
+                  </Form.Group>
 
-                <Form.Group className="mb-3" controlId="textarea1">
-                  <FormP>What do you hope to gain from today's session</FormP>
-                  <Form.Control
-                    as="textarea"
-                    rows={3}
-                    value={formData.session}
-                    placeholder="Please insert input here"
-                    onChange={handleChange}
-                    name="session"
-                  />
-                </Form.Group>
+                  <Form.Group className="mb-3" controlId="textarea1">
+                    <FormP>What do you hope to gain from today's session</FormP>
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      value={formData.session}
+                      placeholder="Please insert input here"
+                      onChange={handleChange}
+                      name="session"
+                    />
+                  </Form.Group>
                 </Col>
               </div>
-              
 
               <div
                 className="form-group col-sm-12 physical-health-input"
-                style={{ textAlign: "left", float: "left", padding:"20px" }}
+                style={{ textAlign: "left", float: "left", padding: "20px" }}
               >
                 <FormP>
                   On a scale of 1-10 how would you rate your current physical
@@ -275,286 +271,291 @@ export default function TherapyChatForm() {
                 {/* "FormP" is From styled components */}
                 <fieldset>
                   <div className="radio-container">
-                    <label for="poor" style={{color:"red"}}>Poor</label>
-                  </div>
-                
-                <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="1"
-                    value="1"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "1"}
-                  />
-                  <label for="1">1</label>{" "}
-                  {/* "Labels" is From styled components */}
+                    <label for="poor" style={{ color: "red" }}>
+                      Poor
+                    </label>
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="2"
-                    value="2"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "2"}
-                  />
-                  <label for="2">2</label>{" "}
-                  {/* "Labels" is From styled components */}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="1"
+                      value="1"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "1"}
+                    />
+                    <label for="1">1</label>{" "}
+                    {/* "Labels" is From styled components */}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="3"
-                    value="3"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "3"}
-                  />
-                  <label for="3">3</label>{" "}
-                  {/* "Labels" is From styled components */}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="2"
+                      value="2"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "2"}
+                    />
+                    <label for="2">2</label>{" "}
+                    {/* "Labels" is From styled components */}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="4"
-                    value="4"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "4"}
-                  />
-                  <label for="4">4</label>{" "}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="3"
+                      value="3"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "3"}
+                    />
+                    <label for="3">3</label>{" "}
+                    {/* "Labels" is From styled components */}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="5"
-                    value="5"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "5"}
-                  />
-                  <label for="5">5</label>{" "}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="4"
+                      value="4"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "4"}
+                    />
+                    <label for="4">4</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="6"
-                    value="6"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "6"}
-                  />
-                  <label for="6">6</label>{" "}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="5"
+                      value="5"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "5"}
+                    />
+                    <label for="5">5</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="7"
-                    value="7"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "7"}
-                  />
-                  <label for="7">7</label>{" "}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="6"
+                      value="6"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "6"}
+                    />
+                    <label for="6">6</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="8"
-                    value="8"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "8"}
-                  />
-                  <label for="8">8</label>{" "}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="7"
+                      value="7"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "7"}
+                    />
+                    <label for="7">7</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="9"
-                    value="9"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "9"}
-                  />
-                  <label for="9">9</label>{" "}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="8"
+                      value="8"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "8"}
+                    />
+                    <label for="8">8</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="physicalhealth"
-                    id="10"
-                    value="10"
-                    onChange={handleChange}
-                    checked={formData.physicalhealth === "10"}
-                  />
-                  <label for="10">10</label>{" "}
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="9"
+                      value="9"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "9"}
+                    />
+                    <label for="9">9</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                    <label for="great" style={{color:"red"}}>Great</label>
+                    <input
+                      type="radio"
+                      name="physicalhealth"
+                      id="10"
+                      value="10"
+                      onChange={handleChange}
+                      checked={formData.physicalhealth === "10"}
+                    />
+                    <label for="10">10</label>{" "}
                   </div>
 
+                  <div className="radio-container">
+                    <label for="great" style={{ color: "red" }}>
+                      Great
+                    </label>
+                  </div>
                 </fieldset>
               </div>
 
               <div
                 className="form-group col-sm-12 eating-habits-input"
-                style={{ textAlign: "left", float: "left", padding:"20px" }}
+                style={{ textAlign: "left", float: "left", padding: "20px" }}
               >
                 <FormP>
                   On a scale of 1-10 how would you rate your current physical
                   health?
                 </FormP>{" "}
                 {/* "FormP" is From styled components */}
-                
                 <fieldset>
                   {/* "FormP" is From styled components */}
                   <div className="radio-container">
-                    <label for="poor" style={{color:"red"}}>Poor</label>
+                    <label for="poor" style={{ color: "red" }}>
+                      Poor
+                    </label>
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="1"
-                    value="1"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "1"}
-                  />
-                  <label for="1">1</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="1"
+                      value="1"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "1"}
+                    />
+                    <label for="1">1</label>{" "}
                   </div>
                   {/* "Labels" is From styled components */}
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="2"
-                    value="2"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "2"}
-                  />
-                  <label for="2">2</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="2"
+                      value="2"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "2"}
+                    />
+                    <label for="2">2</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="3"
-                    value="3"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "3"}
-                  />
-                  <label for="3">3</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="3"
+                      value="3"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "3"}
+                    />
+                    <label for="3">3</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="4"
-                    value="4"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "4"}
-                  />
-                  <label for="4">4</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="4"
+                      value="4"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "4"}
+                    />
+                    <label for="4">4</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="5"
-                    value="5"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "5"}
-                  />
-                  <label for="5">5</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="5"
+                      value="5"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "5"}
+                    />
+                    <label for="5">5</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="6"
-                    value="6"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "6"}
-                  />
-                  <label for="6">6</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="6"
+                      value="6"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "6"}
+                    />
+                    <label for="6">6</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="7"
-                    value="7"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "7"}
-                  />
-                  <label for="7">7</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="7"
+                      value="7"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "7"}
+                    />
+                    <label for="7">7</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="8"
-                    value="8"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "8"}
-                  />
-                  <label for="8">8</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="8"
+                      value="8"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "8"}
+                    />
+                    <label for="8">8</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="9"
-                    value="9"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "9"}
-                  />
-                  <label for="9">9</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="9"
+                      value="9"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "9"}
+                    />
+                    <label for="9">9</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                  <input
-                    type="radio"
-                    name="eatinghabits"
-                    id="10"
-                    value="10"
-                    onChange={handleChange}
-                    checked={formData.eatinghabits === "10"}
-                  />
-                  <label for="10">10</label>{" "}
+                    <input
+                      type="radio"
+                      name="eatinghabits"
+                      id="10"
+                      value="10"
+                      onChange={handleChange}
+                      checked={formData.eatinghabits === "10"}
+                    />
+                    <label for="10">10</label>{" "}
                   </div>
 
                   <div className="radio-container">
-                    <label for="great" style={{color:"red"}}>Great</label>
+                    <label for="great" style={{ color: "red" }}>
+                      Great
+                    </label>
                   </div>
-
                 </fieldset>
               </div>
 
               <div
                 className="form-group col-sm-12 mood-input"
-                style={{ textAlign: "left", float: "left", padding:"20px" }}
+                style={{ textAlign: "left", float: "left", padding: "20px" }}
               >
                 <FormP>
                   Are you currently experiencing overwhelming sadness, grief, or
@@ -590,19 +591,13 @@ export default function TherapyChatForm() {
 
               <br />
               <br />
-
             </Form>
-            
-            <button className="btn-okb-primary" onPress={handleSubmit}>
-                Submit
-            </button>
-        
           </Col>
-          
         </Row>
-
+        <button className="btn-okb-primary" onPress={handleSubmit}>
+          Submit
+        </button>
       </Container>
-
     </div>
   );
 }
