@@ -29,17 +29,21 @@ const ResourceList = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:1337/api/resources?populate=*&title_contains=${searchTerm.trim().replace(" ", "+") }`) 
-    .then((data) => data.json())
-    .then((data) => {
-      console.log(data)
-      setResources(data.data);
-    })
-    .catch((error) => console.log(error));
-  }, [searchTerm]) //When searchTerm changes, the useEffect function is going to run
+    fetch(
+      `http://localhost:1337/api/resources?populate=*&title_contains=${searchTerm
+        .trim()
+        .replace(" ", "+")}`
+    )
+      .then((data) => data.json())
+      .then((data) => {
+        console.log(data);
+        setResources(data.data);
+      })
+      .catch((error) => console.log(error));
+  }, [searchTerm]); //When searchTerm changes, the useEffect function is going to run
 
   return (
-    <div >
+    <div>
       {/* Search Bar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <button
@@ -55,7 +59,7 @@ const ResourceList = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto" style={{paddingLeft:"70px"}}>
+          <ul className="navbar-nav mr-auto" style={{ paddingLeft: "70px" }}>
             <li className="nav-item active">
               <a className="nav-link" href="#">
                 Physical <span className="sr-only">(current)</span>
@@ -94,11 +98,14 @@ const ResourceList = () => {
             value={searchTerm}
           />
         </form>
-        <ResourceSearchButton className="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <ResourceSearchButton
+          className="btn btn-outline-success my-2 my-sm-0"
+          type="submit"
+        >
           Search
         </ResourceSearchButton>
       </nav>
-      
+
       {/* {resources.filter((val) => {
       console.log(val)
 
@@ -116,15 +123,17 @@ const ResourceList = () => {
         let imageurl =
           resource.attributes.image.data.attributes.formats.thumbnail.url;
         let resource_tags = resource.attributes.resource_tags.data;
-        
+
         return (
-          <div className="row">
+          // <div className="row">
+
+          <ResourceListContainer className="container" key={resource.id}>
             <Link
               to={"/resources/" + resource.id}
               key={resource.id}
               style={{ textDecoration: "none" }}
             >
-              <ResourceListContainer key={resource.id} >
+              <div className="row" style={{ margin: "2%" }}>
                 <ResourceListImgContainer>
                   <img
                     src={`${api_url}${imageurl}`}
@@ -132,8 +141,10 @@ const ResourceList = () => {
                   />
                   <div>
                     {resource_tags.map((tag) => (
-                      <div style={{ textDecoration: "none" }}>
-                        
+                      <div
+                        className="row"
+                        style={{ textDecoration: "none", paddingLeft: "10%" }}
+                      >
                         {tag.attributes.name}{" "}
                       </div>
                     ))}
@@ -146,9 +157,10 @@ const ResourceList = () => {
                     {resource.attributes.fullDescription}
                   </ResourceListp>
                 </ResourceListContentContainer>
-              </ResourceListContainer>
+              </div>
             </Link>
-          </div>
+          </ResourceListContainer>
+          // </div>
         );
       })}
     </div>
