@@ -22,14 +22,14 @@ const sizes = {
   };
 
 export const ResourceListContainer = styled.div`
-  display: flex;   
-  justify-content: center;
+  /* display: flex;   
+  justify-content: center; */
   box-shadow: 0 2px 4px 4px #eee;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;
   margin-left: 50px;
   margin-right: 100px;
   padding: 30px;
-  
+   */
 `;
 
 
