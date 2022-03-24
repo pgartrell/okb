@@ -25,7 +25,6 @@ export const Jumbotron = styled.div`
   transform: translateY(-50%);
   color: whitesmoke;
   justify-content: flex-start;
-  
 `;
 
 export const MobileHeroTitle = styled.h1`
