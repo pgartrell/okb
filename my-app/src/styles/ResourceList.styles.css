@@ -1,0 +1,13 @@
+.resource-list-img-container {
+    text-align: justify;
+}
+
+.resource-list-img-container .resource-image {
+    display: block; 
+    margin: 0 auto; 
+}
+
+.resource-tags {
+    text-decoration: none; 
+    padding-left: 10%;
+}

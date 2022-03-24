@@ -9,6 +9,8 @@ import {
   ResourceListh1,
   ResourceSearchInput,
   ResourceSearchButton,
+  ResourceListRow,
+  ResourceImage
 } from "../styles/ResourceList.styles";
 import testResourceImage from "../images/mountains.jpg";
 import { Link } from "react-router-dom";
@@ -127,28 +129,29 @@ const ResourceList = () => {
         return (
           // <div className="row">
 
-          <ResourceListContainer className="container" key={resource.id}>
+          <ResourceListContainer  key={resource.id}>
             <Link
               to={"/resources/" + resource.id}
               key={resource.id}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none",}}
             >
-              <div className="row" style={{ margin: "2%" }}>
-                <ResourceListImgContainer>
-                  <img
+              <ResourceListRow className="row" >
+                <ResourceListImgContainer className="resource-list-img-container">
+                  <ResourceImage
+                    className="resource-image"
                     src={`${api_url}${imageurl}`}
-                    style={{ float: "left" }}
+                    
                   />
-                  <div>
+                  
                     {resource_tags.map((tag) => (
                       <div
-                        className="row"
-                        style={{ textDecoration: "none", paddingLeft: "10%" }}
+                        className="resource-tags"
+                        style={{paddingLeft: "10%"}}                        
                       >
                         {tag.attributes.name}{" "}
                       </div>
                     ))}
-                  </div>
+                  
                 </ResourceListImgContainer>
 
                 <ResourceListContentContainer className="col-6">
@@ -157,7 +160,7 @@ const ResourceList = () => {
                     {resource.attributes.fullDescription}
                   </ResourceListp>
                 </ResourceListContentContainer>
-              </div>
+              </ResourceListRow>
             </Link>
           </ResourceListContainer>
           // </div>

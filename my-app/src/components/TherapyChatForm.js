@@ -594,7 +594,7 @@ export default function TherapyChatForm() {
             </Form>
           </Col>
         </Row>
-        <button className="btn-okb-primary" onPress={handleSubmit}>
+        <button className="btn-okb-primary okb-chat-btn" onPress={handleSubmit}>
           Submit
         </button>
       </Container>

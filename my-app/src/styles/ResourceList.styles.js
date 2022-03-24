@@ -22,24 +22,30 @@ const sizes = {
   };
 
 export const ResourceListContainer = styled.div`
-  /* display: flex;   
-  justify-content: center; */
+  /* display: flex; */  
+   
   box-shadow: 0 2px 4px 4px #eee;
-  /*margin-bottom: 30px;
-  margin-left: 50px;
-  margin-right: 100px;
-  padding: 30px;
-   */
+  margin: 30px;
+  margin-right: 20px;
 `;
 
+export const ResourceListRow = styled.div `
+  margin: "2%";
+  height:"200px";
+`
+
+export const ResourceImage = styled.img `
+  width: 200px;
+  height: auto;
+`
 
 export const ResourceListImgContainer = styled.div`
   max-width: 30%;  
   padding-bottom: 20px;
   height: 100%;
   width: 100%;
-  
-`;
+  text-align: justify;
+  `;
 
 export const ResourceListContentContainer = styled.div`
   padding-right: 100px;
@@ -55,7 +61,7 @@ export const ResourceListp = styled.p`
 export const ResourceListh1 = styled.h1`
   text-align: left;
   font-size: 30px;
-  
+  padding-top: 20px ;
 
 `;
 
