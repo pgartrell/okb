@@ -356,7 +356,8 @@
 
 /* About Founder's Story */
 .founders-container {
-  padding: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 
 .founders-title {
