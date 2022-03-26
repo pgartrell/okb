@@ -20,6 +20,7 @@ const Header = () => {
             <Nav className="navBarLinks">
                 <NavLink to="/aboutPage" className="items-navigation">About</NavLink>
                 <NavLink to="workWithUsPage" className="items-navigation">Work With Us</NavLink>
+                <NavLink to="impactPage" className="items-navigation">Our Impact</NavLink>
             </Nav>
                 <Link to="/donatePage">
                     <button className="btn-okb-primary">Donate</button>
