@@ -2,6 +2,7 @@ import * as React from 'react';
 import { VolunteerAvatarImage } from '../styles/VolunteerTestimonialStyles.styles.js';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { VOLUNTEERS } from '../shared/volunteers';
+import {Link} from "react-router-dom"
 
 const volunteerTestimonials = VOLUNTEERS.map(volunteer => {
   return (
@@ -33,6 +34,10 @@ export default function VolunteerTestimonials() {
         <Row className="m-1">
           {volunteerTestimonials}
         </Row>
+        <Link to='/volunteerApplicationsPage'><button className="btn-okb-primary" style={{marginTop:"100px", padding: "30px"}}>
+          Apply to be a Volunteer
+        </button></Link>
       </Container>
+      
     );
 }
