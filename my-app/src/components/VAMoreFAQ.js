@@ -4,13 +4,13 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { VAFAQS } from "../shared/vafaqs.js";
+import { VAMoreFAQS } from "../shared/vamorefaqs.js";
 import { Container } from "react-bootstrap";
-import { VAFAQh2 } from "../styles/VAQuestions.styles.js";
 import {Link} from "react-router-dom"
+import { VAFAQh2 } from "../styles/VAQuestions.styles.js";
 
-export default function VAFAQ() {
-  const VAAccordion = VAFAQS.map((question) => {
+export default function VAMoreFAQ() {
+  const VAAccordion = VAMoreFAQS.map((question) => {
     return (
       <Accordion className="accordion-margins">
         <AccordionSummary
@@ -31,12 +31,10 @@ export default function VAFAQ() {
   return (
     <div className="m-5">
       <Container style={{ textAlign: "left" }}>
-        <VAFAQh2 style={{whiteSpace: "nowrap"}}>Frequently Asked Questions</VAFAQh2>
+        <VAFAQh2 style={{whiteSpace: "nowrap"}}>Volunteer FAQs</VAFAQh2>
       </Container>
       <Container>{VAAccordion}</Container>
-      <Link to ="/MoreFAQs"><button style={{marginTop:"100px"}} className="btn-okb-secondary">Read More FAQs</button></Link>
+      <Link to ="/VolunteerApplicationsPage"><button style={{marginTop:"100px"}} className="btn-okb-secondary">Back to Volunteer</button></Link>
     </div>
   );
 }
-
-
