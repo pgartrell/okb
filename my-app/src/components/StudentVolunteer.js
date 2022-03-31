@@ -56,7 +56,7 @@ export default function StudentVolunteerForm() {
         <Container className="volunteer-form-container">
             <h2 className='volunteer-form-title'>Student Volunteer Form</h2>
             <p className='volunteer-form-text'>Use the form to apply to become a volunteer</p>
-            <Form onSubmit={handleSubmit}>
+            <Form className='bg-light p-4' onSubmit={handleSubmit}>
             <Row>
                     <p className='volunteer-form-details'>Your Details</p>
                     <FormGroup as={Col} className='mb-3 volunteer-form-radio'>
