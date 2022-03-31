@@ -22,6 +22,7 @@ import TherapistBioList from "./components/TherapistInfoCard";
 import TherapyChatFormPage from "./pages/TherapyChatFormPage";
 import VolunteerApplicationsPage from "./pages/VolunteerApplicationsPage";
 import StudentVolunteerPage from "./pages/StudentVolunteerPage";
+import HealthVolunteerForm from "./components/HealthVolunteerForm";
 import MoreFAQs from "./pages/MoreFAQs";
 import Header from "./components/Header";
 import Footer from './components/Footer'
@@ -52,6 +53,7 @@ function App() {
               <Route path="/TherapyChatFormPage" element={<TherapyChatFormPage />} />
               <Route path="/VolunteerApplicationsPage" element={<VolunteerApplicationsPage />} />
               <Route path="StudentVolunteerPage" element={<StudentVolunteerPage />} />
+              <Route path="HealthVolunteerForm" element={<HealthVolunteerForm />} />
               <Route path="/MoreFAQs" element={<MoreFAQs />} />
               <Route path="/biographies/:id" element={<BioList />} />
               <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />
