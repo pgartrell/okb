@@ -51,14 +51,15 @@ export default function StudentVolunteerForm() {
         console.log(`Form State: ${JSON.stringify(studentFormData)}`);
         alert(`Form State: ${JSON.stringify(studentFormData)}`);
       }
+
     return (
         <Container className="volunteer-form-container">
-            <h2>Student Volunteer Form</h2>
-            <p>Use the form to apply to become a volunteer</p>
+            <h2 className='volunteer-form-title'>Student Volunteer Form</h2>
+            <p className='volunteer-form-text'>Use the form to apply to become a volunteer</p>
             <Form onSubmit={handleSubmit}>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
-                        <FormLabel htmlFor='firstName'>First Name*</FormLabel>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
+                        <FormLabel  htmlFor='firstName'>First Name*</FormLabel>
                         <FormControl
                                 type='text'
                                 name='firstName'
@@ -68,7 +69,7 @@ export default function StudentVolunteerForm() {
                                 onChange={handleChange}
                         />
                     </FormGroup>    
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='lastName'>Last Name*</FormLabel>
                         <FormControl
                                 type='text'
@@ -81,7 +82,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>    
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={3} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={3} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='email'>Email*</FormLabel>
                         <FormControl
                             type='email'
@@ -92,7 +93,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={3} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={3} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='phone'>Phone Number</FormLabel>
                         <FormControl
                             type='phone'
@@ -103,7 +104,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={3} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={3} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='ext'>Ext.</FormLabel>
                         <FormControl
                             type='phone'
@@ -134,7 +135,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='address1'>Address Line 1</FormLabel>
                         <FormControl
                             type='address'
@@ -145,7 +146,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='address2'>Address Line 2</FormLabel>
                         <FormControl
                             type='address'
@@ -158,7 +159,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={3} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={3} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='city'>City</FormLabel>
                         <FormControl
                             type='city'
@@ -169,7 +170,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={3} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={3} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='state'>State/Province</FormLabel>
                         <FormControl
                             type='state'
@@ -180,7 +181,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={3} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={3} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='postalCode'>Postal Code</FormLabel>
                         <FormControl
                             type='postal'
@@ -191,18 +192,16 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={3} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={3} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='country'>Country</FormLabel>
-                        <FormSelect>
-                            <option>Choose Country</option>
-                            <option>Ghana</option>
-                            <option>United States</option>
-                            {/* <option>{options}</option> */}
-                        </FormSelect>
+                            <FormSelect>{options.map((country) => (
+                                <option>{country}</option>
+                            ))}
+                            </FormSelect>
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} className='mb-3'>
+                    <FormGroup as={Col} xs={12} className='mb-3 volunteer-form-group'>
                         <FormCheck
                             inline
                             type='checkbox'
@@ -215,7 +214,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} className='mb-3'>
+                    <FormGroup as={Col} xs={12} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='message'>Message of Support (Will be displayed on public site)</FormLabel>
                         <FormControl 
                             as='textarea'
@@ -228,7 +227,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={4} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={4} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='school'>School Affiliation</FormLabel>
                         <FormControl 
                             type='text'
@@ -239,7 +238,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={4} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={4} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='classYear'>Class Year</FormLabel>
                         <FormControl 
                             type='text'
@@ -250,7 +249,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={4} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={4} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='major'>Major</FormLabel>
                         <FormControl 
                             type='text'
@@ -263,7 +262,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='medicine'>Part of volunteering is shadowing a healthcare provider. What field of medicine are you interested in?</FormLabel>
                         <FormControl 
                             type='text'
@@ -273,7 +272,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='experience'>Do you have any experience working in Healthcare? If so, explain</FormLabel>
                         <FormControl 
                             as='textarea'
@@ -285,7 +284,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='volunteer'>Why do you want to be a volunteer?</FormLabel>
                         <FormControl 
                             as='textarea'
@@ -295,7 +294,7 @@ export default function StudentVolunteerForm() {
                             onChange={handleChange}
                         />
                     </FormGroup>
-                    <FormGroup as={Col} xs={12} lg={6} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='achieve'>What do you hope to achieve from this experience?</FormLabel>
                         <FormControl 
                             as='textarea'
@@ -307,7 +306,7 @@ export default function StudentVolunteerForm() {
                     </FormGroup>
                 </Row>
                 <Row>
-                    <FormGroup as={Col} xs={12} lg={{span: 4, offset: 4}} className='mb-3'>
+                    <FormGroup as={Col} xs={12} lg={{span: 4, offset: 4}} className='mb-3 volunteer-form-group'>
                         <FormLabel htmlFor='resume'>Upload Resume (required)</FormLabel>
                         <FormControl 
                             type='file'

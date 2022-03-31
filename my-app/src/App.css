@@ -690,3 +690,19 @@ ul {
 .volunteer-form-container {
   margin: 3em;
 }
+
+.volunteer-form-title {
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.volunteer-form-text {
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.volunteer-form-group {
+  text-align: left;
+}
+
