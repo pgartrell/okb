@@ -50,7 +50,7 @@ function App() {
               <Route path="/WWDPage" element={<WWDPage />} />
               <Route path="/TherapyChatFormPage" element={<TherapyChatFormPage />} />
               <Route path="/VolunteerApplicationsPage" element={<VolunteerApplicationsPage />} />
-              <Route path="/MoreFAQs" element={<MoreFAQs />} />
+              <Route path="/MoreFAQs" element={<MoreFAQs />} />           
               <Route path="/biographies/:id" element={<BioList />} />
               <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />
           </Route>

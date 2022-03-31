@@ -4,7 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { MOBILEFAQS } from '../shared/mobilefaqs';
+import { MOBILEFAQS} from '../shared/mobilefaqs';
 
 
 export default function MobileAccordion() {
@@ -35,3 +35,4 @@ export default function MobileAccordion() {
     </div>
   );
 }
+
