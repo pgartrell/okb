@@ -9,10 +9,8 @@ const VAQuestions = () => {
         <div>
             <VAQuestionsh1> What are you applying as?</VAQuestionsh1>
             <Link to="/StudentVolunteerPage"><VAQuestionsButton>Student</VAQuestionsButton></Link>
-            <Link to="#"><VAQuestionsButton>Health Professional</VAQuestionsButton></Link>
-
+            <Link to="/HealthVolunteerForm"><VAQuestionsButton>Health Professional</VAQuestionsButton></Link>
         </div>
-
     </Container>
   )
 }

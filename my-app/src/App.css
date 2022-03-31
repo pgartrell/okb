@@ -702,7 +702,15 @@ ul {
   margin-bottom: 2em;
 }
 
+.volunteer-form-details {
+  font-size: 1.2em;
+}
+
 .volunteer-form-group {
   text-align: left;
+}
+
+.volunteer-form-radio {
+  text-align: right;
 }
 
