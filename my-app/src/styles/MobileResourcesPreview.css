@@ -90,8 +90,7 @@
 
 .feature-text {
   text-align: left;
-  padding-top: 20px;
-  padding-right: 15px;
+  padding: 20px 15px 30px 0;
   margin-left: 20px;
   color: black;
   overflow: hidden;

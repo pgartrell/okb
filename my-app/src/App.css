@@ -356,7 +356,8 @@
 
 /* About Founder's Story */
 .founders-container {
-  padding: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 
 .founders-title {
@@ -368,7 +369,7 @@
 /* About Vision */
 .about-vision-container {
   margin: 3em;
-  padding: 4em;
+  padding: 2em;
 }
 
 .about-vision-title {
@@ -437,7 +438,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 55vh;
+  height: 90vh;
 }
 
 .about-team-title {
@@ -684,3 +685,32 @@ ul {
   text-align: center;
   text-shadow: 0.5px 0.5px black;
 }
+
+/* Volunteer Forms */
+.volunteer-form-container {
+  margin: 3em;
+}
+
+.volunteer-form-title {
+  font-size: 2.5em;
+  text-align: left;
+}
+
+.volunteer-form-text {
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+.volunteer-form-details {
+  font-size: 1.2em;
+}
+
+.volunteer-form-group {
+  text-align: left;
+}
+
+.volunteer-form-radio {
+  text-align: right;
+}
+
