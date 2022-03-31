@@ -57,6 +57,33 @@ export default function StudentVolunteerForm() {
             <h2 className='volunteer-form-title'>Student Volunteer Form</h2>
             <p className='volunteer-form-text'>Use the form to apply to become a volunteer</p>
             <Form onSubmit={handleSubmit}>
+            <Row>
+                    <p className='volunteer-form-details'>Your Details</p>
+                    <FormGroup as={Col} className='mb-3 volunteer-form-radio'>
+                    <FormCheck
+                            inline
+                            type='radio'
+                            name='type'
+                            id='individual'
+                            value='individual'
+                            checked={studentFormData.type === 'individual'}
+                            onChange={handleChange}
+                        />
+                        <FormLabel htmlFor='individual'>Individual</FormLabel>
+                    </FormGroup>
+                    <FormGroup as={Col} className='mb-3 volunteer-form-group'>
+                    <FormCheck
+                            inline
+                            type='radio'
+                            name='type'
+                            id='business'
+                            value='business'
+                            checked={studentFormData.type === 'business'}
+                            onChange={handleChange}
+                        />
+                        <FormLabel htmlFor='business'>Business/Organization</FormLabel>
+                    </FormGroup>
+                </Row>
                 <Row>
                     <FormGroup as={Col} xs={12} lg={6} className='mb-3 volunteer-form-group'>
                         <FormLabel  htmlFor='firstName'>First Name*</FormLabel>
