@@ -8,11 +8,9 @@ const VAQuestions = () => {
     <Container>
         <div>
             <VAQuestionsh1> What are you applying as?</VAQuestionsh1>
-            <Link to="#"><VAQuestionsButton>Student</VAQuestionsButton></Link>
-            <Link to="#"><VAQuestionsButton>Health Professional</VAQuestionsButton></Link>
-
+            <Link to="/StudentVolunteerPage"><VAQuestionsButton>Student</VAQuestionsButton></Link>
+            <Link to="/HealthVolunteerForm"><VAQuestionsButton>Health Professional</VAQuestionsButton></Link>
         </div>
-
     </Container>
   )
 }

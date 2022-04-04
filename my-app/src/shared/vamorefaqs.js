@@ -1,4 +1,4 @@
-export const MOBILEFAQS = [
+export const VAMoreFAQS = [
     {
         id: 0,
         title: "Question 1",
@@ -29,10 +29,6 @@ export const MOBILEFAQS = [
         title: "Question 6",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
     },
-];
-
-
-export const THERAPYFAQS = [
     {
         id: 0,
         title: "Question 1",

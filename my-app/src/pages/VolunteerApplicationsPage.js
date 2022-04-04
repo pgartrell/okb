@@ -10,7 +10,7 @@ const VolunteerApplicationsPage = () => {
         <VAHeader />
         <VAQuestions />
         <VAFAQ />
-        {/* <VANeedHelp /> */}
+        <VANeedHelp />
     </div>
   )
 }
