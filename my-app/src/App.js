@@ -1,9 +1,9 @@
 
-import React from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route, Link
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import MobileClinicPage from "./pages/MobileClinicPage";
@@ -28,14 +28,21 @@ import Header from "./components/Header";
 import Footer from './components/Footer'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Breadcrumb from './components/Breadcrumbs';
 
 
 
 function App() {
+  const [crumbs, setCrumbs] = useState([<Link to="/">Home</Link>, 'aboutPage', 'impactPage']);
+
+  const selected = crumb => {
+    console.log(crumb);
+  }
   return (
     <div className="App">
       <Router>
         <Header />
+        <Breadcrumb crumbs={ crumbs } selected={ selected }  />
           <Routes>
             <Route>
               <Route path="/" element={<LandingPage />} />
