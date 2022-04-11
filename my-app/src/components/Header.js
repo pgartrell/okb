@@ -3,10 +3,22 @@ import {
   Container,
   Navbar, 
   Nav,
-  NavbarBrand
+  NavbarBrand, Row
 } from "react-bootstrap";
 import {NavLink, Link} from "react-router-dom"
 import LogoImage from '../images/new-okb-logo.png';
+import useBreadcrumbs from 'use-react-router-breadcrumbs';
+
+const Breadcrumbs = () => {
+  const breadcrumbs = useBreadcrumbs();
+
+  return (
+    <React.Fragment>
+      {breadcrumbs.map(({ breadcrumb }) => breadcrumb)}
+    </React.Fragment>
+  );
+}
+
 
 const Header = () => {
   return (
@@ -27,6 +39,9 @@ const Header = () => {
                 </Link>
         </Navbar.Collapse>
       </Container>
+      <Row>
+        <Breadcrumbs />
+        </Row>
     </Navbar>
   );
 };

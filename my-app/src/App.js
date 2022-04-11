@@ -28,6 +28,17 @@ import Header from "./components/Header";
 import Footer from './components/Footer'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import useBreadcrumbs from 'use-react-router-breadcrumbs';
+
+// const Breadcrumbs = () => {
+//   const breadcrumbs = useBreadcrumbs();
+
+//   return (
+//     <React.Fragment>
+//       {breadcrumbs.map(({ breadcrumb }) => breadcrumb)}
+//     </React.Fragment>
+//   );
+// }
 
 
 
@@ -36,6 +47,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
+        {/* <Breadcrumbs /> */}
           <Routes>
             <Route>
               <Route path="/" element={<LandingPage />} />
