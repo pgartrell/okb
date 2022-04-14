@@ -1,30 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import { Link, useParams } from "react-router-dom";
 import { Card, Row, Col, CardGroup } from "react-bootstrap";
 import testMobileResourceImage from "../images/testMobileResourceImage.jpg";
 import "../styles/MobileResourcesPreview.css";
 
+const api_url = "http://localhost:1337";
+
 const MobileResourcesPreview = () => {
-  const mobileResourcesData = [
-    {
-      id: 2,
-      title: "Resource 1",
-      content:
-        "Est tempor irure commodo amet. Irure cillum minim aliquip quis ut consequat fugiat. Est commodo eu elit consequat elit in ullamco minim reprehenderit duis nostrud cupidatat. Nulla tempor consectetur cupidatat labore ipsum exercitation proident fugiat tempor cillum quis est sint exercitation.",
-    },
-    {
-      id: 3,
-      title: "Resource 2",
-      content:
-        "Est tempor irure commodo amet. Irure cillum minim aliquip quis ut consequat fugiat. Est commodo eu elit consequat elit in ullamco minim reprehenderit duis nostrud cupidatat. Nulla tempor consectetur cupidatat labore ipsum exercitation proident fugiat tempor cillum quis est sint exercitation.",
-    },
-    {
-      id: 4,
-      title: "Resource 3",
-      content:
-        "Est tempor irure commodo amet. Irure cillum minim aliquip quis ut consequat fugiat. Est commodo eu elit consequat elit in ullamco minim reprehenderit duis nostrud cupidatat. Nulla tempor consectetur cupidatat labore ipsum exercitation proident fugiat tempor cillum quis est sint exercitation.",
-    },
-  ];
+  const [resources, setResources] = useState([]);
+  console.log(resources);
+
+  let resourceDataRoute = useParams();
+
+  useEffect(() => {
+    fetch("http://localhost:1337/api/resources?populate=*")
+      .then((data) => data.json())
+      .then((data) => {
+        setResources(data.data);
+      })
+      .catch((error) => console.log(error));
+  }, {});
 
   const featureResourceData = {
     id: 1,
@@ -59,7 +54,8 @@ const MobileResourcesPreview = () => {
         </div>
         <div className="col-md-6 ">
           <Card className="resourceListContainer border-0">
-            {mobileResourcesData.map((resource) => (
+          {resources
+          .map((resource) => (
               <Link
                 to={"/resources/" + resource.id}
                 key={resource.id}
@@ -67,10 +63,10 @@ const MobileResourcesPreview = () => {
               >
                 <Card.Body className="resourceBody">
                   <Card.Title className="resourceTitle">
-                    {resource.title}
+                  {resource.attributes.title}
                   </Card.Title>
                   <Card.Text className="resourceText">
-                    {resource.content}
+                  {resource.attributes.title}
                   </Card.Text>
                 </Card.Body>{" "}
               </Link>

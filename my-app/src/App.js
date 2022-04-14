@@ -16,8 +16,8 @@ import AppointmentPage from "./pages/AppointmentPage";
 import AboutPage from "./pages/AboutPage";
 import DonatePage from "./pages/DonatePage";
 import ImpactPage from "./pages/ImpactPage";
-import WWDPage from "./pages/WWDPage"
 import BioList from "./components/DoctorInfoCard";
+import ResourceBioList from "./components/ResourceInfoCard";
 import TherapistBioList from "./components/TherapistInfoCard";
 import TherapyChatFormPage from "./pages/TherapyChatFormPage";
 import VolunteerApplicationsPage from "./pages/VolunteerApplicationsPage";
@@ -49,7 +49,7 @@ function App() {
               <Route path="/aboutPage" element={<AboutPage />} />
               <Route path="/donatePage" element={<DonatePage />} />
               <Route path="/impactPage" element={<ImpactPage />} />
-              <Route path="/WWDPage" element={<WWDPage />} />
+
               <Route path="/TherapyChatFormPage" element={<TherapyChatFormPage />} />
               <Route path="/VolunteerApplicationsPage" element={<VolunteerApplicationsPage />} />
 
@@ -58,6 +58,8 @@ function App() {
               <Route path="StudentVolunteerPage" element={<StudentVolunteerPage />} />
               <Route path="HealthVolunteerForm" element={<HealthVolunteerForm />} />
               <Route path="/MoreFAQs" element={<MoreFAQs />} />
+
+              <Route path="/resources/:id" element={<ResourceBioList />} />
 
               <Route path="/biographies/:id" element={<BioList />} />
               <Route path="/therapist-biographies/:id" element={<TherapistBioList />} />

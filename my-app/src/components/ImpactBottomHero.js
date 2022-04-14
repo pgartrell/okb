@@ -3,6 +3,7 @@ import {
   JumbotronContainer,
   ImpactBottomHeroTitle,
   ImpactBottomHeroSubtitle,
+  ButtonDiv
 } from "../styles/ImpactBottomHero.styles";
 import { Link } from "react-router-dom";
 
@@ -19,7 +20,7 @@ export default function ImpactBottomHero() {
         </ImpactBottomHeroSubtitle>
       </div>
 
-      <div className="container col-6 float-left">
+      <ButtonDiv className="container col-6 float-left" style={{paddingTop:"50px"}}>
         <div>
           <Link to="/donatePage">
             <button className="btn-okb-primary">Donate</button>{" "}
@@ -27,11 +28,11 @@ export default function ImpactBottomHero() {
         </div>
 
         <div>
-          <Link to="workWithUsPage">
+          <Link to="/VolunteerApplicationsPage">
             <button className="btn-okb-secondary">Volunteer</button>{" "}
           </Link>
         </div>
-      </div>
+      </ButtonDiv>
     </JumbotronContainer>
   );
 }
