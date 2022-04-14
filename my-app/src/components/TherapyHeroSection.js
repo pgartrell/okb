@@ -12,7 +12,7 @@ const TherapyHeroSection = () => {
           This will hold text about Online Therapy 
         </HomeHeroSubtitle>
         <div style={{ paddingLeft: "50px" }}>
-          <Link to="/appointmentPage">
+          <Link to="/TherapyChatFormPage">
             <button className="btn-okb-primary">Get Started</button>
           </Link>
           <Link to='/therapistsPage' style={{textDecoration: 'none'}}>

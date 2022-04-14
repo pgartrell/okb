@@ -1,4 +1,5 @@
 import React from "react";
+
 import ResourceList from "../components/ResourceList";
 
 
@@ -7,6 +8,7 @@ const ResourcesPage = () => {
     <div>
       
       <ResourceList />
+      
     </div>
   );
 };

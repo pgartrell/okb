@@ -31,7 +31,7 @@ export default function VAFAQ() {
   return (
     <div className="m-5">
       <Container style={{ textAlign: "left" }}>
-        <VAFAQh2 style={{whiteSpace: "nowrap"}}>Frequently Asked Questions</VAFAQh2>
+        <VAFAQh2>Frequently Asked Questions</VAFAQh2>
       </Container>
       <Container>{VAAccordion}</Container>
       <Link to ="/MoreFAQs"><button style={{marginTop:"100px"}} className="btn-okb-secondary">Read More FAQs</button></Link>

@@ -18,6 +18,9 @@ export const JumbotronContainer = styled.div`
   padding: 100px;
   color: whitesmoke; 
   text-align: center ;
+  @media (max-width: 1300px) {
+    padding: 30px;
+  }
   
 `
 
@@ -36,6 +39,10 @@ export const ImpactBottomHeroTitle = styled.h1`
   padding-left: 50px;
   color: white;
   padding-right: 50px ;
+  @media (max-width: 776px) {
+    font-size: 40px ;
+    white-space: nowrap ;
+  }
 
 `;
 
@@ -45,5 +52,14 @@ export const ImpactBottomHeroSubtitle = styled.p `
     font-weight: 600;
     color: white;
     float: left;
+    @media (max-width: 1000px) {
+    display: none
+  }
     
+`
+
+export const ButtonDiv = styled.div `
+    @media (max-width: 776px) {
+    float: right!important; 
+  }
 `

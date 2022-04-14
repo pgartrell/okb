@@ -22,8 +22,14 @@ export const VAQuestionsButton = styled.button`
 /*VAFAQ Accordian */
 export const VAFAQh2 = styled.h2 `
   padding-left: 200px ;
+  white-space: nowrap ;
   @media (max-width: 1000px) {
     padding-left: 50px;
+  }
+  @media (max-width: 400px) {
+    padding-left: 0px;
+    white-space: pre-wrap ;
+    text-align: center
   }
 `
 

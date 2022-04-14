@@ -10,39 +10,53 @@ import {
   ResourceSearchInput,
   ResourceSearchButton,
   ResourceListRow,
-  ResourceImage
+  ResourceImage,
 } from "../styles/ResourceList.styles";
 import testResourceImage from "../images/mountains.jpg";
 import { Link } from "react-router-dom";
+import qs from "qs";
 
 const api_url = "http://localhost:1337";
 
 const ResourceList = () => {
   const [resources, setResources] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTag, setSelectedTag] = useState("Mental", "Physical", "Relationship", "Self-help");
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/resources?populate=*")
-      .then((data) => data.json())
-      .then((data) => {
-        setResources(data.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+    const filters = {}
+    const populate = '*'
+    if (selectedTag) {
+      filters.resource_tags = { name: { $eq: `${selectedTag}` } }
+    }
 
-  useEffect(() => {
-    fetch(
-      `http://localhost:1337/api/resources?populate=*&title_contains=${searchTerm
-        .trim()
-        .replace(" ", "+")}`
-    )
+    const query = qs.stringify({ filters, populate }, { encodeValuesOnly: true })
+
+    fetch(`http://localhost:1337/api/resources?${query}`)
       .then((data) => data.json())
       .then((data) => {
-        console.log(data);
-        setResources(data.data);
+        setResources(data.data)
       })
-      .catch((error) => console.log(error));
-  }, [searchTerm]); //When searchTerm changes, the useEffect function is going to run
+      .catch((error) => console.log(error))
+  }, [selectedTag])
+  
+  // function onClickButton(clickedResourceTag){
+  //   setFilteredTags(resource_tags.filter(resource_tag => resource_tag.name === clickedResourceTag)
+  // }  
+
+  // useEffect(() => {
+  //   fetch(
+  //     `http://localhost:1337/api/resources?populate=*&title_contains=${searchTerm
+  //       .trim()
+  //       .replace(" ", "+")}`
+  //   )
+  //     .then((data) => data.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setResources(data.data);
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, [searchTerm]); //When searchTerm changes, the useEffect function is going to run
 
   return (
     <div>
@@ -63,28 +77,23 @@ const ResourceList = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto" style={{ paddingLeft: "70px" }}>
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a href="#" className="nav-link" onClick= {() => {setSelectedTag("Physical")}}>
                 Physical <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+            <a href="#" className="nav-link" onClick= {() => {setSelectedTag("Mental")}}>
                 Mental
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+            <a href="#" className="nav-link" onClick= {() => {setSelectedTag("Relationship")}}>
                 Relationship
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+            <a href="#" className="nav-link" onClick= {() => {setSelectedTag("Self-help")}}>
                 Self Help
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Other
               </a>
             </li>
           </ul>
@@ -117,7 +126,7 @@ const ResourceList = () => {
           return val
         }
       }
-      
+
       )} */}
       {/* Search Bar */}
 
@@ -129,36 +138,32 @@ const ResourceList = () => {
         return (
           // <div className="row">
 
-          <ResourceListContainer  key={resource.id}>
+          <ResourceListContainer key={resource.id}>
             <Link
               to={"/resources/" + resource.id}
               key={resource.id}
-              style={{ textDecoration: "none",}}
+              style={{ textDecoration: "none" }}
             >
-              <ResourceListRow className="row" >
+              <ResourceListRow className="row">
                 <ResourceListImgContainer className="resource-list-img-container">
                   <ResourceImage
                     className="resource-image"
                     src={`${api_url}${imageurl}`}
-                    
                   />
-                  
-                    {resource_tags.map((tag) => (
-                      <div
-                        className="resource-tags"
-                        style={{paddingLeft: "10%"}}                        
-                      >
-                        {tag.attributes.name}{" "}
-                      </div>
-                    ))}
-                  
+
+                  {resource_tags.map((tag) => (
+                    <div
+                      className="resource-tags"
+                      style={{ paddingLeft: "10%" }}
+                    >
+                      {tag.attributes.name}{" "}
+                    </div>
+                  ))}
                 </ResourceListImgContainer>
 
                 <ResourceListContentContainer className="col-6">
                   <ResourceListh1>{resource.attributes.title}</ResourceListh1>
-                  <ResourceListp>
-                    {resource.attributes.fullDescription}
-                  </ResourceListp>
+                  <ResourceListp>{resource.attributes.header1}</ResourceListp>
                 </ResourceListContentContainer>
               </ResourceListRow>
             </Link>
