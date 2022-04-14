@@ -19,7 +19,7 @@ const TherapistLowerBioPics = () => {
 
     return (
         <Row>
-            {tbiographies.filter(biography => biography.attributes.topfeature==false).map((biography) => (
+            {tbiographies.filter(biography => biography.attributes.topfeature!==true).map((biography) => (
                 <Col xs={4} sm={3} lg={2}>
                     <Link 
                     to={"/therapist-biographies/" + biography.id}

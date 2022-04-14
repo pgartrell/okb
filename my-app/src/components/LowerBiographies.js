@@ -19,7 +19,7 @@ const LowerBioPics = () => {
 
     return (
         <Row>
-        {biographies.filter(biography => biography.attributes.topfeature==false).map((biography) => (
+        {biographies.filter(biography => biography.attributes.topfeature!==true).map((biography) => (
             <Col xs={4} sm={3} lg={2}>
                 <Link 
                   to={"/biographies/" + biography.id}
