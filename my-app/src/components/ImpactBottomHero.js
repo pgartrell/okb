@@ -27,7 +27,7 @@ export default function ImpactBottomHero() {
         </div>
 
         <div>
-          <Link to="workWithUsPage">
+          <Link to="/workWithUsPage">
             <button className="btn-okb-secondary">Volunteer</button>{" "}
           </Link>
         </div>
