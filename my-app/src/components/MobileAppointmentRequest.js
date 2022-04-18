@@ -57,6 +57,7 @@ export default function MobileAppointmentRequest() {
                                         model='.firstName'
                                         id='firstName'
                                         name='firstName'
+                                        placeholder='First Name'
                                         type="text"
                                         onChange={handleChange}
                                         value={formData.firstName}
@@ -68,6 +69,7 @@ export default function MobileAppointmentRequest() {
                                         model='.surName'
                                         id='surName'
                                         name='surName'
+                                        placeholder='Surname'
                                         type="text"
                                         onChange={handleChange}
                                         value={formData.surName}
@@ -93,6 +95,7 @@ export default function MobileAppointmentRequest() {
                                         model='.phone'
                                         id='phone'
                                         name='phone'
+                                        placeholder='Phone Number'
                                         type="select"
                                         onChange={handleChange}
                                         value={formData.phone}
