@@ -270,7 +270,7 @@
 /* Mobile Appointment Request Form */
 .appointment-image {
   background-image: url(./images/appointment-img.jpeg);
-  height: 1250px;
+  height: 1500px;
   width: 100%;
   padding-top: 5em;
 }
@@ -325,12 +325,16 @@
   border-top: 2px solid #000;
 }
 
-/* .appointment-title {
-  color: white;
-} */
+.appointment-title {
+  color: whitesmoke;
+  font-size: 4em;
+  text-shadow: 2px 2px #282c34;
+  padding: .5em;
+}
 
 .appointment-input {
   margin-bottom: 1em;
+  text-align: left;
 }
 
 .page-intro-button-white:hover {
@@ -585,6 +589,7 @@
 
 .donation-helps-list-item {
   padding: 0.5em 0;
+  line-height: 1.5em;
 }
 
 .donation-helps-text {
