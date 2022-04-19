@@ -7,6 +7,7 @@ import HomeJoinLink from "../components/HomeJoinLink";
 
 
 const LandingPage = () => {
+  
   return (
     <div>
       <HomeHeroSection />
