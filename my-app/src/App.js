@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {useLayoutEffect}  from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -32,6 +32,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
+    
+useLayoutEffect(() => {
+  window.scrollTo(0, 0)
+});
+
   return (
     <div className="App">
       <Router>

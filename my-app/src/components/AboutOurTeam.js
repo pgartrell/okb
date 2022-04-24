@@ -15,8 +15,6 @@ export default function AboutOurTeam() {
 
                         <Link to="/workWithUsPage"><button className="btn-okb-clear">Meet The Team</button></Link>
 
-                        <Link to='/DoctorsPage'><button className="btn-okb-clear">Meet The Team</button></Link>
-
                     </Col>
                     <Col xs={12} md={6}>
                         <h1 className="about-team-title">Be a part of the change</h1>

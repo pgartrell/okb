@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useLayoutEffect}  from "react";
 import MobileHeroSection from "../components/MobileHeroSection";
 import HowItWorksMobile from "../components/HowItWorksMobile";
 import MobileAccordion from '../components/MobileFAQAccordion';
@@ -8,6 +8,11 @@ import OurDoctorCarouselSection from "../components/MobileOurDoctors";
 
 
 const MobileClinicPage = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  });
+
   return (
     <div>
       <MobileHeroSection />

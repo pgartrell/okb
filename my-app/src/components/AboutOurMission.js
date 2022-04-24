@@ -15,8 +15,6 @@ export default function AboutOurMission() {
 
                     <Link to= '/impactPage'><button className="btn-okb-primary">See Our Impact</button></Link>
 
-                    <Link to='/impactPage'><button className="btn-okb-primary">See Our Impact</button></Link>
-
                 </Col>
             </Row>
         </Container>
