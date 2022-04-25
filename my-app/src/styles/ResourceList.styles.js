@@ -27,6 +27,11 @@ export const ResourceListContainer = styled.div`
   box-shadow: 0 2px 4px 4px #eee;
   margin: 30px;
   margin-right: 20px;
+     &:hover {
+       cursor: pointer;
+       background-color: #DCDCDC;
+       color: black;
+     } 
 `;
 
 export const ResourceListRow = styled.div `
@@ -37,6 +42,7 @@ export const ResourceListRow = styled.div `
 export const ResourceImage = styled.img `
   width: 200px;
   height: auto;
+  padding-bottom: 5% ;
 `
 
 export const ResourceListImgContainer = styled.div`
@@ -55,6 +61,13 @@ export const ResourceListContentContainer = styled.div`
 export const ResourceListp = styled.p`
   text-align: left;
   font-size: 20px;
+  color: black;
+  @media (max-width: 860px) {
+    font-size: 15px;
+  }
+  @media (max-width: 500px) {
+    white-space: nowrap;
+  }
   
 `;
 
@@ -62,13 +75,42 @@ export const ResourceListh1 = styled.h1`
   text-align: left;
   font-size: 30px;
   padding-top: 20px ;
+  color: black ;
+  @media (max-width: 860px) {
+    font-size: 20px;
+  }
+  @media (max-width: 500px) {
+    white-space: nowrap;
+  }
 
 `;
 
 export const ResourceSearchInput = styled.input `
-  padding: 10px
+  padding: 10px;
 `
 export const ResourceSearchButton = styled.button `
   margin-left: 30px;
   margin-right: 30px;
+`
+
+export const ResourceTags= styled.div `
+ 
+  margin-bottom: 10px;
+  margin-left: 15px;
+  font-size:15px ;
+  color: #ff0000;
+  outline-style: solid;
+  outline-color: #ff0000;
+  border-radius: 25px;
+  width: 40%;
+  align-content: center ;
+  text-align: center;
+  white-space: nowrap;
+
+  @media (max-width: 860px) {
+    font-size: 10px;
+    padding:10px ;
+   
+  }
+
 `

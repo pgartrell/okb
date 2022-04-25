@@ -719,3 +719,7 @@ ul {
   text-align: right;
 }
 
+/* Resource List Styling */
+.nav-item.active {
+  font-weight: 600;
+}

@@ -14,6 +14,7 @@ export const Resourceh1 = styled.h1`
   padding-bottom: 50px;
   padding-left: 15px;
   width: 70%;
+ 
   @media (max-width: 850px) {
     width: 100%;
   }

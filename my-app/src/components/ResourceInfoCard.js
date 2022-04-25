@@ -36,7 +36,7 @@ const ResourceBioList = () => {
           .filter((resource) => resource.id == resourceDataRoute.id)
           .map((resource) => (
             <Row>
-              <Row key={resource.id}>
+              <Col md={12}> 
                 <ResourceImage
                   className="resource=pic"
                   src={
@@ -45,8 +45,9 @@ const ResourceBioList = () => {
                       .url
                   }
                 />
-              </Row>
-              <Col key={resource.id}>
+                </Col>  
+              
+              <Col md={8} key={resource.id}>
                 <Container>
                   {/* "id" needs to be given to the htags to connect the floating bar */}
                   <Resourceh1>{resource.attributes.title}</Resourceh1>
@@ -64,16 +65,19 @@ const ResourceBioList = () => {
                   <Resourcep>{resource.attributes.fullDescription3}</Resourcep>
                 </Container>
               </Col>
+              <Col md={4} style={{position:"relative"}}>
+              <ResourceFloatingBar />
+              </Col>
             </Row>
           ))}
       </Container>
-      <Container>
+      {/* <Container>
         <Row>
           <Col>
-            <ResourceFloatingBar />
+            
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </div>
   );
 };
