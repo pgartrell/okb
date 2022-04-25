@@ -1,14 +1,19 @@
+.floating-container {
+  position: sticky;
+  top: 1rem;
+}
+
 .resourceNav {
-    position: fixed;
-    top: 50%;
-    right: 0;
+    
+    
+    /* right: 0; */
     /* -webkit-transform: translateY(-150%);
     -ms-transform: translateY(-150%);
     transform: translateY(-50%); */
     text-decoration: none;
-    float: right;
+    /* float: right; */
     box-shadow:0 2px 4px 4px #eee;
-    margin-right: 200px;
+    /* margin-right: 200px; */
     padding: 80px;
     border: 1px solid #f2f2f2;
 }
@@ -21,6 +26,10 @@
     color: black;
     font-size: 20px;
     text-decoration: none;
+  }
+
+  .resourceUl {
+    list-style-type: none;
   }
 
   /* 1680px and below  */

@@ -9,6 +9,7 @@ import LandingPage from "./pages/LandingPage";
 import MobileClinicPage from "./pages/MobileClinicPage";
 import OnlineTherapyPage from "./pages/OnlineTherapyPage";
 import ResourcesPage from "./pages/ResourcesPage";
+import ResourcesTherapyPage from "./pages/ResourcesTherapyPage";
 import WorkWithUsPage from "./pages/WorkWithUsPage";
 import DoctorsPage from "./pages/DoctorsPage";
 import TherapistsPage from "./pages/TherapistsPage.js"
@@ -42,6 +43,7 @@ function App() {
               <Route path="/mobileClinicPage" element={<MobileClinicPage />} />
               <Route path="/onlineTherapyPage" element={<OnlineTherapyPage />} />
               <Route path="/resourcesPage" element={<ResourcesPage />} />
+              <Route path="/resourcesTherapyPage" element={<ResourcesTherapyPage />} />
               <Route path="/workWithUsPage" element={<WorkWithUsPage />} />
               <Route exact path="/doctorsPage" element={<DoctorsPage />} />
               <Route path="/therapistsPage" element={<TherapistsPage />} />

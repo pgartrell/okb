@@ -412,8 +412,7 @@ export default function TherapyChatForm() {
                 style={{ textAlign: "left", float: "left", padding: "20px" }}
               >
                 <FormP>
-                  On a scale of 1-10 how would you rate your current physical
-                  health?
+                  On a scale of 1-10 how would you rate your current eating habits?
                 </FormP>{" "}
                 {/* "FormP" is From styled components */}
                 <fieldset>
