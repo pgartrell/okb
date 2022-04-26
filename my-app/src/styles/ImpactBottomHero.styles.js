@@ -43,6 +43,10 @@ export const ImpactBottomHeroTitle = styled.h1`
     font-size: 40px ;
     white-space: nowrap ;
   }
+  @media (max-width: 400px) {
+    font-size: 25px ;
+    white-space: nowrap ;
+  }
 
 `;
 

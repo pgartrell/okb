@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export default function ImpactBottomHero() {
   return (
     <JumbotronContainer className="row">
-      <div className=" container col-6">
+      {/* <div className=" container col-6"> */}
         <ImpactBottomHeroTitle className="text-center">
           Be a part of the change
         </ImpactBottomHeroTitle>
@@ -18,7 +18,7 @@ export default function ImpactBottomHero() {
           You can make a difference by supporting our mission for a better Ghana
           and a better world.
         </ImpactBottomHeroSubtitle>
-      </div>
+      {/* </div> */}
 
       <ButtonDiv className="container col-6 float-left" style={{paddingTop:"50px"}}>
         <div>
