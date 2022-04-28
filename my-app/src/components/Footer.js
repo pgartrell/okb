@@ -119,6 +119,13 @@ export default function Footer() {
                     <Col>
                         <p className="copy-footer">&copy; OKB Hope Foundation. All rights reserved.</p>
                     </Col>
+                    <Col>
+                        <p className="copy-footer">
+                            <a href='https://onedrive.live.com/?cid=F6E1FEE4EDAB5F24&id=F6E1FEE4EDAB5F24%21395&parId=F6E1FEE4EDAB5F24%21189&o=OneUp'style={{paddingRight:"5px", textDecoration:"none", color:"#ff0000"}}> Site by: Precious Gartrell, </a> 
+                            <a href="https://sheilastrahan-portfolio.netlify.app/"style={{paddingRight:"5px", textDecoration:"none", color:"#ff0000"}}>Sheila Strahan,</a> 
+                            <a href="https://raulescobedo-portfolio.netlify.app/"style={{paddingRight:"5px", textDecoration:"none", color:"#ff0000"}}>Raul Escobedo</a>
+                        </p>
+                    </Col>
                 </Row>
             </Container>
         </footer>
